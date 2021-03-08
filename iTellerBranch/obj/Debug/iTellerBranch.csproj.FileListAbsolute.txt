@@ -1,0 +1,229 @@
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\obj\Debug\iTellerBranch.csprojAssemblyReference.cache
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\obj\Debug\iTellerBranch.csproj.CoreCompileInputs.cache
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.dll.config
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.pdb
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\csc.exe
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\csc.exe.config
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\csc.rsp
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\csi.exe
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\csi.rsp
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\System.AppContext.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\vbc.exe
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\vbc.exe.config
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\vbc.rsp
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\VBCSCompiler.exe
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\Antlr3.Runtime.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\EntityFramework.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\EntityFramework.SqlServer.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.BankService.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.Business.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.Model.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.Repository.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\Newtonsoft.Json.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\Swashbuckle.Core.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Net.Http.Formatting.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Helpers.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Http.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Http.WebHost.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Mvc.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Optimization.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Razor.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.Razor.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\WebActivatorEx.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\WebGrease.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.BankService.pdb
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.Business.pdb
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.Model.pdb
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.Repository.pdb
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\iTellerBranch.Repository.dll.config
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\EntityFramework.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\EntityFramework.SqlServer.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\Newtonsoft.Json.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Net.Http.Formatting.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Helpers.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Http.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Http.WebHost.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Mvc.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Optimization.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.Razor.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.Razor.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\Antlr3.Runtime.pdb
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\obj\Debug\iTellerBranch.csproj.CopyComplete
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\obj\Debug\iTellerBranch.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch\obj\Debug\iTellerBranch.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.dll.config
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\csc.exe
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\csc.exe.config
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\csc.rsp
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\csi.exe
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\csi.rsp
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\System.AppContext.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\vbc.exe
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\vbc.exe.config
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\vbc.rsp
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\VBCSCompiler.exe
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\Antlr3.Runtime.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\EntityFramework.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\EntityFramework.SqlServer.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.BankService.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.Business.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.Model.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.Repository.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\Newtonsoft.Json.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\Swashbuckle.Core.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Net.Http.Formatting.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Helpers.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Http.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Http.WebHost.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Mvc.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Optimization.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Razor.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.Razor.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\WebActivatorEx.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\WebGrease.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.BankService.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.Business.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.Model.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.Repository.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\iTellerBranch.Repository.dll.config
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\EntityFramework.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\EntityFramework.SqlServer.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\Newtonsoft.Json.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Net.Http.Formatting.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Helpers.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Http.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Http.WebHost.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Mvc.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Optimization.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Razor.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.WebPages.Razor.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\Antlr3.Runtime.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\obj\Debug\iTellerBranch.csprojResolveAssemblyReference.cache
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\obj\Debug\iTellerBranch.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\obj\Debug\iTellerBranch.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch\bin\System.Web.Cors.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\obj\Debug\iTellerBranch.csprojResolveAssemblyReference.cache
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.dll.config
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.pdb
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\csc.exe
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\csc.exe.config
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\csc.rsp
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\csi.exe
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\csi.rsp
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\System.AppContext.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\vbc.exe
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\vbc.exe.config
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\vbc.rsp
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\VBCSCompiler.exe
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\Antlr3.Runtime.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\EntityFramework.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\EntityFramework.SqlServer.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.BankService.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.Business.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.Model.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.Repository.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\Newtonsoft.Json.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\Swashbuckle.Core.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Net.Http.Formatting.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Cors.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Helpers.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Http.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Http.WebHost.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Mvc.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Optimization.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Razor.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.WebPages.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.WebPages.Razor.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\WebActivatorEx.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\WebGrease.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.BankService.pdb
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.Business.pdb
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.Model.pdb
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.Repository.pdb
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\iTellerBranch.Repository.dll.config
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\EntityFramework.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\EntityFramework.SqlServer.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Net.Http.Formatting.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Http.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\Newtonsoft.Json.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Helpers.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Http.WebHost.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Mvc.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Optimization.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.Razor.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.WebPages.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\System.Web.WebPages.Razor.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\Antlr3.Runtime.pdb
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\obj\Debug\iTellerBranch.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch\obj\Debug\iTellerBranch.pdb

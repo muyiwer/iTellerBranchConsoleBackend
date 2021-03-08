@@ -1,0 +1,2736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BranchConsoleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.accountmandates' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="accountmandates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="50" />
+    <Property Name="Picture" Type="image" />
+    <Property Name="Signature" Type="image" />
+    <Property Name="Signatoryname" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Audit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="16" />
+    <Property Name="MachineName" Type="varchar" MaxLength="30" />
+    <Property Name="Event" Type="varchar" MaxLength="100" />
+    <Property Name="HostName" Type="varchar" MaxLength="100" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="50" />
+    <Property Name="MACAddress" Type="varchar" MaxLength="50" />
+    <Property Name="DateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.Bank' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BankCode" />
+      <PropertyRef Name="BankName" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankCode" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="BankName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address1" Type="varchar" MaxLength="150" />
+    <Property Name="Address2" Type="varchar" MaxLength="150" />
+    <Property Name="Address3" Type="varchar" MaxLength="150" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="RoutingNumber" Type="char" MaxLength="9" />
+    <Property Name="ShortName" Type="varchar" MaxLength="10" />
+    <Property Name="DateCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BranchAccounts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchCode" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="BranchCRSuspenceAccount" Type="varchar" MaxLength="50" />
+    <Property Name="BranchDBSuspenceAccount" Type="varchar" MaxLength="50" />
+    <Property Name="VATAccount" Type="varchar" MaxLength="50" />
+    <Property Name="ChargesAccount" Type="varchar" MaxLength="50" />
+    <Property Name="PrincipalAccount" Type="varchar" MaxLength="50" />
+    <Property Name="WHTAccount" Type="varchar" MaxLength="50" />
+    <Property Name="InterestAccount" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Branches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchNnemonics" Type="nvarchar" MaxLength="50" />
+    <Property Name="BranchCode" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="BranchName" Type="varchar" MaxLength="200" />
+    <Property Name="BranchAddress" Type="varchar" MaxLength="1000" />
+    <Property Name="SortCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="InterBranchAccount" Type="char" MaxLength="20" />
+    <Property Name="StateCode" Type="char" MaxLength="10" />
+    <Property Name="TillDateLastAssigned" Type="datetime" />
+    <Property Name="BranchEmail" Type="varchar" MaxLength="1000" />
+    <Property Name="SuspenseAccount" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="WhoCreated" Type="varchar" MaxLength="50" />
+    <Property Name="DisapprovalReason" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="CallOverMode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="AccNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TranType" Type="varchar" MaxLength="20" />
+    <Property Name="WhoApproved" Type="varchar" MaxLength="50" />
+    <Property Name="DateOfApproval" Type="datetime" />
+    <Property Name="frontImage" Type="image" />
+    <Property Name="status" Type="int" />
+    <Property Name="RemoteLodgementRecordID" Type="int" />
+    <Property Name="scanbranchCode" Type="varchar" MaxLength="9" />
+    <Property Name="scannerID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.cards' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="cards">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Pan" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CashDenomination">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubunitName" Type="varchar" MaxLength="50" />
+    <Property Name="RelationshipUnit" Type="int" />
+    <Property Name="DateCreated" Type="datetime2" Precision="7" />
+    <Property Name="Currency" Type="varchar" MaxLength="50" />
+    <Property Name="CurrencyCode" Type="int" />
+    <Property Name="Abbrev" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CashierBalancing">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CheckingTime" Type="datetime" />
+    <Property Name="TillId" Type="varchar" MaxLength="50" />
+    <Property Name="TellerId" Type="varchar" MaxLength="50" />
+    <Property Name="CashAtHand" Type="money" />
+    <Property Name="ExpectedCashAtHand" Type="money" />
+    <Property Name="Finalize" Type="bit" />
+  </EntityType>
+  <EntityType Name="CashReceipt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="POSId" Type="varchar" MaxLength="10" />
+    <Property Name="TransactionDate" Type="datetime" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="10" />
+    <Property Name="AccountTitle" Type="varchar" MaxLength="60" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="FooterMessage" Type="varchar" MaxLength="60" />
+    <Property Name="Ref" Type="varchar" MaxLength="60" />
+    <Property Name="Printed" Type="int" />
+    <Property Name="AmountInWord" Type="varchar" MaxLength="500" />
+    <Property Name="Currency" Type="varchar" MaxLength="4" />
+    <Property Name="TellerName" Type="varchar" MaxLength="25" />
+    <Property Name="TransType" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CashTransactions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="TillId" Type="varchar" MaxLength="50" />
+    <Property Name="ChequeNo" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CautionExemption">
+    <Key>
+      <PropertyRef Name="AccountNumber" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CautionAmount" Type="money" />
+    <Property Name="PercentOverage" Type="real" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.CautionHeaderFooter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CautionHeaderFooter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CautionHeader" Type="image" />
+    <Property Name="CautionFooter" Type="image" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.CautionNotice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CautionNotice">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CautionCode" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CautionCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CautionDescription" Type="varchar" MaxLength="500" />
+    <Property Name="TYPE" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.CautionSignatures' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CautionSignatures">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Idfield" Type="int" />
+    <Property Name="Signatory1" Type="varchar" MaxLength="100" />
+    <Property Name="Designation1" Type="varchar" MaxLength="100" />
+    <Property Name="Sign1" Type="image" />
+    <Property Name="Signatory2" Type="varchar" MaxLength="100" />
+    <Property Name="Designation2" Type="varchar" MaxLength="100" />
+    <Property Name="Sign2" Type="image" />
+  </EntityType>
+  <EntityType Name="ChequeAudit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chequeNumber" Type="varchar" MaxLength="500" />
+    <Property Name="userid" Type="varchar" MaxLength="50" />
+    <Property Name="reasons" Type="varchar" MaxLength="500" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="idfield" Type="varchar" MaxLength="50" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="50" />
+    <Property Name="servicePointID" Type="nvarchar(max)" />
+    <Property Name="ClientID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.ChequeBeneficiary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChequeBeneficiary">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChequeRef" Type="bigint" />
+    <Property Name="AcctNo" Type="varchar" MaxLength="20" />
+    <Property Name="Beneficiary" Type="varchar" MaxLength="100" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+    <Property Name="PresentingbankSortcode" Type="varchar" MaxLength="20" />
+    <Property Name="SMSSent" Type="bit" />
+    <Property Name="EmailSent" Type="bit" />
+    <Property Name="Drawer" Type="varchar" MaxLength="250" />
+    <Property Name="BVNBeneficiary" Type="varchar" MaxLength="150" />
+    <Property Name="BVNPayer" Type="varchar" MaxLength="150" />
+    <Property Name="ChannelId" Type="varchar" MaxLength="50" />
+    <Property Name="Reviewed" Type="int" />
+    <Property Name="MICRRepair" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.ChequeCaution' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChequeCaution">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ChequeRef" />
+      <PropertyRef Name="CautionCode" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChequeRef" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CautionCode" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="PresentingBankSortcode" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.ChequeDetailsCheckLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChequeDetailsCheckLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="AcctNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TranType" Type="varchar" MaxLength="20" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="PresentingBankSortcode" Type="char" MaxLength="15" />
+    <Property Name="Processed" Type="bit" />
+    <Property Name="SessionId" Type="char" MaxLength="1" />
+    <Property Name="CaptureFileDate" Type="datetime" />
+    <Property Name="CaptureFileTime" Type="varchar" MaxLength="50" />
+    <Property Name="Cautioned" Type="bit" />
+    <Property Name="ChequeRef" Type="bigint" />
+    <Property Name="ScanDate" Type="datetime" />
+    <Property Name="Uploaded" Type="bit" />
+    <Property Name="UploadedDate" Type="datetime" />
+    <Property Name="Returned" Type="bit" />
+    <Property Name="ReturnedDate" Type="datetime" />
+    <Property Name="ReturnSession" Type="int" />
+    <Property Name="ReturnCustomerAccNo" Type="varchar" MaxLength="20" />
+    <Property Name="ReturnReason" Type="varchar" MaxLength="5" />
+    <Property Name="KioskID" Type="varchar" MaxLength="50" />
+    <Property Name="TransID" Type="int" />
+  </EntityType>
+  <EntityType Name="ChequeDump">
+    <Key>
+      <PropertyRef Name="idfield" />
+    </Key>
+    <Property Name="idfield" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="AccNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TranType" Type="varchar" MaxLength="20" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="PresentingBankSortcode" Type="varchar" MaxLength="15" />
+    <Property Name="locked" Type="bit" />
+    <Property Name="scanDate" Type="datetime" />
+    <Property Name="batchID" Type="int" />
+    <Property Name="kioskID" Type="varchar" MaxLength="50" />
+    <Property Name="transID" Type="bigint" />
+    <Property Name="captureDateTime" Type="datetime" />
+    <Property Name="checkingOfficer" Type="varchar" MaxLength="50" />
+    <Property Name="checkingTime" Type="datetime" />
+    <Property Name="approvingOfficer" Type="varchar" MaxLength="50" />
+    <Property Name="approvingTime" Type="datetime" />
+    <Property Name="cautioned" Type="bit" />
+    <Property Name="sessionid" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="valueDate" Type="datetime" />
+    <Property Name="approved" Type="int" />
+    <Property Name="status" Type="int" />
+    <Property Name="returnReason" Type="varchar" MaxLength="5" />
+    <Property Name="isInward" Type="int" />
+    <Property Name="valueDateCaptured" Type="datetime" />
+    <Property Name="rejected" Type="int" />
+    <Property Name="posted" Type="bit" />
+    <Property Name="postCount" Type="tinyint" />
+    <Property Name="notifiedFailure" Type="bit" />
+    <Property Name="sent2Clearing" Type="bit" />
+    <Property Name="servicePointID" Type="varchar" MaxLength="50" />
+    <Property Name="depositor" Type="varchar" MaxLength="250" />
+    <Property Name="phoneno" Type="varchar" MaxLength="150" />
+    <Property Name="currencyCode" Type="int" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="Processed" Type="int" />
+    <Property Name="CaptureFileTime" Type="varchar" MaxLength="50" />
+    <Property Name="CaptureFileDate" Type="datetime" />
+    <Property Name="scanBranchSortCode" Type="varchar" MaxLength="50" />
+    <Property Name="ChequeOperation_type" Type="varchar" MaxLength="5" />
+    <Property Name="Narration" Type="varchar" MaxLength="200" />
+    <Property Name="floatDays" Type="int" />
+    <Property Name="foreignId" Type="int" />
+    <Property Name="disapprovalComment" Type="varchar" MaxLength="300" />
+    <Property Name="callovermodestatus" Type="int" />
+    <Property Name="MailStatus" Type="bit" Nullable="false" />
+    <Property Name="clientID" Type="varchar" MaxLength="10" />
+    <Property Name="LockID" Type="varchar" MaxLength="50" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="msgid" Type="bigint" />
+    <Property Name="ItemSeqNumber" Type="varchar" MaxLength="50" />
+    <Property Name="accepted" Type="bit" />
+    <Property Name="IsSpecialSession" Type="bit" />
+    <Property Name="CheckDigit" Type="varchar" MaxLength="5" />
+    <Property Name="ExpiryDate" Type="varchar" MaxLength="15" />
+    <Property Name="PostingFileBatch" Type="varchar" MaxLength="100" />
+    <Property Name="CaptureFileBatch" Type="varchar" MaxLength="100" />
+    <Property Name="CBABeneficiary" Type="varchar" MaxLength="150" />
+    <Property Name="Match" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.ChequeDump_Trigger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChequeDump_Trigger">
+    <Key>
+      <PropertyRef Name="idfield" />
+      <PropertyRef Name="Processed" />
+      <PropertyRef Name="id" />
+      <PropertyRef Name="MailStatus" />
+    </Key>
+    <Property Name="ChequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="AccNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TranType" Type="varchar" MaxLength="20" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="PresentingBankSortcode" Type="char" MaxLength="15" />
+    <Property Name="locked" Type="bit" />
+    <Property Name="idfield" Type="bigint" Nullable="false" />
+    <Property Name="scanDate" Type="datetime" />
+    <Property Name="batchID" Type="int" />
+    <Property Name="kioskID" Type="varchar" MaxLength="50" />
+    <Property Name="transID" Type="bigint" />
+    <Property Name="captureDateTime" Type="datetime" />
+    <Property Name="checkingOfficer" Type="varchar" MaxLength="50" />
+    <Property Name="checkingTime" Type="datetime" />
+    <Property Name="approvingOfficer" Type="varchar" MaxLength="50" />
+    <Property Name="approvingTime" Type="datetime" />
+    <Property Name="cautioned" Type="bit" />
+    <Property Name="sessionid" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="valueDate" Type="datetime" />
+    <Property Name="approved" Type="int" />
+    <Property Name="status" Type="int" />
+    <Property Name="returnReason" Type="varchar" MaxLength="5" />
+    <Property Name="isInward" Type="int" />
+    <Property Name="valueDateCaptured" Type="datetime" />
+    <Property Name="rejected" Type="int" />
+    <Property Name="posted" Type="bit" />
+    <Property Name="postCount" Type="tinyint" />
+    <Property Name="notifiedFailure" Type="bit" />
+    <Property Name="sent2Clearing" Type="bit" />
+    <Property Name="servicePointID" Type="varchar" MaxLength="50" />
+    <Property Name="depositor" Type="varchar" MaxLength="250" />
+    <Property Name="phoneno" Type="varchar" MaxLength="150" />
+    <Property Name="currencyCode" Type="int" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="Processed" Type="bit" Nullable="false" />
+    <Property Name="CaptureFileTime" Type="varchar" MaxLength="50" />
+    <Property Name="CaptureFileDate" Type="datetime" />
+    <Property Name="scanBranchSortCode" Type="varchar" MaxLength="50" />
+    <Property Name="ChequeOperation_type" Type="varchar" MaxLength="5" />
+    <Property Name="Narration" Type="varchar" MaxLength="200" />
+    <Property Name="floatDays" Type="int" />
+    <Property Name="xdate" Type="datetime" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clientID" Type="varchar" MaxLength="10" />
+    <Property Name="callovermodestatus" Type="int" />
+    <Property Name="CheckDigit" Type="varchar" MaxLength="5" />
+    <Property Name="ExpiryDate" Type="varchar" MaxLength="15" />
+    <Property Name="PostingFileBatch" Type="varchar" MaxLength="100" />
+    <Property Name="CaptureFileBatch" Type="varchar" MaxLength="100" />
+    <Property Name="CBABeneficiary" Type="varchar" MaxLength="150" />
+    <Property Name="Match" Type="int" />
+    <Property Name="MailStatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChequeImages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cheque_ref" Type="bigint" Nullable="false" />
+    <Property Name="frontImage" Type="varbinary(max)" />
+    <Property Name="rearImage" Type="varbinary(max)" />
+    <Property Name="commited" Type="bit" />
+    <Property Name="machineName" Type="nvarchar(max)" />
+    <Property Name="isnax" Type="bit" />
+    <Property Name="presentingbanksortcode" Type="nvarchar(max)" />
+    <Property Name="uploaded" Type="bit" />
+    <Property Name="uploadedDate" Type="datetime" />
+    <Property Name="frontImage2" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.chequeimageuv' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="chequeimageuv">
+    <Key>
+      <PropertyRef Name="cheque_ref" />
+    </Key>
+    <Property Name="cheque_ref" Type="bigint" Nullable="false" />
+    <Property Name="frontImage" Type="image" />
+    <Property Name="rearImage" Type="image" />
+    <Property Name="commited" Type="bit" />
+    <Property Name="machineName" Type="varchar" MaxLength="50" />
+    <Property Name="isnax" Type="bit" />
+    <Property Name="presentingbanksortcode" Type="varchar" MaxLength="15" />
+    <Property Name="uploaded" Type="bit" />
+    <Property Name="uploadedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ChequeLodgement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="TillId" Type="varchar" MaxLength="50" />
+    <Property Name="ChequeNo" Type="varchar" MaxLength="10" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="20" />
+    <Property Name="AccountName" Type="varchar" MaxLength="150" />
+    <Property Name="TransType" Type="int" />
+    <Property Name="ChequeDate" Type="date" />
+    <Property Name="ChargeAmt" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.ChequesForCashWithdrawal' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChequesForCashWithdrawal">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Idfield" />
+      <PropertyRef Name="Processed" />
+      <PropertyRef Name="CashTranID" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="AcctNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TranType" Type="varchar" MaxLength="20" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="PresentingBankSortcode" Type="char" MaxLength="15" />
+    <Property Name="Locked" Type="bit" />
+    <Property Name="Idfield" Type="bigint" Nullable="false" />
+    <Property Name="ScanDate" Type="datetime" />
+    <Property Name="BatchID" Type="int" />
+    <Property Name="KioskID" Type="varchar" MaxLength="50" />
+    <Property Name="TransID" Type="int" />
+    <Property Name="CaptureDateTime" Type="datetime" />
+    <Property Name="CheckingOfficer" Type="varchar" MaxLength="50" />
+    <Property Name="CheckingTime" Type="datetime" />
+    <Property Name="ApprovingOfficer" Type="varchar" MaxLength="50" />
+    <Property Name="ApprovingTime" Type="datetime" />
+    <Property Name="Cautioned" Type="bit" />
+    <Property Name="SessionId" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="ValueDate" Type="datetime" />
+    <Property Name="Approved" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="ReturnReason" Type="varchar" MaxLength="5" />
+    <Property Name="IsInward" Type="int" />
+    <Property Name="ValueDateCaptured" Type="datetime" />
+    <Property Name="Rejected" Type="int" />
+    <Property Name="Posted" Type="bit" />
+    <Property Name="PostCount" Type="tinyint" />
+    <Property Name="NotifiedFailure" Type="bit" />
+    <Property Name="Sent2Clearing" Type="bit" />
+    <Property Name="ServicePointID" Type="varchar" MaxLength="50" />
+    <Property Name="Depositor" Type="varchar" MaxLength="250" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="150" />
+    <Property Name="CurrencyCode" Type="int" />
+    <Property Name="ChequeDate" Type="datetime" />
+    <Property Name="Processed" Type="bit" Nullable="false" />
+    <Property Name="CaptureFileTime" Type="varchar" MaxLength="50" />
+    <Property Name="CaptureFileDate" Type="datetime" />
+    <Property Name="CashTranID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="chequeStatus">
+    <Key>
+      <PropertyRef Name="chequeNumber" />
+      <PropertyRef Name="accountNo" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chequeNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="accountNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.chq_bene' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="chq_bene">
+    <Key>
+      <PropertyRef Name="cheque_ref" />
+    </Key>
+    <Property Name="cheque_ref" Type="bigint" Nullable="false" />
+    <Property Name="acct_no" Type="varchar" MaxLength="20" />
+    <Property Name="beneficiary" Type="varchar" MaxLength="200" />
+    <Property Name="remarks" Type="varchar" MaxLength="100" />
+    <Property Name="presentingbanksortcode" Type="varchar" MaxLength="20" />
+    <Property Name="beneficiary_bvn" Type="varchar" MaxLength="15" />
+    <Property Name="chequedate" Type="date" />
+    <Property Name="drawer" Type="varchar" MaxLength="50" />
+    <Property Name="payer_bvn" Type="varchar" MaxLength="50" />
+    <Property Name="MICRRepair" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.ClientScanners' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ClientScanners">
+    <Key>
+      <PropertyRef Name="ClientID" />
+      <PropertyRef Name="ScannerID" />
+    </Key>
+    <Property Name="ClientID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ScannerID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ScannerTag" Type="varchar" MaxLength="100" />
+    <Property Name="ScannerType" Type="varchar" MaxLength="100" />
+    <Property Name="Approved" Type="bit" />
+    <Property Name="DisapprovalReason" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.CompanyLogo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CompanyLogo">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="CompanyLogo" Type="image" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.Currency' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="Currency" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Currency" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Abbrev" Type="varchar" MaxLength="10" />
+    <Property Name="Country" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.CurrencySubunit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CurrencySubunit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrencyCode" Type="int" />
+    <Property Name="SubunitName" Type="varchar" MaxLength="50" />
+    <Property Name="RelationshipUnit" Type="int" />
+  </EntityType>
+  <EntityType Name="customerMaster">
+    <Key>
+      <PropertyRef Name="AccountNo" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AccountName" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="Bookbalance" Type="money" />
+    <Property Name="Availablebalance" Type="money" />
+    <Property Name="Accountofficer" Type="varchar" MaxLength="50" />
+    <Property Name="BranchCode" Type="varchar" MaxLength="50" />
+    <Property Name="OpenDate" Type="datetime" />
+    <Property Name="AccountStatus" Type="varchar" MaxLength="50" />
+    <Property Name="Accountofficer_email" Type="varchar" MaxLength="150" />
+    <Property Name="Accountofficer_fullname" Type="varchar" MaxLength="50" />
+    <Property Name="Operatinginstructions" Type="varchar" MaxLength="150" />
+    <Property Name="AccountType" Type="nchar" MaxLength="20" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="10" />
+    <Property Name="ProductName" Type="varchar" MaxLength="50" />
+    <Property Name="CurrencyCode" Type="varchar" MaxLength="3" />
+    <Property Name="Currency" Type="varchar" MaxLength="50" />
+    <Property Name="Abbrev" Type="nchar" MaxLength="3" />
+    <Property Name="ValidForClearingCheque" Type="bit" />
+    <Property Name="customerId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Denomination">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Value" Type="money" />
+    <Property Name="DateCreated" Type="datetime2" Precision="7" />
+    <Property Name="CashDenominationID" Type="int" />
+  </EntityType>
+  <EntityType Name="DiscountedTreasuryProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="20" />
+    <Property Name="ProductName" Type="varchar" MaxLength="50" />
+    <Property Name="AccountType" Type="char" MaxLength="1" />
+    <Property Name="Discounted" Type="bit" />
+    <Property Name="WHTMinAmt" Type="money" />
+    <Property Name="Tenured" Type="bit" />
+    <Property Name="MinTaxablePrincipal" Type="money" />
+    <Property Name="CBAProductCode" Type="varchar" MaxLength="50" />
+    <Property Name="Rate" Type="money" />
+    <Property Name="WHTPayableAccount" Type="varchar" MaxLength="20" />
+    <Property Name="InterestPenaltyAccount" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DocumentaryEvidence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" Nullable="false" />
+    <Property Name="Data" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.DraftIssuedCharges' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DraftIssuedCharges">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="ChargeID" Type="int" />
+    <Property Name="ChargeAmount" Type="money" />
+    <Property Name="Approved" Type="bit" />
+  </EntityType>
+  <EntityType Name="FixedInwardChequedump">
+    <Key>
+      <PropertyRef Name="itemid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="itemid" Type="bigint" Nullable="false" />
+    <Property Name="PreBankSeqNumber" Type="varchar" MaxLength="40" />
+    <Property Name="PayBankRoutNumber" Type="varchar" MaxLength="40" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TransactionCode" Type="varchar" MaxLength="40" />
+    <Property Name="SerialNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ItemAmount" Type="numeric" Precision="20" Scale="2" />
+    <Property Name="presentingBankSortCode" Type="varchar" MaxLength="50" />
+    <Property Name="presentmentDate" Type="datetime" />
+    <Property Name="Beneficiary" Type="varchar" MaxLength="100" />
+    <Property Name="confirmedAccountMandate" Type="bit" />
+    <Property Name="confirmedFundsBalance" Type="bit" />
+    <Property Name="confirmedCheque" Type="bit" />
+    <Property Name="DownloadBatchId" Type="bigint" />
+    <Property Name="Settlementdatetime" Type="datetime" />
+    <Property Name="CheckDigit" Type="varchar" MaxLength="50" />
+    <Property Name="ExpiryDate" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GLAccountSetup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GLAcctName" Type="varchar" MaxLength="50" />
+    <Property Name="GLAcctNo" Type="varchar" MaxLength="50" />
+    <Property Name="DateCreated" Type="datetime2" Precision="7" />
+    <Property Name="CurrencyID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.InwardChequedump' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InwardChequedump">
+    <Key>
+      <PropertyRef Name="ItemID" />
+      <PropertyRef Name="Entry_Generated" />
+    </Key>
+    <Property Name="ItemID" Type="bigint" Nullable="false" />
+    <Property Name="PreBankSeqNumber" Type="varchar" MaxLength="40" />
+    <Property Name="PayBankRoutNumber" Type="varchar" MaxLength="40" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TransactionCode" Type="varchar" MaxLength="40" />
+    <Property Name="SerialNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ItemAmount" Type="numeric" Precision="20" Scale="2" />
+    <Property Name="BankOfFirstDepoSortCode" Type="varchar" MaxLength="40" />
+    <Property Name="MICRRepairFlags" Type="varchar" MaxLength="40" />
+    <Property Name="Beneficiary" Type="varchar" MaxLength="500" />
+    <Property Name="Marked" Type="bit" />
+    <Property Name="Status" Type="varchar" MaxLength="40" />
+    <Property Name="Charges" Type="float" />
+    <Property Name="Payment_Date" Type="datetime" />
+    <Property Name="Entry_Generated" Type="bit" Nullable="false" />
+    <Property Name="Cancel_Reason" Type="varchar" MaxLength="40" />
+    <Property Name="payer" Type="varchar" MaxLength="50" />
+    <Property Name="payee" Type="varchar" MaxLength="150" />
+    <Property Name="trans_narration" Type="varchar" MaxLength="500" />
+    <Property Name="collectionType" Type="varchar" MaxLength="10" />
+    <Property Name="downloadBatchID" Type="bigint" />
+    <Property Name="presentingBankSortCode" Type="varchar" MaxLength="50" />
+    <Property Name="presentmentDate" Type="datetime" />
+    <Property Name="cycleNo" Type="varchar" MaxLength="2" />
+    <Property Name="currencyInd" Type="varchar" MaxLength="5" />
+    <Property Name="DepositorAcct" Type="varchar" MaxLength="20" />
+    <Property Name="BOFDBusDate" Type="datetime" />
+    <Property Name="instrumentType" Type="varchar" MaxLength="5" />
+    <Property Name="confirmedAccountMandate" Type="bit" />
+    <Property Name="confirmedFundsBalance" Type="bit" />
+    <Property Name="confirmedCheque" Type="bit" />
+    <Property Name="confirmedAccountMandateUser" Type="varchar" MaxLength="50" />
+    <Property Name="confirmedFundsBalanceUser" Type="varchar" MaxLength="50" />
+    <Property Name="confirmedChequeUser" Type="varchar" MaxLength="50" />
+    <Property Name="udf1" Type="varchar(max)" />
+    <Property Name="udf2" Type="varchar(max)" />
+    <Property Name="udf3" Type="varchar(max)" />
+    <Property Name="udf4" Type="varchar(max)" />
+    <Property Name="udf5" Type="varchar(max)" />
+    <Property Name="udf6" Type="varchar(max)" />
+    <Property Name="udf7" Type="varchar(max)" />
+    <Property Name="udf8" Type="varchar(max)" />
+    <Property Name="udf9" Type="varchar(max)" />
+    <Property Name="udf10" Type="varchar(max)" />
+    <Property Name="SentFundMailAO" Type="bit" />
+    <Property Name="SentFundMailBranch" Type="bit" />
+    <Property Name="SentChqConfrmMailAO" Type="bit" />
+    <Property Name="SentChqConfrmMailBranch" Type="bit" />
+    <Property Name="ErrMsg" Type="varchar" MaxLength="200" />
+    <Property Name="Validated" Type="bit" />
+    <Property Name="udf11" Type="varchar(max)" />
+    <Property Name="udf12" Type="varchar(max)" />
+    <Property Name="udf13" Type="varchar(max)" />
+    <Property Name="udf14" Type="varchar(max)" />
+    <Property Name="udf15" Type="varchar(max)" />
+    <Property Name="udf16" Type="varchar(max)" />
+    <Property Name="udf17" Type="varchar(max)" />
+    <Property Name="udf18" Type="varchar(max)" />
+    <Property Name="udf19" Type="varchar(max)" />
+    <Property Name="udf20" Type="varchar(max)" />
+    <Property Name="ID" Type="int" />
+    <Property Name="beneficiaryBVN" Type="varchar" MaxLength="20" />
+    <Property Name="payerBVN" Type="varchar" MaxLength="20" />
+    <Property Name="beneficiaryAccountNo" Type="varchar" MaxLength="20" />
+    <Property Name="processed" Type="bit" />
+    <Property Name="accepted" Type="bit" />
+    <Property Name="Settlementdatetime" Type="datetime" />
+    <Property Name="CustomerId" Type="varchar" MaxLength="50" />
+    <Property Name="PostBatch" Type="int" />
+    <Property Name="PostStatus" Type="int" />
+    <Property Name="CBAResponse" Type="varchar" MaxLength="500" />
+    <Property Name="PostedAttempted" Type="int" />
+    <Property Name="CBABeneficiary" Type="varchar" MaxLength="250" />
+    <Property Name="Match" Type="int" />
+    <Property Name="CheckDigit" Type="varchar" MaxLength="50" />
+    <Property Name="ExpiryDate" Type="varchar" MaxLength="50" />
+    <Property Name="TransRef" Type="int" />
+    <Property Name="PostRefID" Type="int" />
+    <Property Name="PostingFileBatch" Type="varchar(max)" />
+    <Property Name="CaptureFileBatch" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="InwardChequedump_Trigger">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemID" Type="bigint" Nullable="false" />
+    <Property Name="PreBankSeqNumber" Type="varchar" MaxLength="40" />
+    <Property Name="PayBankRoutNumber" Type="varchar" MaxLength="40" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TransactionCode" Type="varchar" MaxLength="40" />
+    <Property Name="SerialNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ItemAmount" Type="money" />
+    <Property Name="BankOfFirstDepoSortCode" Type="varchar" MaxLength="40" />
+    <Property Name="MICRRepairFlags" Type="varchar" MaxLength="40" />
+    <Property Name="Beneficiary" Type="varchar" MaxLength="100" />
+    <Property Name="Marked" Type="bit" />
+    <Property Name="Status" Type="varchar" MaxLength="40" />
+    <Property Name="Charges" Type="float" />
+    <Property Name="Payment_Date" Type="datetime" />
+    <Property Name="Entry_Generated" Type="bit" Nullable="false" />
+    <Property Name="Cancel_Reason" Type="varchar" MaxLength="40" />
+    <Property Name="payer" Type="varchar" MaxLength="50" />
+    <Property Name="payee" Type="varchar" MaxLength="50" />
+    <Property Name="trans_narration" Type="varchar" MaxLength="150" />
+    <Property Name="collectionType" Type="varchar" MaxLength="10" />
+    <Property Name="downloadBatchID" Type="bigint" />
+    <Property Name="presentingBankSortCode" Type="varchar" MaxLength="50" />
+    <Property Name="presentmentDate" Type="datetime" />
+    <Property Name="cycleNo" Type="varchar" MaxLength="2" />
+    <Property Name="currencyInd" Type="varchar" MaxLength="5" />
+    <Property Name="DepositorAcct" Type="varchar" MaxLength="20" />
+    <Property Name="BOFDBusDate" Type="datetime" />
+    <Property Name="instrumentType" Type="varchar" MaxLength="5" />
+    <Property Name="confirmedAccountMandate" Type="bit" />
+    <Property Name="confirmedFundsBalance" Type="bit" />
+    <Property Name="confirmedCheque" Type="bit" />
+    <Property Name="confirmedAccountMandateUser" Type="varchar" MaxLength="50" />
+    <Property Name="confirmedFundsBalanceUser" Type="varchar" MaxLength="50" />
+    <Property Name="confirmedChequeUser" Type="varchar" MaxLength="50" />
+    <Property Name="udf1" Type="varchar(max)" />
+    <Property Name="udf2" Type="varchar(max)" />
+    <Property Name="udf3" Type="varchar(max)" />
+    <Property Name="udf4" Type="varchar(max)" />
+    <Property Name="udf5" Type="varchar(max)" />
+    <Property Name="udf6" Type="varchar(max)" />
+    <Property Name="udf7" Type="varchar(max)" />
+    <Property Name="udf8" Type="varchar(max)" />
+    <Property Name="udf9" Type="varchar(max)" />
+    <Property Name="udf10" Type="varchar(max)" />
+    <Property Name="SentFundMailAO" Type="bit" />
+    <Property Name="SentFundMailBranch" Type="bit" />
+    <Property Name="SentChqConfrmMailAO" Type="bit" />
+    <Property Name="SentChqConfrmMailBranch" Type="bit" />
+    <Property Name="ErrMsg" Type="varchar" MaxLength="200" />
+    <Property Name="Validated" Type="bit" />
+    <Property Name="udf11" Type="varchar(max)" />
+    <Property Name="udf12" Type="varchar(max)" />
+    <Property Name="udf13" Type="varchar(max)" />
+    <Property Name="udf14" Type="varchar(max)" />
+    <Property Name="udf15" Type="varchar(max)" />
+    <Property Name="udf16" Type="varchar(max)" />
+    <Property Name="udf17" Type="varchar(max)" />
+    <Property Name="udf18" Type="varchar(max)" />
+    <Property Name="udf19" Type="varchar(max)" />
+    <Property Name="udf20" Type="varchar(max)" />
+    <Property Name="beneficiaryBVN" Type="varchar" MaxLength="20" />
+    <Property Name="payerBVN" Type="varchar" MaxLength="20" />
+    <Property Name="beneficiaryAccountNo" Type="varchar" MaxLength="20" />
+    <Property Name="processed" Type="bit" />
+    <Property Name="accepted" Type="bit" />
+    <Property Name="SettlementDateTime" Type="datetime" />
+    <Property Name="CustomerId" Type="varchar" MaxLength="50" />
+    <Property Name="PostBatch" Type="int" />
+    <Property Name="PostStatus" Type="int" />
+    <Property Name="CBAResponse" Type="varchar" MaxLength="500" />
+    <Property Name="PostedAttempted" Type="int" />
+    <Property Name="CBABeneficiary" Type="varchar" MaxLength="250" />
+    <Property Name="Match" Type="int" />
+    <Property Name="CheckDigit" Type="varchar" MaxLength="50" />
+    <Property Name="ExpiryDate" Type="varchar" MaxLength="50" />
+    <Property Name="xdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="InwardChequeImage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="AccNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TranType" Type="varchar" MaxLength="20" />
+    <Property Name="Sessionid" Type="char" MaxLength="2" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="PresentingBankSortcode" Type="char" MaxLength="15" />
+    <Property Name="FrontImage" Type="image" />
+    <Property Name="FrontImage2" Type="image" />
+    <Property Name="RearImage" Type="image" />
+    <Property Name="Processed" Type="bit" />
+    <Property Name="CaptureFileDate" Type="datetime" />
+    <Property Name="CaptureFileTime" Type="char" MaxLength="5" />
+    <Property Name="cautioned" Type="bit" />
+    <Property Name="cheque_ref" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="scanDate" Type="datetime" />
+    <Property Name="returned" Type="bit" />
+    <Property Name="returnedDate" Type="datetime" />
+    <Property Name="returnSession" Type="int" />
+    <Property Name="returnCustomerAccNo" Type="varchar" MaxLength="20" />
+    <Property Name="returnReason" Type="varchar" MaxLength="5" />
+    <Property Name="presentmentDate" Type="datetime" />
+    <Property Name="DownloadBatchId" Type="bigint" />
+    <Property Name="QRCode" Type="image" />
+  </EntityType>
+  <EntityType Name="InwardMessages">
+    <Key>
+      <PropertyRef Name="msgID" />
+    </Key>
+    <Property Name="msgID" Type="bigint" Nullable="false" />
+    <Property Name="currency" Type="varchar" MaxLength="20" />
+    <Property Name="ItemCount" Type="int" />
+    <Property Name="TotalValue" Type="money" />
+    <Property Name="SettlementWindow" Type="int" />
+    <Property Name="SettlementTime" Type="datetime" />
+    <Property Name="id" Type="int" />
+    <Property Name="SystemDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="iTellerTimeStamp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="varchar" MaxLength="50" />
+    <Property Name="LastTimeStamp" Type="datetime" />
+    <Property Name="Type" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="KioskCustomerAcctDetails">
+    <Key>
+      <PropertyRef Name="AccountNo" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AccountName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="150" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="CautionAmount" Type="money" />
+    <Property Name="CautionAge" Type="int" />
+    <Property Name="PAN" Type="varchar" MaxLength="50" />
+    <Property Name="Signature" Type="image" />
+    <Property Name="CurrencyCode" Type="int" />
+    <Property Name="LastDateModified" Type="datetime" />
+    <Property Name="BranchCode" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.kioskLogos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="kioskLogos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="image" />
+    <Property Name="Footer" Type="image" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.KioskRejectedCheques' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="KioskRejectedCheques">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KioskID" Type="varchar" MaxLength="200" />
+    <Property Name="ChequeRef" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="RejectionReason" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.KioskRejectionReasons' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="KioskRejectionReasons">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReasonCode" Type="varchar" MaxLength="10" />
+    <Property Name="ReasonDescription" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.KioskReturnedCheques' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="KioskReturnedCheques">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KioskID" Type="varchar" MaxLength="200" />
+    <Property Name="ChequeRef" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="ReturnReason" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Kiosks">
+    <Key>
+      <PropertyRef Name="KioskId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KioskId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Location" Type="varchar" MaxLength="150" />
+    <Property Name="SortCode" Type="varchar" MaxLength="50" />
+    <Property Name="ServicePointID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LoggedOnUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="SessionID" Type="varchar" MaxLength="50" />
+    <Property Name="Branch" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LogOnUserRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="TillStatus" Type="varchar" MaxLength="10" />
+    <Property Name="TellerId" Type="varchar" MaxLength="50" />
+    <Property Name="CreditAmount" Type="money" />
+    <Property Name="DebitAmount" Type="money" />
+    <Property Name="TimeOpened" Type="time" Precision="7" />
+    <Property Name="UserName" Type="varchar" MaxLength="20" />
+    <Property Name="UserTillBranch" Type="varchar" MaxLength="20" />
+    <Property Name="LocalCurrencyAmount" Type="money" />
+    <Property Name="UserRole" Type="varchar" MaxLength="50" />
+    <Property Name="ProfileStartTime" Type="varchar" MaxLength="50" />
+    <Property Name="ProfileEndTime" Type="varchar" MaxLength="50" />
+    <Property Name="UserBranch" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MakerChecker">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RESOURCES" Type="nvarchar" MaxLength="120" />
+    <Property Name="MODE" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ManagerChequeIssuanceDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="20" />
+    <Property Name="AccountName" Type="varchar" MaxLength="50" />
+    <Property Name="DraftNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="money" />
+  </EntityType>
+  <EntityType Name="MCAccount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchCode" Type="varchar" MaxLength="50" />
+    <Property Name="CurrencyCode" Type="int" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MCCharge">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChargeCode" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="250" />
+    <Property Name="ChargeWithdrawn" Type="money" />
+    <Property Name="MinimumCharge" Type="money" />
+    <Property Name="ChargeAccount" Type="nvarchar" MaxLength="20" />
+    <Property Name="IsPercentage" Type="bit" />
+  </EntityType>
+  <EntityType Name="messageCounter">
+    <Key>
+      <PropertyRef Name="msgid" />
+    </Key>
+    <Property Name="msgid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="freshItems" Type="bit" />
+    <Property Name="currency" Type="varchar" MaxLength="10" />
+    <Property Name="itemCount" Type="int" />
+    <Property Name="TotalValue" Type="money" />
+    <Property Name="generationTime" Type="datetime" />
+    <Property Name="sent" Type="bit" />
+    <Property Name="SettlementWindowID" Type="int" />
+    <Property Name="failedItems" Type="int" />
+  </EntityType>
+  <EntityType Name="Modules">
+    <Key>
+      <PropertyRef Name="ModuleId" />
+    </Key>
+    <Property Name="ModuleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModuleName" Type="varchar" MaxLength="150" />
+    <Property Name="AppId" Type="int" />
+    <Property Name="FontIcon" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.POSPosting' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="POSPosting">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Deliver" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="POSId" Type="varchar" MaxLength="10" />
+    <Property Name="TerminalId" Type="varchar" MaxLength="60" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="10" />
+    <Property Name="PostTime" Type="datetime" />
+    <Property Name="Deliver" Type="int" Nullable="false" />
+    <Property Name="TranType" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="PreLiquidatedDeal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealID" Type="varchar" MaxLength="50" />
+    <Property Name="LiquidationDate" Type="datetime" />
+    <Property Name="PenaltyRate" Type="money" />
+    <Property Name="DateCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Resources">
+    <Key>
+      <PropertyRef Name="ResourceId" />
+    </Key>
+    <Property Name="ResourceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResourceName" Type="varchar" MaxLength="100" />
+    <Property Name="ResourceDesc" Type="varchar" MaxLength="150" />
+    <Property Name="ModuleId" Type="int" />
+    <Property Name="Sequence" Type="int" />
+    <Property Name="AppId" Type="varchar" MaxLength="50" />
+    <Property Name="NeedMakerChecker" Type="bit" />
+    <Property Name="TableName" Type="varchar" MaxLength="70" />
+    <Property Name="Show" Type="bit" />
+    <Property Name="ShowMenu" Type="int" />
+    <Property Name="SubMenu" Type="int" />
+    <Property Name="Path" Type="varchar" MaxLength="500" />
+    <Property Name="FontIcon" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ReturnedChequeImages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="frontImage" Type="image" />
+    <Property Name="rearImage" Type="image" />
+    <Property Name="frontImage2" Type="image" />
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.ReturnedCheques' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ReturnedCheques">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Processed" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="AccNumber" Type="varchar" MaxLength="20" />
+    <Property Name="TranType" Type="varchar" MaxLength="20" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="PresentingBankSortcode" Type="varchar" MaxLength="50" />
+    <Property Name="locked" Type="bit" />
+    <Property Name="idfield" Type="bigint" />
+    <Property Name="scanDate" Type="datetime" />
+    <Property Name="batchID" Type="int" />
+    <Property Name="kioskID" Type="varchar" MaxLength="50" />
+    <Property Name="transID" Type="int" />
+    <Property Name="captureDateTime" Type="datetime" />
+    <Property Name="checkingOfficer" Type="varchar" MaxLength="50" />
+    <Property Name="checkingTime" Type="datetime" />
+    <Property Name="approvingOfficer" Type="varchar" MaxLength="50" />
+    <Property Name="approvingTime" Type="datetime" />
+    <Property Name="cautioned" Type="bit" />
+    <Property Name="sessionid" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="valueDate" Type="datetime" />
+    <Property Name="approved" Type="int" />
+    <Property Name="status" Type="int" />
+    <Property Name="returnReason" Type="varchar" MaxLength="5" />
+    <Property Name="isInward" Type="int" />
+    <Property Name="valueDateCaptured" Type="datetime" />
+    <Property Name="rejected" Type="int" />
+    <Property Name="posted" Type="bit" />
+    <Property Name="postCount" Type="int" />
+    <Property Name="notifiedFailure" Type="bit" />
+    <Property Name="sent2Clearing" Type="bit" />
+    <Property Name="servicePointID" Type="varchar" MaxLength="50" />
+    <Property Name="depositor" Type="varchar" MaxLength="250" />
+    <Property Name="phoneno" Type="varchar" MaxLength="150" />
+    <Property Name="currencyCode" Type="int" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="Processed" Type="bit" Nullable="false" />
+    <Property Name="CaptureFileTime" Type="varchar" MaxLength="50" />
+    <Property Name="CaptureFileDate" Type="datetime" />
+    <Property Name="scanBranchSortCode" Type="varchar" MaxLength="50" />
+    <Property Name="ChequeOperation_type" Type="varchar" MaxLength="5" />
+    <Property Name="Narration" Type="varchar" MaxLength="200" />
+    <Property Name="floatDays" Type="int" />
+    <Property Name="foreignId" Type="int" />
+    <Property Name="acceptedstatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="ReturnInwardFile">
+    <Key>
+      <PropertyRef Name="FileID" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fileDate" Type="datetime" Nullable="false" />
+    <Property Name="Session" Type="int" Nullable="false" />
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="fileName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Currency" Type="varchar" MaxLength="20" />
+    <Property Name="SettlementWindowID" Type="int" />
+    <Property Name="SettlementTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.ReturnReasons' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ReturnReasons">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReasonCode" Type="varchar" MaxLength="5" />
+    <Property Name="ReasonDescription" Type="varchar" MaxLength="500" />
+    <Property Name="CBACode" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="RoleResources">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="ResourceId" Type="int" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleDesc" Type="varchar" MaxLength="100" />
+    <Property Name="AppId" Type="int" />
+    <Property Name="SortCode" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="ScannerDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ScannerType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ScannerSerialNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ScannerStore">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SCANNER" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="FOLDER" Type="varchar" MaxLength="200" />
+    <Property Name="APPLICATION_NAME" Type="varchar" MaxLength="200" />
+    <Property Name="LITE" Type="bit" Nullable="false" />
+    <Property Name="DELETE" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.scorpion' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="scorpion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="column1" Type="varchar" MaxLength="50" />
+    <Property Name="column2" Type="varchar" MaxLength="50" />
+    <Property Name="column3" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SettlementTimes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+    <Property Name="settlementTime" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="SystemConfiguration">
+    <Key>
+      <PropertyRef Name="KeyName" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="KeyValue" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="UserEditable" Type="bit" Nullable="false" />
+    <Property Name="Autofield" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.SystemConfiguration_Trigger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SystemConfiguration_Trigger">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="KeyName" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="UserEditable" />
+      <PropertyRef Name="TimeChanged" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="KeyValue" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="UserEditable" Type="bit" Nullable="false" />
+    <Property Name="Autofield" Type="int" />
+    <Property Name="TimeChanged" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.TerminalPosMap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TerminalPosMap">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="POSId" Type="varchar" MaxLength="50" />
+    <Property Name="TerminalId" Type="varchar" MaxLength="50" />
+    <Property Name="BranchCode" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TerminationInstruction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="CBACode" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TillAssignment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TillNo" Type="varchar" MaxLength="15" />
+    <Property Name="UserID" Type="varchar" MaxLength="50" />
+    <Property Name="MaxAmount" Type="money" />
+    <Property Name="TillID" Type="int" />
+    <Property Name="EffectiveDate" Type="datetime" Nullable="false" />
+    <Property Name="ExpiryDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TillAssignmentHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TillNos" Type="varchar" MaxLength="150" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="TillID" Type="int" />
+  </EntityType>
+  <EntityType Name="TillManagement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionBranch" Type="varchar" MaxLength="50" />
+    <Property Name="TellerId" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="varchar(max)" />
+    <Property Name="IsHeadTeller" Type="varchar" MaxLength="50" />
+    <Property Name="User" Type="varchar" MaxLength="50" />
+    <Property Name="Approve" Type="bit" />
+    <Property Name="ApprovedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ApprovedDate" Type="datetime" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="IsClosed" Type="bit" />
+    <Property Name="Event" Type="varchar(max)" />
+    <Property Name="CBAResponse" Type="varchar(max)" />
+    <Property Name="ClosingBalance" Type="money" />
+    <Property Name="ShortageOverageAmount" Type="money" />
+  </EntityType>
+  <EntityType Name="TillSetup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TillNo" Type="varchar" MaxLength="15" />
+    <Property Name="TillDesc" Type="varchar" MaxLength="150" />
+    <Property Name="GLAcctNo" Type="varchar" MaxLength="20" />
+    <Property Name="IsVault" Type="bit" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="GLAcctName" Type="varchar" MaxLength="100" />
+    <Property Name="GLAcctCurrency" Type="int" />
+    <Property Name="MinTillAmount" Type="money" />
+    <Property Name="MaxTillAmount" Type="money" />
+    <Property Name="GLAccountID" Type="int" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.TillSetupDeleted' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TillSetupDeleted">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="IsVault" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TillNos" Type="varchar" MaxLength="15" />
+    <Property Name="TillDesc" Type="varchar" MaxLength="150" />
+    <Property Name="GLAcctNo" Type="varchar" MaxLength="20" />
+    <Property Name="IsVault" Type="bit" Nullable="false" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="GLAcctName" Type="varchar" MaxLength="100" />
+    <Property Name="GLAcctCurrency" Type="int" />
+    <Property Name="DateDeleted" Type="datetime" />
+    <Property Name="WhoDeleted" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TillTransfer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="TransferDate" Type="datetime" />
+    <Property Name="CurrencyCode" Type="int" Nullable="false" />
+    <Property Name="ReceiverTillNo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ReceiverUser" Type="varchar" MaxLength="50" />
+    <Property Name="GiverTillNo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="GiverUser" Type="varchar" MaxLength="50" />
+    <Property Name="CashierID" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="money" Nullable="false" />
+    <Property Name="AmountReleased" Type="money" />
+    <Property Name="IsFufilled" Type="bit" />
+    <Property Name="Accepted" Type="bit" />
+    <Property Name="TransferMode" Type="int" />
+    <Property Name="Branch" Type="varchar" MaxLength="50" />
+    <Property Name="CBA" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.TillTransferDisapproval' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TillTransferDisapproval">
+    <Key>
+      <PropertyRef Name="TranId" />
+    </Key>
+    <Property Name="TranId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Reason" Type="varchar" MaxLength="500" />
+    <Property Name="WhenDisApproved" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TransactionCodes">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.TransactionCodeToDETypeMapping' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TransactionCodeToDETypeMapping">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionCode" Type="varchar" MaxLength="5" />
+    <Property Name="DEType" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TransactionFiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="FileName" Type="varchar" MaxLength="250" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="Branch" Type="varchar" MaxLength="50" />
+    <Property Name="TotalCount" Type="int" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="DateUploaded" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TransactionsMaster">
+    <Key>
+      <PropertyRef Name="TranId" />
+    </Key>
+    <Property Name="TranId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TotalAmount" Type="money" Nullable="false" />
+    <Property Name="TellerId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ToTellerId" Type="varchar" MaxLength="50" />
+    <Property Name="TransacterName" Type="varchar" MaxLength="100" />
+    <Property Name="AccountName" Type="varchar" MaxLength="100" />
+    <Property Name="AccountOfficer" Type="varchar" MaxLength="50" />
+    <Property Name="TransacterEmail" Type="varchar" MaxLength="100" />
+    <Property Name="TransacterPhoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="TransactionParty" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="50" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="TransType" Type="int" Nullable="false" />
+    <Property Name="Currency" Type="int" Nullable="false" />
+    <Property Name="ValueDate" Type="datetime" />
+    <Property Name="Narration" Type="varchar" MaxLength="250" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="MachineName" Type="varchar" MaxLength="50" />
+    <Property Name="TransRef" Type="varchar" MaxLength="50" />
+    <Property Name="hasMemo" Type="bit" />
+    <Property Name="hasMandate" Type="bit" />
+    <Property Name="Remarks" Type="varchar" MaxLength="150" />
+    <Property Name="NeededApproval" Type="bit" />
+    <Property Name="ApprovedBy" Type="varchar" MaxLength="50" />
+    <Property Name="WhenApproved" Type="datetime" />
+    <Property Name="Approved" Type="bit" />
+    <Property Name="IsReversed" Type="bit" />
+    <Property Name="DisapprovalReason" Type="varchar" MaxLength="250" />
+    <Property Name="DisapprovedBy" Type="varchar" MaxLength="20" />
+    <Property Name="WhenDisapproved" Type="datetime" />
+    <Property Name="BranchCode" Type="varchar" MaxLength="15" />
+    <Property Name="Posted" Type="bit" />
+    <Property Name="CBAResponse" Type="varchar(max)" />
+    <Property Name="CBACode" Type="varchar" MaxLength="5" />
+    <Property Name="CBA" Type="varchar" MaxLength="15" />
+    <Property Name="ReversedTranId" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.TransDepCounter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TransDepCounter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="int" />
+  </EntityType>
+  <EntityType Name="TransDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="int" Nullable="false" />
+    <Property Name="Counter" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="money" />
+  </EntityType>
+  <EntityType Name="TransferDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="BenAccountNumber" Type="varchar" MaxLength="20" />
+    <Property Name="BenAccountName" Type="varchar" MaxLength="150" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="Narration" Type="varchar" MaxLength="250" />
+    <Property Name="ApplicableCharge" Type="money" />
+    <Property Name="TransRef" Type="varchar" MaxLength="50" />
+    <Property Name="Posted" Type="bit" />
+    <Property Name="CBAResponse" Type="varchar" MaxLength="250" />
+    <Property Name="CBAResponseCode" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TransferHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="InstrumentNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ApplicableCharge" Type="money" />
+    <Property Name="IsBulkTran" Type="bit" />
+    <Property Name="ChargeType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TransferType">
+    <Key>
+      <PropertyRef Name="TransferType" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="TransferType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransferName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TransMaster">
+    <Key>
+      <PropertyRef Name="TranId" />
+    </Key>
+    <Property Name="CustomerAcctNos" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="TotalAmt" Type="money" Nullable="false" />
+    <Property Name="CashierID" Type="varchar" MaxLength="50" />
+    <Property Name="CashierTillNos" Type="varchar" MaxLength="15" />
+    <Property Name="CashierTillGL" Type="varchar" MaxLength="20" />
+    <Property Name="DepositorName" Type="varchar" MaxLength="500" />
+    <Property Name="DepositorPhoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="WhenApproved" Type="datetime" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+    <Property Name="Currency" Type="int" />
+    <Property Name="ValueDate" Type="datetime" />
+    <Property Name="SupervisoryUser" Type="varchar" MaxLength="50" />
+    <Property Name="Narration" Type="varchar" MaxLength="500" />
+    <Property Name="Creation_Date" Type="datetime" />
+    <Property Name="Occupation" Type="varchar" MaxLength="100" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="MotherMaidenNAme" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="IDType" Type="int" />
+    <Property Name="IDNo" Type="varchar" MaxLength="15" />
+    <Property Name="TranId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MachineName" Type="varchar" MaxLength="50" />
+    <Property Name="NeededApproval" Type="bit" />
+    <Property Name="Beneficiary" Type="varchar" MaxLength="150" />
+    <Property Name="Chequeno" Type="varchar" MaxLength="50" />
+    <Property Name="DateonCheque" Type="datetime" />
+    <Property Name="TransType" Type="int" />
+    <Property Name="hasMemo" Type="bit" />
+    <Property Name="hasMandate" Type="bit" />
+    <Property Name="Remarks" Type="varchar" MaxLength="150" />
+    <Property Name="TransRef" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TransMasterDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="Counter" Type="int" />
+    <Property Name="Amount" Type="money" />
+  </EntityType>
+  <EntityType Name="TransSetup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Denominations" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="WeightValue" Type="real" />
+    <Property Name="Currency" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.TransTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TransTypes">
+    <Key>
+      <PropertyRef Name="TransTypeCode" />
+    </Key>
+    <Property Name="TransTypeCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransTypeName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TreasuryDealsMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealId" Type="varchar" MaxLength="50" />
+    <Property Name="CBADealId" Type="varchar" MaxLength="50" />
+    <Property Name="DealersReference" Type="varchar" MaxLength="50" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="20" />
+    <Property Name="CurrencyCode" Type="int" />
+    <Property Name="CustomerId" Type="varchar" MaxLength="10" />
+    <Property Name="CustomerName" Type="varchar" MaxLength="50" />
+    <Property Name="PrincipalAmount" Type="money" />
+    <Property Name="ValueDate" Type="datetime" />
+    <Property Name="Tenure" Type="int" />
+    <Property Name="MaturityDate" Type="datetime" />
+    <Property Name="PaymentDate" Type="datetime" />
+    <Property Name="InterestAmount" Type="money" />
+    <Property Name="WHTAmount" Type="money" />
+    <Property Name="NetInterestAmount" Type="money" />
+    <Property Name="PaymentAmount" Type="money" />
+    <Property Name="InflowAccount" Type="varchar" MaxLength="20" />
+    <Property Name="PaymentAccount" Type="varchar" MaxLength="20" />
+    <Property Name="AccountOfficer" Type="varchar" MaxLength="50" />
+    <Property Name="TerminationInstructionCode" Type="int" />
+    <Property Name="Remarks" Type="varchar" MaxLength="250" />
+    <Property Name="PrincipalAccount" Type="varchar" MaxLength="20" />
+    <Property Name="InterestAccount" Type="varchar" MaxLength="20" />
+    <Property Name="WHTAccount" Type="varchar" MaxLength="20" />
+    <Property Name="TransactionStatus" Type="char" MaxLength="1" />
+    <Property Name="ParentDealId" Type="int" />
+    <Property Name="ProcessStatus" Type="int" />
+    <Property Name="ApprovedBy" Type="varchar" MaxLength="50" />
+    <Property Name="WhenApproved" Type="datetime" />
+    <Property Name="DisapprovedBy" Type="varchar" MaxLength="50" />
+    <Property Name="WhenDisapproved" Type="datetime" />
+    <Property Name="DisapprovalReason" Type="varchar" MaxLength="250" />
+    <Property Name="Posted" Type="bit" />
+    <Property Name="CBA" Type="nchar" MaxLength="10" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="MachineName" Type="varchar" MaxLength="50" />
+    <Property Name="BranchCode" Type="varchar" MaxLength="20" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="DoubleEntrySuccessful" Type="bit" />
+  </EntityType>
+  <EntityType Name="TreasuryDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranId" Type="bigint" />
+    <Property Name="AccountName" Type="varchar" MaxLength="50" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="20" />
+    <Property Name="DealId" Type="varchar" MaxLength="50" />
+    <Property Name="CrDr" Type="nchar" MaxLength="1" />
+    <Property Name="Naration" Type="varchar" MaxLength="250" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="TransRef" Type="varchar" MaxLength="50" />
+    <Property Name="Posted" Type="bit" />
+    <Property Name="CBAResponse" Type="varchar" MaxLength="250" />
+    <Property Name="CBAResponseCode" Type="varchar" MaxLength="10" />
+    <Property Name="IsReversed" Type="bit" />
+  </EntityType>
+  <EntityType Name="TreasuryInterest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealId" Type="int" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="NoOfDaysInYear" Type="int" />
+    <Property Name="InterestRate" Type="money" />
+    <Property Name="InterestAmount" Type="money" />
+  </EntityType>
+  <EntityType Name="TreasuryProductCode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="20" />
+    <Property Name="ProductName" Type="varchar" MaxLength="50" />
+    <Property Name="AccountType" Type="char" MaxLength="1" />
+    <Property Name="Discounted" Type="bit" />
+    <Property Name="WHTMinAmt" Type="money" />
+    <Property Name="Tenured" Type="bit" />
+    <Property Name="MinTaxablePrincipal" Type="money" />
+    <Property Name="CBAProductCode" Type="varchar" MaxLength="50" />
+    <Property Name="Rate" Type="money" />
+    <Property Name="WHTPayableAccount" Type="varchar" MaxLength="20" />
+    <Property Name="InterestPenaltyAccount" Type="varchar" MaxLength="20" />
+    <Property Name="InterestExpenseAccount" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="UserActivity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="isLoggedIn" Type="bit" />
+    <Property Name="LastLoginDate" Type="datetime" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Event" Type="varchar(max)" />
+    <Property Name="Branch" Type="varchar" MaxLength="15" />
+    <Property Name="ActivityDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.UserBranches' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="UserBranches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="SortCode" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.UserCurrencies' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="UserCurrencies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="150" />
+    <Property Name="CurrencyCode" Type="int" />
+  </EntityType>
+  <EntityType Name="UserLogins">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Staffid" Type="varchar" MaxLength="50" />
+    <Property Name="Firstname" Type="varchar" MaxLength="100" />
+    <Property Name="Middlename" Type="varchar" MaxLength="100" />
+    <Property Name="Lastname" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="LoginAttempts" Type="int" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="Successful" Type="bit" />
+  </EntityType>
+  <EntityType Name="USERROLES">
+    <Key>
+      <PropertyRef Name="ROLEID" />
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="APPID" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ROLEID" Type="int" Nullable="false" />
+    <Property Name="USERID" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="APPID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" />
+    <Property Name="Password" Type="varchar" MaxLength="20" />
+    <Property Name="UserLevel" Type="varchar" MaxLength="1" />
+    <Property Name="Locked" Type="bit" />
+    <Property Name="LowerLimit" Type="datetime" />
+    <Property Name="UpperLimit" Type="datetime" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="Expired" Type="bit" />
+    <Property Name="ValidDays" Type="int" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="BankCode" Type="char" MaxLength="3" />
+    <Property Name="Supervisory" Type="bit" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="LastLogingTime" Type="datetime" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="CreationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="USERS_IN_GROUP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupCode" Type="varchar" MaxLength="10" />
+    <Property Name="UserId" Type="varchar" MaxLength="16" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BranchConsole.dbo.UserSignature' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="UserSignature">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="Signature" Type="image" />
+  </EntityType>
+  <Association Name="FK_CashTransactions_TransactionsMaster">
+    <End Role="TransactionsMaster" Type="Self.TransactionsMaster" Multiplicity="0..1" />
+    <End Role="CashTransactions" Type="Self.CashTransactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionsMaster">
+        <PropertyRef Name="TranId" />
+      </Principal>
+      <Dependent Role="CashTransactions">
+        <PropertyRef Name="TranId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Denomination_CashDenomination">
+    <End Role="CashDenomination" Type="Self.CashDenomination" Multiplicity="0..1" />
+    <End Role="Denomination" Type="Self.Denomination" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CashDenomination">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Denomination">
+        <PropertyRef Name="CashDenominationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DraftIssuedCharges_MCCharge">
+    <End Role="MCCharge" Type="Self.MCCharge" Multiplicity="0..1" />
+    <End Role="DraftIssuedCharges" Type="Self.DraftIssuedCharges" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MCCharge">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DraftIssuedCharges">
+        <PropertyRef Name="ChargeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DraftIssuedCharges_TransactionsMaster">
+    <End Role="TransactionsMaster" Type="Self.TransactionsMaster" Multiplicity="0..1" />
+    <End Role="DraftIssuedCharges" Type="Self.DraftIssuedCharges" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionsMaster">
+        <PropertyRef Name="TranId" />
+      </Principal>
+      <Dependent Role="DraftIssuedCharges">
+        <PropertyRef Name="TranId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GLAccountSetup_CashDenomination">
+    <End Role="CashDenomination" Type="Self.CashDenomination" Multiplicity="0..1" />
+    <End Role="GLAccountSetup" Type="Self.GLAccountSetup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CashDenomination">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GLAccountSetup">
+        <PropertyRef Name="CurrencyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ManagerChequeIssuanceDetails_TransactionsMaster">
+    <End Role="TransactionsMaster" Type="Self.TransactionsMaster" Multiplicity="0..1" />
+    <End Role="ManagerChequeIssuanceDetails" Type="Self.ManagerChequeIssuanceDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionsMaster">
+        <PropertyRef Name="TranId" />
+      </Principal>
+      <Dependent Role="ManagerChequeIssuanceDetails">
+        <PropertyRef Name="TranId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PreLiquidatedDeal_PreLiquidatedDeal">
+    <End Role="PreLiquidatedDeal" Type="Self.PreLiquidatedDeal" Multiplicity="1" />
+    <End Role="PreLiquidatedDeal1" Type="Self.PreLiquidatedDeal" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PreLiquidatedDeal">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PreLiquidatedDeal1">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resources_Modules">
+    <End Role="Modules" Type="Self.Modules" Multiplicity="0..1" />
+    <End Role="Resources" Type="Self.Resources" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modules">
+        <PropertyRef Name="ModuleId" />
+      </Principal>
+      <Dependent Role="Resources">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleResources_Resources">
+    <End Role="Resources" Type="Self.Resources" Multiplicity="0..1" />
+    <End Role="RoleResources" Type="Self.RoleResources" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resources">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="RoleResources">
+        <PropertyRef Name="ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleResources_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="RoleResources" Type="Self.RoleResources" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="RoleResources">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TillAssignment_TillSetup">
+    <End Role="TillSetup" Type="Self.TillSetup" Multiplicity="0..1" />
+    <End Role="TillAssignment" Type="Self.TillAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TillSetup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TillAssignment">
+        <PropertyRef Name="TillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TillAssignment_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="TillAssignment" Type="Self.TillAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="TillAssignment">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TillAssignmentHistory_TillSetup">
+    <End Role="TillSetup" Type="Self.TillSetup" Multiplicity="0..1" />
+    <End Role="TillAssignmentHistory" Type="Self.TillAssignmentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TillSetup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TillAssignmentHistory">
+        <PropertyRef Name="TillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TillSetup_GLAccountSetup">
+    <End Role="GLAccountSetup" Type="Self.GLAccountSetup" Multiplicity="0..1" />
+    <End Role="TillSetup" Type="Self.TillSetup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GLAccountSetup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TillSetup">
+        <PropertyRef Name="GLAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TillTransfer_CashDenomination">
+    <End Role="CashDenomination" Type="Self.CashDenomination" Multiplicity="1" />
+    <End Role="TillTransfer" Type="Self.TillTransfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CashDenomination">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TillTransfer">
+        <PropertyRef Name="CurrencyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TillTransfer_TillTransfer">
+    <End Role="TransactionsMaster" Type="Self.TransactionsMaster" Multiplicity="0..1" />
+    <End Role="TillTransfer" Type="Self.TillTransfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionsMaster">
+        <PropertyRef Name="TranId" />
+      </Principal>
+      <Dependent Role="TillTransfer">
+        <PropertyRef Name="TranId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransactionFiles_TransactionsMaster">
+    <End Role="TransactionsMaster" Type="Self.TransactionsMaster" Multiplicity="0..1" />
+    <End Role="TransactionFiles" Type="Self.TransactionFiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionsMaster">
+        <PropertyRef Name="TranId" />
+      </Principal>
+      <Dependent Role="TransactionFiles">
+        <PropertyRef Name="TranId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TreasuryDetails_TransactionsMaster">
+    <End Role="TransactionsMaster" Type="Self.TransactionsMaster" Multiplicity="0..1" />
+    <End Role="TreasuryDetails" Type="Self.TreasuryDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionsMaster">
+        <PropertyRef Name="TranId" />
+      </Principal>
+      <Dependent Role="TreasuryDetails">
+        <PropertyRef Name="TranId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TreasuryInterest_TreasuryDealsMaster">
+    <End Role="TreasuryDealsMaster" Type="Self.TreasuryDealsMaster" Multiplicity="0..1" />
+    <End Role="TreasuryInterest" Type="Self.TreasuryInterest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TreasuryDealsMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TreasuryInterest">
+        <PropertyRef Name="DealId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BranchConsoleModelStoreContainer">
+    <EntitySet Name="Audit" EntityType="Self.Audit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BranchAccounts" EntityType="Self.BranchAccounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Branches" EntityType="Self.Branches" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CallOverMode" EntityType="Self.CallOverMode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CashDenomination" EntityType="Self.CashDenomination" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CashierBalancing" EntityType="Self.CashierBalancing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CashReceipt" EntityType="Self.CashReceipt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CashTransactions" EntityType="Self.CashTransactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CautionExemption" EntityType="Self.CautionExemption" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChequeAudit" EntityType="Self.ChequeAudit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChequeDump" EntityType="Self.ChequeDump" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChequeImages" EntityType="Self.ChequeImages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChequeLodgement" EntityType="Self.ChequeLodgement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="chequeStatus" EntityType="Self.chequeStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customerMaster" EntityType="Self.customerMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Denomination" EntityType="Self.Denomination" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DiscountedTreasuryProduct" EntityType="Self.DiscountedTreasuryProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentaryEvidence" EntityType="Self.DocumentaryEvidence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FixedInwardChequedump" EntityType="Self.FixedInwardChequedump" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GLAccountSetup" EntityType="Self.GLAccountSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InwardChequedump_Trigger" EntityType="Self.InwardChequedump_Trigger" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InwardChequeImage" EntityType="Self.InwardChequeImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InwardMessages" EntityType="Self.InwardMessages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iTellerTimeStamp" EntityType="Self.iTellerTimeStamp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KioskCustomerAcctDetails" EntityType="Self.KioskCustomerAcctDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kiosks" EntityType="Self.Kiosks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoggedOnUsers" EntityType="Self.LoggedOnUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogOnUserRecord" EntityType="Self.LogOnUserRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MakerChecker" EntityType="Self.MakerChecker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ManagerChequeIssuanceDetails" EntityType="Self.ManagerChequeIssuanceDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MCAccount" EntityType="Self.MCAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MCCharge" EntityType="Self.MCCharge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="messageCounter" EntityType="Self.messageCounter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modules" EntityType="Self.Modules" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PreLiquidatedDeal" EntityType="Self.PreLiquidatedDeal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Resources" EntityType="Self.Resources" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReturnedChequeImages" EntityType="Self.ReturnedChequeImages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReturnInwardFile" EntityType="Self.ReturnInwardFile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoleResources" EntityType="Self.RoleResources" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScannerDetail" EntityType="Self.ScannerDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScannerStore" EntityType="Self.ScannerStore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SettlementTimes" EntityType="Self.SettlementTimes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemConfiguration" EntityType="Self.SystemConfiguration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TerminationInstruction" EntityType="Self.TerminationInstruction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TillAssignment" EntityType="Self.TillAssignment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TillAssignmentHistory" EntityType="Self.TillAssignmentHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TillManagement" EntityType="Self.TillManagement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TillSetup" EntityType="Self.TillSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TillTransfer" EntityType="Self.TillTransfer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransactionCodes" EntityType="Self.TransactionCodes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransactionFiles" EntityType="Self.TransactionFiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransactionsMaster" EntityType="Self.TransactionsMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransDetails" EntityType="Self.TransDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransferDetails" EntityType="Self.TransferDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransferHeader" EntityType="Self.TransferHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransferType" EntityType="Self.TransferType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransMaster" EntityType="Self.TransMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransMasterDetails" EntityType="Self.TransMasterDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransSetup" EntityType="Self.TransSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TreasuryDealsMaster" EntityType="Self.TreasuryDealsMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TreasuryDetails" EntityType="Self.TreasuryDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TreasuryInterest" EntityType="Self.TreasuryInterest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TreasuryProductCode" EntityType="Self.TreasuryProductCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserActivity" EntityType="Self.UserActivity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLogins" EntityType="Self.UserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERROLES" EntityType="Self.USERROLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS_IN_GROUP" EntityType="Self.USERS_IN_GROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="accountmandates" EntityType="Self.accountmandates" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [accountmandates].[Id] AS [Id], 
+    [accountmandates].[AccountNo] AS [AccountNo], 
+    [accountmandates].[Picture] AS [Picture], 
+    [accountmandates].[Signature] AS [Signature], 
+    [accountmandates].[Signatoryname] AS [Signatoryname]
+    FROM [dbo].[accountmandates] AS [accountmandates]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Bank" EntityType="Self.Bank" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Bank].[Id] AS [Id], 
+    [Bank].[BankCode] AS [BankCode], 
+    [Bank].[BankName] AS [BankName], 
+    [Bank].[Address1] AS [Address1], 
+    [Bank].[Address2] AS [Address2], 
+    [Bank].[Address3] AS [Address3], 
+    [Bank].[PhoneNo] AS [PhoneNo], 
+    [Bank].[Email] AS [Email], 
+    [Bank].[RoutingNumber] AS [RoutingNumber], 
+    [Bank].[ShortName] AS [ShortName], 
+    [Bank].[DateCreated] AS [DateCreated]
+    FROM [dbo].[Bank] AS [Bank]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cards" EntityType="Self.cards" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [cards].[Id] AS [Id], 
+    [cards].[AccountNumber] AS [AccountNumber], 
+    [cards].[Pan] AS [Pan]
+    FROM [dbo].[cards] AS [cards]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CautionHeaderFooter" EntityType="Self.CautionHeaderFooter" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CautionHeaderFooter].[Id] AS [Id], 
+    [CautionHeaderFooter].[CautionHeader] AS [CautionHeader], 
+    [CautionHeaderFooter].[CautionFooter] AS [CautionFooter]
+    FROM [dbo].[CautionHeaderFooter] AS [CautionHeaderFooter]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CautionNotice" EntityType="Self.CautionNotice" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CautionNotice].[Id] AS [Id], 
+    [CautionNotice].[CautionCode] AS [CautionCode], 
+    [CautionNotice].[CautionDescription] AS [CautionDescription], 
+    [CautionNotice].[TYPE] AS [TYPE]
+    FROM [dbo].[CautionNotice] AS [CautionNotice]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CautionSignatures" EntityType="Self.CautionSignatures" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CautionSignatures].[Id] AS [Id], 
+    [CautionSignatures].[Idfield] AS [Idfield], 
+    [CautionSignatures].[Signatory1] AS [Signatory1], 
+    [CautionSignatures].[Designation1] AS [Designation1], 
+    [CautionSignatures].[Sign1] AS [Sign1], 
+    [CautionSignatures].[Signatory2] AS [Signatory2], 
+    [CautionSignatures].[Designation2] AS [Designation2], 
+    [CautionSignatures].[Sign2] AS [Sign2]
+    FROM [dbo].[CautionSignatures] AS [CautionSignatures]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ChequeBeneficiary" EntityType="Self.ChequeBeneficiary" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChequeBeneficiary].[Id] AS [Id], 
+    [ChequeBeneficiary].[ChequeRef] AS [ChequeRef], 
+    [ChequeBeneficiary].[AcctNo] AS [AcctNo], 
+    [ChequeBeneficiary].[Beneficiary] AS [Beneficiary], 
+    [ChequeBeneficiary].[Remarks] AS [Remarks], 
+    [ChequeBeneficiary].[PresentingbankSortcode] AS [PresentingbankSortcode], 
+    [ChequeBeneficiary].[SMSSent] AS [SMSSent], 
+    [ChequeBeneficiary].[EmailSent] AS [EmailSent], 
+    [ChequeBeneficiary].[Drawer] AS [Drawer], 
+    [ChequeBeneficiary].[BVNBeneficiary] AS [BVNBeneficiary], 
+    [ChequeBeneficiary].[BVNPayer] AS [BVNPayer], 
+    [ChequeBeneficiary].[ChannelId] AS [ChannelId], 
+    [ChequeBeneficiary].[Reviewed] AS [Reviewed], 
+    [ChequeBeneficiary].[MICRRepair] AS [MICRRepair]
+    FROM [dbo].[ChequeBeneficiary] AS [ChequeBeneficiary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ChequeCaution" EntityType="Self.ChequeCaution" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChequeCaution].[Id] AS [Id], 
+    [ChequeCaution].[ChequeRef] AS [ChequeRef], 
+    [ChequeCaution].[CautionCode] AS [CautionCode], 
+    [ChequeCaution].[PresentingBankSortcode] AS [PresentingBankSortcode]
+    FROM [dbo].[ChequeCaution] AS [ChequeCaution]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ChequeDetailsCheckLog" EntityType="Self.ChequeDetailsCheckLog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChequeDetailsCheckLog].[Id] AS [Id], 
+    [ChequeDetailsCheckLog].[ChequeNumber] AS [ChequeNumber], 
+    [ChequeDetailsCheckLog].[SortCode] AS [SortCode], 
+    [ChequeDetailsCheckLog].[AcctNumber] AS [AcctNumber], 
+    [ChequeDetailsCheckLog].[TranType] AS [TranType], 
+    [ChequeDetailsCheckLog].[Amount] AS [Amount], 
+    [ChequeDetailsCheckLog].[PresentingBankSortcode] AS [PresentingBankSortcode], 
+    [ChequeDetailsCheckLog].[Processed] AS [Processed], 
+    [ChequeDetailsCheckLog].[SessionId] AS [SessionId], 
+    [ChequeDetailsCheckLog].[CaptureFileDate] AS [CaptureFileDate], 
+    [ChequeDetailsCheckLog].[CaptureFileTime] AS [CaptureFileTime], 
+    [ChequeDetailsCheckLog].[Cautioned] AS [Cautioned], 
+    [ChequeDetailsCheckLog].[ChequeRef] AS [ChequeRef], 
+    [ChequeDetailsCheckLog].[ScanDate] AS [ScanDate], 
+    [ChequeDetailsCheckLog].[Uploaded] AS [Uploaded], 
+    [ChequeDetailsCheckLog].[UploadedDate] AS [UploadedDate], 
+    [ChequeDetailsCheckLog].[Returned] AS [Returned], 
+    [ChequeDetailsCheckLog].[ReturnedDate] AS [ReturnedDate], 
+    [ChequeDetailsCheckLog].[ReturnSession] AS [ReturnSession], 
+    [ChequeDetailsCheckLog].[ReturnCustomerAccNo] AS [ReturnCustomerAccNo], 
+    [ChequeDetailsCheckLog].[ReturnReason] AS [ReturnReason], 
+    [ChequeDetailsCheckLog].[KioskID] AS [KioskID], 
+    [ChequeDetailsCheckLog].[TransID] AS [TransID]
+    FROM [dbo].[ChequeDetailsCheckLog] AS [ChequeDetailsCheckLog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ChequeDump_Trigger" EntityType="Self.ChequeDump_Trigger" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChequeDump_Trigger].[ChequeNumber] AS [ChequeNumber], 
+    [ChequeDump_Trigger].[SortCode] AS [SortCode], 
+    [ChequeDump_Trigger].[AccNumber] AS [AccNumber], 
+    [ChequeDump_Trigger].[TranType] AS [TranType], 
+    [ChequeDump_Trigger].[Amount] AS [Amount], 
+    [ChequeDump_Trigger].[PresentingBankSortcode] AS [PresentingBankSortcode], 
+    [ChequeDump_Trigger].[locked] AS [locked], 
+    [ChequeDump_Trigger].[idfield] AS [idfield], 
+    [ChequeDump_Trigger].[scanDate] AS [scanDate], 
+    [ChequeDump_Trigger].[batchID] AS [batchID], 
+    [ChequeDump_Trigger].[kioskID] AS [kioskID], 
+    [ChequeDump_Trigger].[transID] AS [transID], 
+    [ChequeDump_Trigger].[captureDateTime] AS [captureDateTime], 
+    [ChequeDump_Trigger].[checkingOfficer] AS [checkingOfficer], 
+    [ChequeDump_Trigger].[checkingTime] AS [checkingTime], 
+    [ChequeDump_Trigger].[approvingOfficer] AS [approvingOfficer], 
+    [ChequeDump_Trigger].[approvingTime] AS [approvingTime], 
+    [ChequeDump_Trigger].[cautioned] AS [cautioned], 
+    [ChequeDump_Trigger].[sessionid] AS [sessionid], 
+    [ChequeDump_Trigger].[valueDate] AS [valueDate], 
+    [ChequeDump_Trigger].[approved] AS [approved], 
+    [ChequeDump_Trigger].[status] AS [status], 
+    [ChequeDump_Trigger].[returnReason] AS [returnReason], 
+    [ChequeDump_Trigger].[isInward] AS [isInward], 
+    [ChequeDump_Trigger].[valueDateCaptured] AS [valueDateCaptured], 
+    [ChequeDump_Trigger].[rejected] AS [rejected], 
+    [ChequeDump_Trigger].[posted] AS [posted], 
+    [ChequeDump_Trigger].[postCount] AS [postCount], 
+    [ChequeDump_Trigger].[notifiedFailure] AS [notifiedFailure], 
+    [ChequeDump_Trigger].[sent2Clearing] AS [sent2Clearing], 
+    [ChequeDump_Trigger].[servicePointID] AS [servicePointID], 
+    [ChequeDump_Trigger].[depositor] AS [depositor], 
+    [ChequeDump_Trigger].[phoneno] AS [phoneno], 
+    [ChequeDump_Trigger].[currencyCode] AS [currencyCode], 
+    [ChequeDump_Trigger].[chequeDate] AS [chequeDate], 
+    [ChequeDump_Trigger].[Processed] AS [Processed], 
+    [ChequeDump_Trigger].[CaptureFileTime] AS [CaptureFileTime], 
+    [ChequeDump_Trigger].[CaptureFileDate] AS [CaptureFileDate], 
+    [ChequeDump_Trigger].[scanBranchSortCode] AS [scanBranchSortCode], 
+    [ChequeDump_Trigger].[ChequeOperation_type] AS [ChequeOperation_type], 
+    [ChequeDump_Trigger].[Narration] AS [Narration], 
+    [ChequeDump_Trigger].[floatDays] AS [floatDays], 
+    [ChequeDump_Trigger].[xdate] AS [xdate], 
+    [ChequeDump_Trigger].[id] AS [id], 
+    [ChequeDump_Trigger].[clientID] AS [clientID], 
+    [ChequeDump_Trigger].[callovermodestatus] AS [callovermodestatus], 
+    [ChequeDump_Trigger].[CheckDigit] AS [CheckDigit], 
+    [ChequeDump_Trigger].[ExpiryDate] AS [ExpiryDate], 
+    [ChequeDump_Trigger].[PostingFileBatch] AS [PostingFileBatch], 
+    [ChequeDump_Trigger].[CaptureFileBatch] AS [CaptureFileBatch], 
+    [ChequeDump_Trigger].[CBABeneficiary] AS [CBABeneficiary], 
+    [ChequeDump_Trigger].[Match] AS [Match], 
+    [ChequeDump_Trigger].[MailStatus] AS [MailStatus]
+    FROM [dbo].[ChequeDump_Trigger] AS [ChequeDump_Trigger]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="chequeimageuv" EntityType="Self.chequeimageuv" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [chequeimageuv].[cheque_ref] AS [cheque_ref], 
+    [chequeimageuv].[frontImage] AS [frontImage], 
+    [chequeimageuv].[rearImage] AS [rearImage], 
+    [chequeimageuv].[commited] AS [commited], 
+    [chequeimageuv].[machineName] AS [machineName], 
+    [chequeimageuv].[isnax] AS [isnax], 
+    [chequeimageuv].[presentingbanksortcode] AS [presentingbanksortcode], 
+    [chequeimageuv].[uploaded] AS [uploaded], 
+    [chequeimageuv].[uploadedDate] AS [uploadedDate]
+    FROM [dbo].[chequeimageuv] AS [chequeimageuv]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ChequesForCashWithdrawal" EntityType="Self.ChequesForCashWithdrawal" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChequesForCashWithdrawal].[Id] AS [Id], 
+    [ChequesForCashWithdrawal].[ChequeNumber] AS [ChequeNumber], 
+    [ChequesForCashWithdrawal].[SortCode] AS [SortCode], 
+    [ChequesForCashWithdrawal].[AcctNumber] AS [AcctNumber], 
+    [ChequesForCashWithdrawal].[TranType] AS [TranType], 
+    [ChequesForCashWithdrawal].[Amount] AS [Amount], 
+    [ChequesForCashWithdrawal].[PresentingBankSortcode] AS [PresentingBankSortcode], 
+    [ChequesForCashWithdrawal].[Locked] AS [Locked], 
+    [ChequesForCashWithdrawal].[Idfield] AS [Idfield], 
+    [ChequesForCashWithdrawal].[ScanDate] AS [ScanDate], 
+    [ChequesForCashWithdrawal].[BatchID] AS [BatchID], 
+    [ChequesForCashWithdrawal].[KioskID] AS [KioskID], 
+    [ChequesForCashWithdrawal].[TransID] AS [TransID], 
+    [ChequesForCashWithdrawal].[CaptureDateTime] AS [CaptureDateTime], 
+    [ChequesForCashWithdrawal].[CheckingOfficer] AS [CheckingOfficer], 
+    [ChequesForCashWithdrawal].[CheckingTime] AS [CheckingTime], 
+    [ChequesForCashWithdrawal].[ApprovingOfficer] AS [ApprovingOfficer], 
+    [ChequesForCashWithdrawal].[ApprovingTime] AS [ApprovingTime], 
+    [ChequesForCashWithdrawal].[Cautioned] AS [Cautioned], 
+    [ChequesForCashWithdrawal].[SessionId] AS [SessionId], 
+    [ChequesForCashWithdrawal].[ValueDate] AS [ValueDate], 
+    [ChequesForCashWithdrawal].[Approved] AS [Approved], 
+    [ChequesForCashWithdrawal].[Status] AS [Status], 
+    [ChequesForCashWithdrawal].[ReturnReason] AS [ReturnReason], 
+    [ChequesForCashWithdrawal].[IsInward] AS [IsInward], 
+    [ChequesForCashWithdrawal].[ValueDateCaptured] AS [ValueDateCaptured], 
+    [ChequesForCashWithdrawal].[Rejected] AS [Rejected], 
+    [ChequesForCashWithdrawal].[Posted] AS [Posted], 
+    [ChequesForCashWithdrawal].[PostCount] AS [PostCount], 
+    [ChequesForCashWithdrawal].[NotifiedFailure] AS [NotifiedFailure], 
+    [ChequesForCashWithdrawal].[Sent2Clearing] AS [Sent2Clearing], 
+    [ChequesForCashWithdrawal].[ServicePointID] AS [ServicePointID], 
+    [ChequesForCashWithdrawal].[Depositor] AS [Depositor], 
+    [ChequesForCashWithdrawal].[PhoneNo] AS [PhoneNo], 
+    [ChequesForCashWithdrawal].[CurrencyCode] AS [CurrencyCode], 
+    [ChequesForCashWithdrawal].[ChequeDate] AS [ChequeDate], 
+    [ChequesForCashWithdrawal].[Processed] AS [Processed], 
+    [ChequesForCashWithdrawal].[CaptureFileTime] AS [CaptureFileTime], 
+    [ChequesForCashWithdrawal].[CaptureFileDate] AS [CaptureFileDate], 
+    [ChequesForCashWithdrawal].[CashTranID] AS [CashTranID]
+    FROM [dbo].[ChequesForCashWithdrawal] AS [ChequesForCashWithdrawal]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="chq_bene" EntityType="Self.chq_bene" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [chq_bene].[cheque_ref] AS [cheque_ref], 
+    [chq_bene].[acct_no] AS [acct_no], 
+    [chq_bene].[beneficiary] AS [beneficiary], 
+    [chq_bene].[remarks] AS [remarks], 
+    [chq_bene].[presentingbanksortcode] AS [presentingbanksortcode], 
+    [chq_bene].[beneficiary_bvn] AS [beneficiary_bvn], 
+    [chq_bene].[chequedate] AS [chequedate], 
+    [chq_bene].[drawer] AS [drawer], 
+    [chq_bene].[payer_bvn] AS [payer_bvn], 
+    [chq_bene].[MICRRepair] AS [MICRRepair]
+    FROM [dbo].[chq_bene] AS [chq_bene]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ClientScanners" EntityType="Self.ClientScanners" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ClientScanners].[ClientID] AS [ClientID], 
+    [ClientScanners].[ScannerID] AS [ScannerID], 
+    [ClientScanners].[ScannerTag] AS [ScannerTag], 
+    [ClientScanners].[ScannerType] AS [ScannerType], 
+    [ClientScanners].[Approved] AS [Approved], 
+    [ClientScanners].[DisapprovalReason] AS [DisapprovalReason]
+    FROM [dbo].[ClientScanners] AS [ClientScanners]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CompanyLogo" EntityType="Self.CompanyLogo" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CompanyLogo].[Id] AS [Id], 
+    [CompanyLogo].[CompanyId] AS [CompanyId], 
+    [CompanyLogo].[CompanyLogo] AS [CompanyLogo]
+    FROM [dbo].[CompanyLogo] AS [CompanyLogo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Currency" EntityType="Self.Currency" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Currency].[Id] AS [Id], 
+    [Currency].[Code] AS [Code], 
+    [Currency].[Currency] AS [Currency], 
+    [Currency].[Abbrev] AS [Abbrev], 
+    [Currency].[Country] AS [Country]
+    FROM [dbo].[Currency] AS [Currency]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CurrencySubunit" EntityType="Self.CurrencySubunit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CurrencySubunit].[Id] AS [Id], 
+    [CurrencySubunit].[CurrencyCode] AS [CurrencyCode], 
+    [CurrencySubunit].[SubunitName] AS [SubunitName], 
+    [CurrencySubunit].[RelationshipUnit] AS [RelationshipUnit]
+    FROM [dbo].[CurrencySubunit] AS [CurrencySubunit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DraftIssuedCharges" EntityType="Self.DraftIssuedCharges" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DraftIssuedCharges].[ID] AS [ID], 
+    [DraftIssuedCharges].[TranId] AS [TranId], 
+    [DraftIssuedCharges].[ChargeID] AS [ChargeID], 
+    [DraftIssuedCharges].[ChargeAmount] AS [ChargeAmount], 
+    [DraftIssuedCharges].[Approved] AS [Approved]
+    FROM [dbo].[DraftIssuedCharges] AS [DraftIssuedCharges]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InwardChequedump" EntityType="Self.InwardChequedump" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InwardChequedump].[ItemID] AS [ItemID], 
+    [InwardChequedump].[PreBankSeqNumber] AS [PreBankSeqNumber], 
+    [InwardChequedump].[PayBankRoutNumber] AS [PayBankRoutNumber], 
+    [InwardChequedump].[AccountNumber] AS [AccountNumber], 
+    [InwardChequedump].[TransactionCode] AS [TransactionCode], 
+    [InwardChequedump].[SerialNumber] AS [SerialNumber], 
+    [InwardChequedump].[ItemAmount] AS [ItemAmount], 
+    [InwardChequedump].[BankOfFirstDepoSortCode] AS [BankOfFirstDepoSortCode], 
+    [InwardChequedump].[MICRRepairFlags] AS [MICRRepairFlags], 
+    [InwardChequedump].[Beneficiary] AS [Beneficiary], 
+    [InwardChequedump].[Marked] AS [Marked], 
+    [InwardChequedump].[Status] AS [Status], 
+    [InwardChequedump].[Charges] AS [Charges], 
+    [InwardChequedump].[Payment_Date] AS [Payment_Date], 
+    [InwardChequedump].[Entry_Generated] AS [Entry_Generated], 
+    [InwardChequedump].[Cancel_Reason] AS [Cancel_Reason], 
+    [InwardChequedump].[payer] AS [payer], 
+    [InwardChequedump].[payee] AS [payee], 
+    [InwardChequedump].[trans_narration] AS [trans_narration], 
+    [InwardChequedump].[collectionType] AS [collectionType], 
+    [InwardChequedump].[downloadBatchID] AS [downloadBatchID], 
+    [InwardChequedump].[presentingBankSortCode] AS [presentingBankSortCode], 
+    [InwardChequedump].[presentmentDate] AS [presentmentDate], 
+    [InwardChequedump].[cycleNo] AS [cycleNo], 
+    [InwardChequedump].[currencyInd] AS [currencyInd], 
+    [InwardChequedump].[DepositorAcct] AS [DepositorAcct], 
+    [InwardChequedump].[BOFDBusDate] AS [BOFDBusDate], 
+    [InwardChequedump].[instrumentType] AS [instrumentType], 
+    [InwardChequedump].[confirmedAccountMandate] AS [confirmedAccountMandate], 
+    [InwardChequedump].[confirmedFundsBalance] AS [confirmedFundsBalance], 
+    [InwardChequedump].[confirmedCheque] AS [confirmedCheque], 
+    [InwardChequedump].[confirmedAccountMandateUser] AS [confirmedAccountMandateUser], 
+    [InwardChequedump].[confirmedFundsBalanceUser] AS [confirmedFundsBalanceUser], 
+    [InwardChequedump].[confirmedChequeUser] AS [confirmedChequeUser], 
+    [InwardChequedump].[udf1] AS [udf1], 
+    [InwardChequedump].[udf2] AS [udf2], 
+    [InwardChequedump].[udf3] AS [udf3], 
+    [InwardChequedump].[udf4] AS [udf4], 
+    [InwardChequedump].[udf5] AS [udf5], 
+    [InwardChequedump].[udf6] AS [udf6], 
+    [InwardChequedump].[udf7] AS [udf7], 
+    [InwardChequedump].[udf8] AS [udf8], 
+    [InwardChequedump].[udf9] AS [udf9], 
+    [InwardChequedump].[udf10] AS [udf10], 
+    [InwardChequedump].[SentFundMailAO] AS [SentFundMailAO], 
+    [InwardChequedump].[SentFundMailBranch] AS [SentFundMailBranch], 
+    [InwardChequedump].[SentChqConfrmMailAO] AS [SentChqConfrmMailAO], 
+    [InwardChequedump].[SentChqConfrmMailBranch] AS [SentChqConfrmMailBranch], 
+    [InwardChequedump].[ErrMsg] AS [ErrMsg], 
+    [InwardChequedump].[Validated] AS [Validated], 
+    [InwardChequedump].[udf11] AS [udf11], 
+    [InwardChequedump].[udf12] AS [udf12], 
+    [InwardChequedump].[udf13] AS [udf13], 
+    [InwardChequedump].[udf14] AS [udf14], 
+    [InwardChequedump].[udf15] AS [udf15], 
+    [InwardChequedump].[udf16] AS [udf16], 
+    [InwardChequedump].[udf17] AS [udf17], 
+    [InwardChequedump].[udf18] AS [udf18], 
+    [InwardChequedump].[udf19] AS [udf19], 
+    [InwardChequedump].[udf20] AS [udf20], 
+    [InwardChequedump].[ID] AS [ID], 
+    [InwardChequedump].[beneficiaryBVN] AS [beneficiaryBVN], 
+    [InwardChequedump].[payerBVN] AS [payerBVN], 
+    [InwardChequedump].[beneficiaryAccountNo] AS [beneficiaryAccountNo], 
+    [InwardChequedump].[processed] AS [processed], 
+    [InwardChequedump].[accepted] AS [accepted], 
+    [InwardChequedump].[Settlementdatetime] AS [Settlementdatetime], 
+    [InwardChequedump].[CustomerId] AS [CustomerId], 
+    [InwardChequedump].[PostBatch] AS [PostBatch], 
+    [InwardChequedump].[PostStatus] AS [PostStatus], 
+    [InwardChequedump].[CBAResponse] AS [CBAResponse], 
+    [InwardChequedump].[PostedAttempted] AS [PostedAttempted], 
+    [InwardChequedump].[CBABeneficiary] AS [CBABeneficiary], 
+    [InwardChequedump].[Match] AS [Match], 
+    [InwardChequedump].[CheckDigit] AS [CheckDigit], 
+    [InwardChequedump].[ExpiryDate] AS [ExpiryDate], 
+    [InwardChequedump].[TransRef] AS [TransRef], 
+    [InwardChequedump].[PostRefID] AS [PostRefID], 
+    [InwardChequedump].[PostingFileBatch] AS [PostingFileBatch], 
+    [InwardChequedump].[CaptureFileBatch] AS [CaptureFileBatch]
+    FROM [dbo].[InwardChequedump] AS [InwardChequedump]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="kioskLogos" EntityType="Self.kioskLogos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [kioskLogos].[Id] AS [Id], 
+    [kioskLogos].[Header] AS [Header], 
+    [kioskLogos].[Footer] AS [Footer]
+    FROM [dbo].[kioskLogos] AS [kioskLogos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="KioskRejectedCheques" EntityType="Self.KioskRejectedCheques" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [KioskRejectedCheques].[Id] AS [Id], 
+    [KioskRejectedCheques].[KioskID] AS [KioskID], 
+    [KioskRejectedCheques].[ChequeRef] AS [ChequeRef], 
+    [KioskRejectedCheques].[RejectionReason] AS [RejectionReason]
+    FROM [dbo].[KioskRejectedCheques] AS [KioskRejectedCheques]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="KioskRejectionReasons" EntityType="Self.KioskRejectionReasons" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [KioskRejectionReasons].[Id] AS [Id], 
+    [KioskRejectionReasons].[ReasonCode] AS [ReasonCode], 
+    [KioskRejectionReasons].[ReasonDescription] AS [ReasonDescription]
+    FROM [dbo].[KioskRejectionReasons] AS [KioskRejectionReasons]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="KioskReturnedCheques" EntityType="Self.KioskReturnedCheques" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [KioskReturnedCheques].[Id] AS [Id], 
+    [KioskReturnedCheques].[KioskID] AS [KioskID], 
+    [KioskReturnedCheques].[ChequeRef] AS [ChequeRef], 
+    [KioskReturnedCheques].[ReturnReason] AS [ReturnReason]
+    FROM [dbo].[KioskReturnedCheques] AS [KioskReturnedCheques]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="POSPosting" EntityType="Self.POSPosting" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [POSPosting].[ID] AS [ID], 
+    [POSPosting].[POSId] AS [POSId], 
+    [POSPosting].[TerminalId] AS [TerminalId], 
+    [POSPosting].[Amount] AS [Amount], 
+    [POSPosting].[AccountNo] AS [AccountNo], 
+    [POSPosting].[PostTime] AS [PostTime], 
+    [POSPosting].[Deliver] AS [Deliver], 
+    [POSPosting].[TranType] AS [TranType]
+    FROM [dbo].[POSPosting] AS [POSPosting]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ReturnedCheques" EntityType="Self.ReturnedCheques" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ReturnedCheques].[Id] AS [Id], 
+    [ReturnedCheques].[ChequeNumber] AS [ChequeNumber], 
+    [ReturnedCheques].[SortCode] AS [SortCode], 
+    [ReturnedCheques].[AccNumber] AS [AccNumber], 
+    [ReturnedCheques].[TranType] AS [TranType], 
+    [ReturnedCheques].[Amount] AS [Amount], 
+    [ReturnedCheques].[PresentingBankSortcode] AS [PresentingBankSortcode], 
+    [ReturnedCheques].[locked] AS [locked], 
+    [ReturnedCheques].[idfield] AS [idfield], 
+    [ReturnedCheques].[scanDate] AS [scanDate], 
+    [ReturnedCheques].[batchID] AS [batchID], 
+    [ReturnedCheques].[kioskID] AS [kioskID], 
+    [ReturnedCheques].[transID] AS [transID], 
+    [ReturnedCheques].[captureDateTime] AS [captureDateTime], 
+    [ReturnedCheques].[checkingOfficer] AS [checkingOfficer], 
+    [ReturnedCheques].[checkingTime] AS [checkingTime], 
+    [ReturnedCheques].[approvingOfficer] AS [approvingOfficer], 
+    [ReturnedCheques].[approvingTime] AS [approvingTime], 
+    [ReturnedCheques].[cautioned] AS [cautioned], 
+    [ReturnedCheques].[sessionid] AS [sessionid], 
+    [ReturnedCheques].[valueDate] AS [valueDate], 
+    [ReturnedCheques].[approved] AS [approved], 
+    [ReturnedCheques].[status] AS [status], 
+    [ReturnedCheques].[returnReason] AS [returnReason], 
+    [ReturnedCheques].[isInward] AS [isInward], 
+    [ReturnedCheques].[valueDateCaptured] AS [valueDateCaptured], 
+    [ReturnedCheques].[rejected] AS [rejected], 
+    [ReturnedCheques].[posted] AS [posted], 
+    [ReturnedCheques].[postCount] AS [postCount], 
+    [ReturnedCheques].[notifiedFailure] AS [notifiedFailure], 
+    [ReturnedCheques].[sent2Clearing] AS [sent2Clearing], 
+    [ReturnedCheques].[servicePointID] AS [servicePointID], 
+    [ReturnedCheques].[depositor] AS [depositor], 
+    [ReturnedCheques].[phoneno] AS [phoneno], 
+    [ReturnedCheques].[currencyCode] AS [currencyCode], 
+    [ReturnedCheques].[chequeDate] AS [chequeDate], 
+    [ReturnedCheques].[Processed] AS [Processed], 
+    [ReturnedCheques].[CaptureFileTime] AS [CaptureFileTime], 
+    [ReturnedCheques].[CaptureFileDate] AS [CaptureFileDate], 
+    [ReturnedCheques].[scanBranchSortCode] AS [scanBranchSortCode], 
+    [ReturnedCheques].[ChequeOperation_type] AS [ChequeOperation_type], 
+    [ReturnedCheques].[Narration] AS [Narration], 
+    [ReturnedCheques].[floatDays] AS [floatDays], 
+    [ReturnedCheques].[foreignId] AS [foreignId], 
+    [ReturnedCheques].[acceptedstatus] AS [acceptedstatus]
+    FROM [dbo].[ReturnedCheques] AS [ReturnedCheques]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ReturnReasons" EntityType="Self.ReturnReasons" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ReturnReasons].[Id] AS [Id], 
+    [ReturnReasons].[ReasonCode] AS [ReasonCode], 
+    [ReturnReasons].[ReasonDescription] AS [ReasonDescription], 
+    [ReturnReasons].[CBACode] AS [CBACode]
+    FROM [dbo].[ReturnReasons] AS [ReturnReasons]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="scorpion" EntityType="Self.scorpion" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [scorpion].[id] AS [id], 
+    [scorpion].[column1] AS [column1], 
+    [scorpion].[column2] AS [column2], 
+    [scorpion].[column3] AS [column3]
+    FROM [dbo].[scorpion] AS [scorpion]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SystemConfiguration_Trigger" EntityType="Self.SystemConfiguration_Trigger" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SystemConfiguration_Trigger].[Id] AS [Id], 
+    [SystemConfiguration_Trigger].[KeyName] AS [KeyName], 
+    [SystemConfiguration_Trigger].[KeyValue] AS [KeyValue], 
+    [SystemConfiguration_Trigger].[Description] AS [Description], 
+    [SystemConfiguration_Trigger].[UserEditable] AS [UserEditable], 
+    [SystemConfiguration_Trigger].[Autofield] AS [Autofield], 
+    [SystemConfiguration_Trigger].[TimeChanged] AS [TimeChanged]
+    FROM [dbo].[SystemConfiguration_Trigger] AS [SystemConfiguration_Trigger]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TerminalPosMap" EntityType="Self.TerminalPosMap" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TerminalPosMap].[Id] AS [Id], 
+    [TerminalPosMap].[POSId] AS [POSId], 
+    [TerminalPosMap].[TerminalId] AS [TerminalId], 
+    [TerminalPosMap].[BranchCode] AS [BranchCode]
+    FROM [dbo].[TerminalPosMap] AS [TerminalPosMap]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TillSetupDeleted" EntityType="Self.TillSetupDeleted" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TillSetupDeleted].[ID] AS [ID], 
+    [TillSetupDeleted].[TillNos] AS [TillNos], 
+    [TillSetupDeleted].[TillDesc] AS [TillDesc], 
+    [TillSetupDeleted].[GLAcctNo] AS [GLAcctNo], 
+    [TillSetupDeleted].[IsVault] AS [IsVault], 
+    [TillSetupDeleted].[SortCode] AS [SortCode], 
+    [TillSetupDeleted].[GLAcctName] AS [GLAcctName], 
+    [TillSetupDeleted].[GLAcctCurrency] AS [GLAcctCurrency], 
+    [TillSetupDeleted].[DateDeleted] AS [DateDeleted], 
+    [TillSetupDeleted].[WhoDeleted] AS [WhoDeleted]
+    FROM [dbo].[TillSetupDeleted] AS [TillSetupDeleted]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TillTransferDisapproval" EntityType="Self.TillTransferDisapproval" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TillTransferDisapproval].[TranId] AS [TranId], 
+    [TillTransferDisapproval].[Reason] AS [Reason], 
+    [TillTransferDisapproval].[WhenDisApproved] AS [WhenDisApproved]
+    FROM [dbo].[TillTransferDisapproval] AS [TillTransferDisapproval]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TransactionCodeToDETypeMapping" EntityType="Self.TransactionCodeToDETypeMapping" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TransactionCodeToDETypeMapping].[Id] AS [Id], 
+    [TransactionCodeToDETypeMapping].[TransactionCode] AS [TransactionCode], 
+    [TransactionCodeToDETypeMapping].[DEType] AS [DEType], 
+    [TransactionCodeToDETypeMapping].[Description] AS [Description]
+    FROM [dbo].[TransactionCodeToDETypeMapping] AS [TransactionCodeToDETypeMapping]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TransDepCounter" EntityType="Self.TransDepCounter" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TransDepCounter].[Id] AS [Id], 
+    [TransDepCounter].[TranId] AS [TranId]
+    FROM [dbo].[TransDepCounter] AS [TransDepCounter]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TransTypes" EntityType="Self.TransTypes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TransTypes].[TransTypeCode] AS [TransTypeCode], 
+    [TransTypes].[TransTypeName] AS [TransTypeName]
+    FROM [dbo].[TransTypes] AS [TransTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UserBranches" EntityType="Self.UserBranches" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [UserBranches].[Id] AS [Id], 
+    [UserBranches].[UserId] AS [UserId], 
+    [UserBranches].[SortCode] AS [SortCode]
+    FROM [dbo].[UserBranches] AS [UserBranches]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UserCurrencies" EntityType="Self.UserCurrencies" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [UserCurrencies].[Id] AS [Id], 
+    [UserCurrencies].[UserID] AS [UserID], 
+    [UserCurrencies].[CurrencyCode] AS [CurrencyCode]
+    FROM [dbo].[UserCurrencies] AS [UserCurrencies]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UserSignature" EntityType="Self.UserSignature" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [UserSignature].[Id] AS [Id], 
+    [UserSignature].[UserId] AS [UserId], 
+    [UserSignature].[Signature] AS [Signature]
+    FROM [dbo].[UserSignature] AS [UserSignature]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_CashTransactions_TransactionsMaster" Association="Self.FK_CashTransactions_TransactionsMaster">
+      <End Role="TransactionsMaster" EntitySet="TransactionsMaster" />
+      <End Role="CashTransactions" EntitySet="CashTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Denomination_CashDenomination" Association="Self.FK_Denomination_CashDenomination">
+      <End Role="CashDenomination" EntitySet="CashDenomination" />
+      <End Role="Denomination" EntitySet="Denomination" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DraftIssuedCharges_MCCharge" Association="Self.FK_DraftIssuedCharges_MCCharge">
+      <End Role="MCCharge" EntitySet="MCCharge" />
+      <End Role="DraftIssuedCharges" EntitySet="DraftIssuedCharges" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DraftIssuedCharges_TransactionsMaster" Association="Self.FK_DraftIssuedCharges_TransactionsMaster">
+      <End Role="TransactionsMaster" EntitySet="TransactionsMaster" />
+      <End Role="DraftIssuedCharges" EntitySet="DraftIssuedCharges" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GLAccountSetup_CashDenomination" Association="Self.FK_GLAccountSetup_CashDenomination">
+      <End Role="CashDenomination" EntitySet="CashDenomination" />
+      <End Role="GLAccountSetup" EntitySet="GLAccountSetup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ManagerChequeIssuanceDetails_TransactionsMaster" Association="Self.FK_ManagerChequeIssuanceDetails_TransactionsMaster">
+      <End Role="TransactionsMaster" EntitySet="TransactionsMaster" />
+      <End Role="ManagerChequeIssuanceDetails" EntitySet="ManagerChequeIssuanceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PreLiquidatedDeal_PreLiquidatedDeal" Association="Self.FK_PreLiquidatedDeal_PreLiquidatedDeal">
+      <End Role="PreLiquidatedDeal" EntitySet="PreLiquidatedDeal" />
+      <End Role="PreLiquidatedDeal1" EntitySet="PreLiquidatedDeal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resources_Modules" Association="Self.FK_Resources_Modules">
+      <End Role="Modules" EntitySet="Modules" />
+      <End Role="Resources" EntitySet="Resources" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleResources_Resources" Association="Self.FK_RoleResources_Resources">
+      <End Role="Resources" EntitySet="Resources" />
+      <End Role="RoleResources" EntitySet="RoleResources" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleResources_ROLES" Association="Self.FK_RoleResources_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="RoleResources" EntitySet="RoleResources" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TillAssignment_TillSetup" Association="Self.FK_TillAssignment_TillSetup">
+      <End Role="TillSetup" EntitySet="TillSetup" />
+      <End Role="TillAssignment" EntitySet="TillAssignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TillAssignment_Users" Association="Self.FK_TillAssignment_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="TillAssignment" EntitySet="TillAssignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TillAssignmentHistory_TillSetup" Association="Self.FK_TillAssignmentHistory_TillSetup">
+      <End Role="TillSetup" EntitySet="TillSetup" />
+      <End Role="TillAssignmentHistory" EntitySet="TillAssignmentHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TillSetup_GLAccountSetup" Association="Self.FK_TillSetup_GLAccountSetup">
+      <End Role="GLAccountSetup" EntitySet="GLAccountSetup" />
+      <End Role="TillSetup" EntitySet="TillSetup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TillTransfer_CashDenomination" Association="Self.FK_TillTransfer_CashDenomination">
+      <End Role="CashDenomination" EntitySet="CashDenomination" />
+      <End Role="TillTransfer" EntitySet="TillTransfer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TillTransfer_TillTransfer" Association="Self.FK_TillTransfer_TillTransfer">
+      <End Role="TransactionsMaster" EntitySet="TransactionsMaster" />
+      <End Role="TillTransfer" EntitySet="TillTransfer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransactionFiles_TransactionsMaster" Association="Self.FK_TransactionFiles_TransactionsMaster">
+      <End Role="TransactionsMaster" EntitySet="TransactionsMaster" />
+      <End Role="TransactionFiles" EntitySet="TransactionFiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TreasuryDetails_TransactionsMaster" Association="Self.FK_TreasuryDetails_TransactionsMaster">
+      <End Role="TransactionsMaster" EntitySet="TransactionsMaster" />
+      <End Role="TreasuryDetails" EntitySet="TreasuryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TreasuryInterest_TreasuryDealsMaster" Association="Self.FK_TreasuryInterest_TreasuryDealsMaster">
+      <End Role="TreasuryDealsMaster" EntitySet="TreasuryDealsMaster" />
+      <End Role="TreasuryInterest" EntitySet="TreasuryInterest" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

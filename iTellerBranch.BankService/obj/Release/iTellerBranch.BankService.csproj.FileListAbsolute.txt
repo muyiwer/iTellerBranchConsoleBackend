@@ -1,0 +1,14 @@
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\iTellerBranch.BankService.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\iTellerBranch.BankService.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\iTellerBranch.Model.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\iTellerBranch.Repository.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\Newtonsoft.Json.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\EntityFramework.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\iTellerBranch.Model.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\iTellerBranch.Repository.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\iTellerBranch.Repository.dll.config
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\Newtonsoft.Json.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\bin\Release\EntityFramework.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\obj\Release\iTellerBranch.BankService.csprojResolveAssemblyReference.cache
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\obj\Release\iTellerBranch.BankService.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.BankService\obj\Release\iTellerBranch.BankService.pdb

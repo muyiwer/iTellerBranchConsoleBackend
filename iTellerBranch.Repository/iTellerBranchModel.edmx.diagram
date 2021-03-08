@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="43591dd756fa47c4acdcee39e09e658b" Name="Diagram1" ZoomLevel="52">
+        <EntityTypeShape EntityType="BranchConsoleModel.Audit" Width="1.5" PointX="14.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.Branches" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CallOverMode" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CashDenomination" Width="1.5" PointX="3.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CashierBalancing" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CashReceipt" Width="1.5" PointX="6.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CashTransactions" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CautionExemption" Width="1.5" PointX="15.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ChequeAudit" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ChequeDump" Width="1.5" PointX="16.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ChequeImages" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ChequeLodgement" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.chequeStatus" Width="1.5" PointX="17.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.customerMaster" Width="1.5" PointX="8.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.Denomination" Width="1.5" PointX="6" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.DocumentaryEvidence" Width="1.5" PointX="17.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.FixedInwardChequedump" Width="1.5" PointX="10.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.GLAccountSetup" Width="1.5" PointX="6" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.InwardChequedump_Trigger" Width="1.5" PointX="18.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.InwardChequeImage" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.InwardMessages" Width="1.5" PointX="18.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.iTellerTimeStamp" Width="1.5" PointX="19.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.KioskCustomerAcctDetails" Width="1.5" PointX="12.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.Kiosks" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.LoggedOnUsers" Width="1.5" PointX="2.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.LogOnUserRecord" Width="1.5" PointX="4.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.MakerChecker" Width="1.5" PointX="20.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.messageCounter" Width="1.5" PointX="20.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.Modules" Width="1.5" PointX="10.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.Resources" Width="1.5" PointX="13" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ReturnedChequeImages" Width="1.5" PointX="20.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ReturnInwardFile" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.RoleResources" Width="1.5" PointX="15.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ROLES" Width="1.5" PointX="13" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ScannerDetail" Width="1.5" PointX="21.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ScannerStore" Width="1.5" PointX="21.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.SettlementTimes" Width="1.5" PointX="20.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.SystemConfiguration" Width="1.5" PointX="22.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TillAssignment" Width="1.5" PointX="10.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TillAssignmentHistory" Width="1.5" PointX="10.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TillManagement" Width="1.5" PointX="22.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TillSetup" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TillTransfer" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransactionFiles" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransactionsMaster" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransDetails" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransferDetails" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransferHeader" Width="1.5" PointX="23.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransferType" Width="1.5" PointX="6.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransMaster" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransMasterDetails" Width="1.5" PointX="8.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransSetup" Width="1.5" PointX="10.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TreasuryInterest" Width="1.5" PointX="15" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.UserActivity" Width="1.5" PointX="24.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.UserLogins" Width="1.5" PointX="24.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.USERROLES" Width="1.5" PointX="20.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.Users" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.USERS_IN_GROUP" Width="1.5" PointX="22.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.accountmandates" Width="1.5" PointX="24.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.Bank" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.cards" Width="1.5" PointX="2.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CautionHeaderFooter" Width="1.5" PointX="26.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CautionNotice" Width="1.5" PointX="4.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CautionSignatures" Width="1.5" PointX="26.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ChequeBeneficiary" Width="1.5" PointX="26.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ChequeCaution" Width="1.5" PointX="26.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ChequeDetailsCheckLog" Width="1.5" PointX="26.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ChequeDump_Trigger" Width="1.5" PointX="24.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.chequeimageuv" Width="1.5" PointX="26.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ChequesForCashWithdrawal" Width="1.5" PointX="6.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.chq_bene" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ClientScanners" Width="1.5" PointX="8.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CompanyLogo" Width="1.5" PointX="20.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.Currency" Width="1.5" PointX="0.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CurrencySubunit" Width="1.5" PointX="28.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.InwardChequedump" Width="1.5" PointX="28.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.kioskLogos" Width="1.5" PointX="10.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.KioskRejectedCheques" Width="1.5" PointX="12.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.KioskRejectionReasons" Width="1.5" PointX="28.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.KioskReturnedCheques" Width="1.5" PointX="28.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.POSPosting" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ReturnedCheques" Width="1.5" PointX="2.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ReturnReasons" Width="1.5" PointX="14.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.scorpion" Width="1.5" PointX="30.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.SystemConfiguration_Trigger" Width="1.5" PointX="30.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TerminalPosMap" Width="1.5" PointX="30.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TillSetupDeleted" Width="1.5" PointX="30.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TillTransferDisapproval" Width="1.5" PointX="30.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransactionCodeToDETypeMapping" Width="1.5" PointX="20.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransDepCounter" Width="1.5" PointX="30.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransTypes" Width="1.5" PointX="30.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.UserBranches" Width="1.5" PointX="30.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.UserCurrencies" Width="1.5" PointX="30.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BranchConsoleModel.UserSignature" Width="1.5" PointX="31.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="BranchConsoleModel.FK_Denomination_CashDenomination" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_GLAccountSetup_CashDenomination" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TillTransfer_CashDenomination" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_CashTransactions_TransactionsMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TillSetup_GLAccountSetup" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_Resources_Modules" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_RoleResources_Resources" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_RoleResources_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TillAssignment_TillSetup" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TillAssignment_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TillAssignmentHistory_TillSetup" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TillTransfer_TillTransfer" ManuallyRouted="false" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TransactionFiles_TransactionsMaster" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TerminationInstruction" Width="1.5" PointX="17.375" PointY="31.75" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TransactionCodes" Width="1.5" PointX="27.375" PointY="31.75" />
+        <EntityTypeShape EntityType="BranchConsoleModel.DiscountedTreasuryProduct" Width="1.5" PointX="33.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BranchConsoleModel.MCCharge" Width="1.5" PointX="6.75" PointY="40.125" />
+        <EntityTypeShape EntityType="BranchConsoleModel.MCAccount" Width="1.5" PointX="33.375" PointY="8.75" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TreasuryDetails" Width="1.5" PointX="3" PointY="41.125" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TreasuryDetails_TransactionsMaster" />
+        <EntityTypeShape EntityType="BranchConsoleModel.Cheque_Template" Width="1.5" PointX="33.375" PointY="11.75" />
+        <EntityTypeShape EntityType="BranchConsoleModel.DraftIssuedCharges" Width="1.5" PointX="21.625" PointY="37" />
+        <AssociationConnector Association="BranchConsoleModel.FK_DraftIssuedCharges_MCCharge" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TreasuryProductCode" Width="1.5" PointX="9.375" PointY="31.75" />
+        <EntityTypeShape EntityType="BranchConsoleModel.AccountStament" Width="1.5" PointX="31.625" PointY="34" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TreasuryDealsMaster" Width="1.5" PointX="12.75" PointY="33.125" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TreasuryInterest_TreasuryDealsMaster" />
+        <EntityTypeShape EntityType="BranchConsoleModel.UserTransactionPageAccess" Width="1.5" PointX="15" PointY="40.625" />
+        <AssociationConnector Association="BranchConsoleModel.FK_UserTransactionPageAccess_TreasuryDealsMaster" />
+        <EntityTypeShape EntityType="BranchConsoleModel.CustomerDetails" Width="1.5" PointX="29.375" PointY="35" />
+        <AssociationConnector Association="BranchConsoleModel.FK_AccountStament_CustomerDetails" />
+        <EntityTypeShape EntityType="BranchConsoleModel.PreLiquidatedDeal" Width="1.5" PointX="13.375" PointY="24.75" />
+        <AssociationConnector Association="BranchConsoleModel.FK_PreLiquidatedDeal_PreLiquidatedDeal" />
+        <EntityTypeShape EntityType="BranchConsoleModel.TillTransferIMAL" Width="1.5" PointX="9" PointY="0.75" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TillTransferIMAL_CashDenomination" />
+        <AssociationConnector Association="BranchConsoleModel.FK_TillTransferIMAL_TillTransferIMAL" />
+        <EntityTypeShape EntityType="BranchConsoleModel.OutwardChequeDetails" Width="1.5" PointX="34.375" PointY="33.75" />
+        <EntityTypeShape EntityType="BranchConsoleModel.ManagerChequeIssuanceDetails" Width="1.5" PointX="19.375" PointY="34.75" />
+        <AssociationConnector Association="BranchConsoleModel.FK_DraftIssuedCharges_ManagerChequeIssuanceDetails" />
+        <EntityTypeShape EntityType="BranchConsoleModel.BranchAccounts" Width="1.5" PointX="15.375" PointY="34.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

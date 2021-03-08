@@ -1,0 +1,216 @@
+﻿
+ TreasuryDealsMaster treasuryDealsMaster = new TreasuryDealsMaster
+                    {
+                        DealId = treasuryDealsModel.DealId,
+                        CBADealId = treasuryDealsModel.CBADealId,
+                        DealersReference = treasuryDealsModel.DealersReference,
+                        ProductCode = treasuryDealsModel.ProductCode,
+                        CurrencyCode = treasuryDealsModel.CurrencyCode,
+                        CustomerId = treasuryDealsModel.CustomerId,
+                        PrincipalAmount = treasuryDealsModel.PrincipalAmount,
+                        ValueDate = treasuryDealsModel.ValueDate,
+                        Tenure = treasuryDealsModel.Tenure,
+                        MaturityDate = treasuryDealsModel.MaturityDate,
+                        PaymentDate = treasuryDealsModel.PaymentDate,
+                        InterestAmount = treasuryDealsModel.InterestAmount,
+                        WHTAmount = treasuryDealsModel.WHTAmount,
+                        NetInterestAmount = treasuryDealsModel.NetInterestAmount,
+                        PaymentAmount = treasuryDealsModel.PaymentAmount,
+                        InflowAccount = treasuryDealsModel.InflowAccount,
+                        PaymentAccount = treasuryDealsModel.PaymentAccount,
+                        AccountOfficer = treasuryDealsModel.AccountOfficer,
+                        TerminationInstructionCode = treasuryDealsModel.TerminationInstructionCode,
+                        Remarks = treasuryDealsModel.Remarks,
+                        PrincipalAccount = treasuryDealsModel.PrincipalAccount,
+                        InterestAccount = treasuryDealsModel.InterestAccount,
+                        WHTAccount = treasuryDealsModel.WHTAccount,
+                        TransactionStatus = treasuryDealsModel.TransactionStatus,
+                        ParentDealId = treasuryDealsModel.ParentDealId,
+                        ProcessStatus = treasuryDealsModel.ProcessStatus,
+                        //ApprovedBy = treasuryDealsModel.
+                        //WhenApproved = treasuryDealsModel
+                        //DisapprovedBy = treasuryDealsModel
+                        //WhenDisapproved = treasuryDealsModel
+                        //DisapprovalReason = treasuryDealsModel
+                        //Posted = treasuryDealsModel
+                        //CBA = treasuryDealsModel
+                        //CreationDate = DateTime.Now,
+                        //MachineName = treasuryDealsModel.MachineName,
+                        //BranchCode = treasuryDealsModel.BranchCode,
+                        //CustomerName = treasuryDealsModel.CustomerName,
+                        //UserId = treasuryDealsModel.UserId
+                    };
+
+
+
+
+ //case 1:
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.AccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = "",
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "D"
+                    //    });
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.GLAccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = transactionModel.CashierTillNos,
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "C"
+                    //    });
+                    //    db.TransactionMaster.AddRange(tranMasterModel);
+                    //    break;
+                    //case 2:
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.GLAccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = transactionModel.CashierTillNos,
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "D"
+
+                    //    });
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.AccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = "",
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "C"
+                    //    });
+                    //    db.TransactionMaster.AddRange(tranMasterModel);
+                    //    break;
+                    //case 3:
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.GLAccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = transactionModel.CashierTillNos,
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "D"
+
+                    //    });
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.AccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = "",
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "C"
+                    //    });
+                    //    db.TransactionMaster.AddRange(tranMasterModel);
+                    //    break;
+                    //case 4:
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.AccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = "",
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "D"
+                    //    });
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.GLAccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = transactionModel.CashierTillNos,
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "C"
+                    //    });
+                    //    db.TransactionMaster.AddRange(tranMasterModel);
+                    //    break;
+                    //case 5:
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.GLAccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = transactionModel.CashierTillNos,
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "C"
+                    //    });
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.AccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = transactionModel.CashierTillNos,
+                    //        TellerId = transactionModel.ToTellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "D"
+                    //    });
+                    //    db.TransactionMaster.AddRange(tranMasterModel);
+                    //    break;
+                    //case 6:
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.GLAccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = transactionModel.CashierTillNos,
+                    //        TellerId = transactionModel.ToTellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "C"
+                    //    });
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.GLAccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = transactionModel.CashierTillNos,
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "D"
+                    //    });
+                    //    db.TransactionMaster.AddRange(tranMasterModel);
+                    //    break;
+                    //case 7:
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.GLAccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = transactionModel.CashierTillNos,
+                    //        TellerId = transactionModel.ToTellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "D"
+                    //    });
+                    //    tranMasterModel.Add(new TransactionMaster
+                    //    {
+                    //        TranID = result,
+                    //        AccountNo = transactionModel.GLAccountNo,
+                    //        Amount = transactionModel.Amount,
+                    //        TillNo = transactionModel.CashierTillNos,
+                    //        TellerId = transactionModel.TellerId,
+                    //        TransType = Convert.ToInt16(transactionModel.TransType),
+                    //        CrDr = "C"
+                    //    });<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>

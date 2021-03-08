@@ -1,0 +1,44 @@
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Business.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Business.pdb
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Model.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Repository.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\EntityFramework.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Model.pdb
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Repository.pdb
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Repository.dll.config
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\bin\Debug\EntityFramework.xml
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.csprojAssemblyReference.cache
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.csproj.CoreCompileInputs.cache
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.csproj.CopyComplete
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.dll
+C:\Users\Workload\Documents\Visual Studio 2017\Gitlab\iTellerBranch\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Business.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Business.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Model.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Repository.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\EntityFramework.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Model.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Repository.pdb
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\iTellerBranch.Repository.dll.config
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\Newtonsoft.Json.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\bin\Debug\EntityFramework.xml
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.csprojResolveAssemblyReference.cache
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.dll
+C:\Users\PFS\Documents\Visual Studio 2017\Projects\iTellerBranch\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.pdb
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.csprojResolveAssemblyReference.cache
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\iTellerBranch.Business.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\iTellerBranch.Business.pdb
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\iTellerBranch.Model.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\iTellerBranch.Repository.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\EntityFramework.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\iTellerBranch.Model.pdb
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\iTellerBranch.Repository.pdb
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\iTellerBranch.Repository.dll.config
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\Newtonsoft.Json.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\bin\Debug\EntityFramework.xml
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.dll
+C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Business\obj\Debug\iTellerBranch.Business.pdb

@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43913B8C-B4EB-42D5-9475-0165B83070FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iTellerBranch.Repository</RootNamespace>
+    <AssemblyName>iTellerBranch.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\iTellerBranch\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accountmandates.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccountStament.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Audit.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bank.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BranchAccounts.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Branches.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CallOverMode.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cards.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CashDenomination.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CashierBalancing.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CashReceipt.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CashTransactions.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CautionExemption.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CautionHeaderFooter.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CautionNotice.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CautionSignatures.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChequeAudit.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChequeBeneficiary.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChequeCaution.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChequeDetailsCheckLog.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChequeDump.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChequeDump_Trigger.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChequeImages.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chequeimageuv.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChequeLodgement.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChequesForCashWithdrawal.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chequeStatus.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cheque_Template.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chq_bene.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="ClientScanners.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyLogo.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Currency.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencySubunit.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDetails.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="customerMaster.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Denomination.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountedTreasuryProduct.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentaryEvidence.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DraftIssuedCharges.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FixedInwardChequedump.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GLAccountSetup.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Interface\ICashDenominationService.cs" />
+    <Compile Include="Interface\IGeneralService.cs" />
+    <Compile Include="Interface\IReportService.cs" />
+    <Compile Include="Interface\IResourceService.cs" />
+    <Compile Include="Interface\ITillService.cs" />
+    <Compile Include="Interface\ITillTransfer.cs" />
+    <Compile Include="Interface\IIsuanceService.cs" />
+    <Compile Include="Interface\ITransactionService.cs" />
+    <Compile Include="Interface\IUserService.cs" />
+    <Compile Include="InwardChequedump.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InwardChequedump_Trigger.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InwardChequeImage.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InwardMessages.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iTellerBranchModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iTellerBranchModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iTellerBranchModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iTellerBranchModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iTellerBranchModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="iTellerTimeStamp.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KioskCustomerAcctDetails.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kioskLogos.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KioskRejectedCheques.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KioskRejectionReasons.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KioskReturnedCheques.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kiosks.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoggedOnUsers.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogOnUserRecord.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MakerChecker.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerChequeIssuanceDetails.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCAccount.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCCharge.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="messageCounter.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modules.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OutwardChequeDetails.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSPosting.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PreLiquidatedDeal.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnedChequeImages.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnedCheques.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnInwardFile.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnReasons.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleResources.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROLES.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScannerDetail.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScannerStore.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="scorpion.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service\BaseService.cs" />
+    <Compile Include="Service\CashDenominationService.cs" />
+    <Compile Include="Service\General.cs" />
+    <Compile Include="Service\GeneralService.cs" />
+    <Compile Include="Service\ReportService.cs" />
+    <Compile Include="Service\ResourceService.cs" />
+    <Compile Include="Service\TillService.cs" />
+    <Compile Include="Service\TillTransferService.cs" />
+    <Compile Include="Service\IssuanceService.cs" />
+    <Compile Include="Service\TransactionService.cs" />
+    <Compile Include="Service\TreasuryService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="SettlementTimes.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConfiguration.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConfiguration_Trigger.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TerminalPosMap.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TerminationInstruction.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TillAssignment.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TillAssignmentHistory.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TillManagement.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TillSetup.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TillSetupDeleted.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TillTransfer.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TillTransferDisapproval.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TillTransferIMAL.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionCodes.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionCodeToDETypeMapping.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionFiles.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionsMaster.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransDepCounter.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransDetails.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransferDetails.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransferHeader.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransferType.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransMaster.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransMasterDetails.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransSetup.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransTypes.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreasuryDealsMaster.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreasuryDetails.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreasuryInterest.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreasuryProductCode.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserActivity.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserBranches.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserCurrencies.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogins.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USERROLES.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserSignature.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USERS_IN_GROUP.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserTransactionPageAccess.cs">
+      <DependentUpon>iTellerBranchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="iTellerBranchModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>iTellerBranchModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="iTellerBranchModel.edmx.diagram">
+      <DependentUpon>iTellerBranchModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iTellerBranchModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>iTellerBranchModel.edmx</DependentUpon>
+      <LastGenOutput>iTellerBranchModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="iTellerBranchModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>iTellerBranchModel.edmx</DependentUpon>
+      <LastGenOutput>iTellerBranchModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iTellerBranch.Model\iTellerBranch.Model.csproj">
+      <Project>{a2e1b602-9ecd-4e42-aa4f-2477ca4b9554}</Project>
+      <Name>iTellerBranch.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

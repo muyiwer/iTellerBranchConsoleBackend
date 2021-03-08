@@ -1,0 +1,2046 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BranchConsoleModelStoreContainer" CdmEntityContainer="BranchConsoleEntities">
+    <EntitySetMapping Name="Audit">
+      <EntityTypeMapping TypeName="BranchConsoleModel.Audit">
+        <MappingFragment StoreEntitySet="Audit">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="HostName" ColumnName="HostName" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="MACAddress" ColumnName="MACAddress" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="BranchConsoleModel.Branches">
+        <MappingFragment StoreEntitySet="Branches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BranchNnemonics" ColumnName="BranchNnemonics" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="BranchAddress" ColumnName="BranchAddress" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="InterBranchAccount" ColumnName="InterBranchAccount" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="TillDateLastAssigned" ColumnName="TillDateLastAssigned" />
+          <ScalarProperty Name="BranchEmail" ColumnName="BranchEmail" />
+          <ScalarProperty Name="SuspenseAccount" ColumnName="SuspenseAccount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="WhoCreated" ColumnName="WhoCreated" />
+          <ScalarProperty Name="DisapprovalReason" ColumnName="DisapprovalReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CallOverMode">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CallOverMode">
+        <MappingFragment StoreEntitySet="CallOverMode">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="AccNumber" ColumnName="AccNumber" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="WhoApproved" ColumnName="WhoApproved" />
+          <ScalarProperty Name="DateOfApproval" ColumnName="DateOfApproval" />
+          <ScalarProperty Name="frontImage" ColumnName="frontImage" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="RemoteLodgementRecordID" ColumnName="RemoteLodgementRecordID" />
+          <ScalarProperty Name="scanbranchCode" ColumnName="scanbranchCode" />
+          <ScalarProperty Name="scannerID" ColumnName="scannerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashDenomination">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CashDenomination">
+        <MappingFragment StoreEntitySet="CashDenomination">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SubunitName" ColumnName="SubunitName" />
+          <ScalarProperty Name="RelationshipUnit" ColumnName="RelationshipUnit" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="Abbrev" ColumnName="Abbrev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashierBalancing">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CashierBalancing">
+        <MappingFragment StoreEntitySet="CashierBalancing">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CheckingTime" ColumnName="CheckingTime" />
+          <ScalarProperty Name="TillId" ColumnName="TillId" />
+          <ScalarProperty Name="TellerId" ColumnName="TellerId" />
+          <ScalarProperty Name="CashAtHand" ColumnName="CashAtHand" />
+          <ScalarProperty Name="ExpectedCashAtHand" ColumnName="ExpectedCashAtHand" />
+          <ScalarProperty Name="Finalize" ColumnName="Finalize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashReceipt">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CashReceipt">
+        <MappingFragment StoreEntitySet="CashReceipt">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="POSId" ColumnName="POSId" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="AccountTitle" ColumnName="AccountTitle" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="FooterMessage" ColumnName="FooterMessage" />
+          <ScalarProperty Name="Ref" ColumnName="Ref" />
+          <ScalarProperty Name="Printed" ColumnName="Printed" />
+          <ScalarProperty Name="AmountInWord" ColumnName="AmountInWord" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="TellerName" ColumnName="TellerName" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashTransactions">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CashTransactions">
+        <MappingFragment StoreEntitySet="CashTransactions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="TillId" ColumnName="TillId" />
+          <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CautionExemption">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CautionExemption">
+        <MappingFragment StoreEntitySet="CautionExemption">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="CautionAmount" ColumnName="CautionAmount" />
+          <ScalarProperty Name="PercentOverage" ColumnName="PercentOverage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeAudit">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ChequeAudit">
+        <MappingFragment StoreEntitySet="ChequeAudit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="reasons" ColumnName="reasons" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="idfield" ColumnName="idfield" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="servicePointID" ColumnName="servicePointID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeDump">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ChequeDump">
+        <MappingFragment StoreEntitySet="ChequeDump">
+          <ScalarProperty Name="idfield" ColumnName="idfield" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="AccNumber" ColumnName="AccNumber" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PresentingBankSortcode" ColumnName="PresentingBankSortcode" />
+          <ScalarProperty Name="locked" ColumnName="locked" />
+          <ScalarProperty Name="scanDate" ColumnName="scanDate" />
+          <ScalarProperty Name="batchID" ColumnName="batchID" />
+          <ScalarProperty Name="kioskID" ColumnName="kioskID" />
+          <ScalarProperty Name="transID" ColumnName="transID" />
+          <ScalarProperty Name="captureDateTime" ColumnName="captureDateTime" />
+          <ScalarProperty Name="checkingOfficer" ColumnName="checkingOfficer" />
+          <ScalarProperty Name="checkingTime" ColumnName="checkingTime" />
+          <ScalarProperty Name="approvingOfficer" ColumnName="approvingOfficer" />
+          <ScalarProperty Name="approvingTime" ColumnName="approvingTime" />
+          <ScalarProperty Name="cautioned" ColumnName="cautioned" />
+          <ScalarProperty Name="sessionid" ColumnName="sessionid" />
+          <ScalarProperty Name="valueDate" ColumnName="valueDate" />
+          <ScalarProperty Name="approved" ColumnName="approved" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="returnReason" ColumnName="returnReason" />
+          <ScalarProperty Name="isInward" ColumnName="isInward" />
+          <ScalarProperty Name="valueDateCaptured" ColumnName="valueDateCaptured" />
+          <ScalarProperty Name="rejected" ColumnName="rejected" />
+          <ScalarProperty Name="posted" ColumnName="posted" />
+          <ScalarProperty Name="postCount" ColumnName="postCount" />
+          <ScalarProperty Name="notifiedFailure" ColumnName="notifiedFailure" />
+          <ScalarProperty Name="sent2Clearing" ColumnName="sent2Clearing" />
+          <ScalarProperty Name="servicePointID" ColumnName="servicePointID" />
+          <ScalarProperty Name="depositor" ColumnName="depositor" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="currencyCode" ColumnName="currencyCode" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="CaptureFileTime" ColumnName="CaptureFileTime" />
+          <ScalarProperty Name="CaptureFileDate" ColumnName="CaptureFileDate" />
+          <ScalarProperty Name="scanBranchSortCode" ColumnName="scanBranchSortCode" />
+          <ScalarProperty Name="ChequeOperation_type" ColumnName="ChequeOperation_type" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="floatDays" ColumnName="floatDays" />
+          <ScalarProperty Name="foreignId" ColumnName="foreignId" />
+          <ScalarProperty Name="disapprovalComment" ColumnName="disapprovalComment" />
+          <ScalarProperty Name="callovermodestatus" ColumnName="callovermodestatus" />
+          <ScalarProperty Name="MailStatus" ColumnName="MailStatus" />
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="LockID" ColumnName="LockID" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="msgid" ColumnName="msgid" />
+          <ScalarProperty Name="ItemSeqNumber" ColumnName="ItemSeqNumber" />
+          <ScalarProperty Name="accepted" ColumnName="accepted" />
+          <ScalarProperty Name="IsSpecialSession" ColumnName="IsSpecialSession" />
+          <ScalarProperty Name="CheckDigit" ColumnName="CheckDigit" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="PostingFileBatch" ColumnName="PostingFileBatch" />
+          <ScalarProperty Name="CaptureFileBatch" ColumnName="CaptureFileBatch" />
+          <ScalarProperty Name="CBABeneficiary" ColumnName="CBABeneficiary" />
+          <ScalarProperty Name="Match" ColumnName="Match" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeImages">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ChequeImages">
+        <MappingFragment StoreEntitySet="ChequeImages">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cheque_ref" ColumnName="cheque_ref" />
+          <ScalarProperty Name="frontImage" ColumnName="frontImage" />
+          <ScalarProperty Name="rearImage" ColumnName="rearImage" />
+          <ScalarProperty Name="commited" ColumnName="commited" />
+          <ScalarProperty Name="machineName" ColumnName="machineName" />
+          <ScalarProperty Name="isnax" ColumnName="isnax" />
+          <ScalarProperty Name="presentingbanksortcode" ColumnName="presentingbanksortcode" />
+          <ScalarProperty Name="uploaded" ColumnName="uploaded" />
+          <ScalarProperty Name="uploadedDate" ColumnName="uploadedDate" />
+          <ScalarProperty Name="frontImage2" ColumnName="frontImage2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeLodgement">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ChequeLodgement">
+        <MappingFragment StoreEntitySet="ChequeLodgement">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="TillId" ColumnName="TillId" />
+          <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="ChequeDate" ColumnName="ChequeDate" />
+          <ScalarProperty Name="ChargeAmt" ColumnName="ChargeAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chequeStatus">
+      <EntityTypeMapping TypeName="BranchConsoleModel.chequeStatus">
+        <MappingFragment StoreEntitySet="chequeStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="accountNo" ColumnName="accountNo" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customerMaster">
+      <EntityTypeMapping TypeName="BranchConsoleModel.customerMaster">
+        <MappingFragment StoreEntitySet="customerMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Bookbalance" ColumnName="Bookbalance" />
+          <ScalarProperty Name="Availablebalance" ColumnName="Availablebalance" />
+          <ScalarProperty Name="Accountofficer" ColumnName="Accountofficer" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="AccountStatus" ColumnName="AccountStatus" />
+          <ScalarProperty Name="Accountofficer_email" ColumnName="Accountofficer_email" />
+          <ScalarProperty Name="Accountofficer_fullname" ColumnName="Accountofficer_fullname" />
+          <ScalarProperty Name="Operatinginstructions" ColumnName="Operatinginstructions" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Abbrev" ColumnName="Abbrev" />
+          <ScalarProperty Name="ValidForClearingCheque" ColumnName="ValidForClearingCheque" />
+          <ScalarProperty Name="customerId" ColumnName="customerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Denomination">
+      <EntityTypeMapping TypeName="BranchConsoleModel.Denomination">
+        <MappingFragment StoreEntitySet="Denomination">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="CashDenominationID" ColumnName="CashDenominationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentaryEvidence">
+      <EntityTypeMapping TypeName="BranchConsoleModel.DocumentaryEvidence">
+        <MappingFragment StoreEntitySet="DocumentaryEvidence">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FixedInwardChequedump">
+      <EntityTypeMapping TypeName="BranchConsoleModel.FixedInwardChequedump">
+        <MappingFragment StoreEntitySet="FixedInwardChequedump">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="itemid" ColumnName="itemid" />
+          <ScalarProperty Name="PreBankSeqNumber" ColumnName="PreBankSeqNumber" />
+          <ScalarProperty Name="PayBankRoutNumber" ColumnName="PayBankRoutNumber" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="TransactionCode" ColumnName="TransactionCode" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+          <ScalarProperty Name="presentingBankSortCode" ColumnName="presentingBankSortCode" />
+          <ScalarProperty Name="presentmentDate" ColumnName="presentmentDate" />
+          <ScalarProperty Name="Beneficiary" ColumnName="Beneficiary" />
+          <ScalarProperty Name="confirmedAccountMandate" ColumnName="confirmedAccountMandate" />
+          <ScalarProperty Name="confirmedFundsBalance" ColumnName="confirmedFundsBalance" />
+          <ScalarProperty Name="confirmedCheque" ColumnName="confirmedCheque" />
+          <ScalarProperty Name="DownloadBatchId" ColumnName="DownloadBatchId" />
+          <ScalarProperty Name="Settlementdatetime" ColumnName="Settlementdatetime" />
+          <ScalarProperty Name="CheckDigit" ColumnName="CheckDigit" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GLAccountSetup">
+      <EntityTypeMapping TypeName="BranchConsoleModel.GLAccountSetup">
+        <MappingFragment StoreEntitySet="GLAccountSetup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GLAcctName" ColumnName="GLAcctName" />
+          <ScalarProperty Name="GLAcctNo" ColumnName="GLAcctNo" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InwardChequedump_Trigger">
+      <EntityTypeMapping TypeName="BranchConsoleModel.InwardChequedump_Trigger">
+        <MappingFragment StoreEntitySet="InwardChequedump_Trigger">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="PreBankSeqNumber" ColumnName="PreBankSeqNumber" />
+          <ScalarProperty Name="PayBankRoutNumber" ColumnName="PayBankRoutNumber" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="TransactionCode" ColumnName="TransactionCode" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+          <ScalarProperty Name="BankOfFirstDepoSortCode" ColumnName="BankOfFirstDepoSortCode" />
+          <ScalarProperty Name="MICRRepairFlags" ColumnName="MICRRepairFlags" />
+          <ScalarProperty Name="Beneficiary" ColumnName="Beneficiary" />
+          <ScalarProperty Name="Marked" ColumnName="Marked" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Charges" ColumnName="Charges" />
+          <ScalarProperty Name="Payment_Date" ColumnName="Payment_Date" />
+          <ScalarProperty Name="Entry_Generated" ColumnName="Entry_Generated" />
+          <ScalarProperty Name="Cancel_Reason" ColumnName="Cancel_Reason" />
+          <ScalarProperty Name="payer" ColumnName="payer" />
+          <ScalarProperty Name="payee" ColumnName="payee" />
+          <ScalarProperty Name="trans_narration" ColumnName="trans_narration" />
+          <ScalarProperty Name="collectionType" ColumnName="collectionType" />
+          <ScalarProperty Name="downloadBatchID" ColumnName="downloadBatchID" />
+          <ScalarProperty Name="presentingBankSortCode" ColumnName="presentingBankSortCode" />
+          <ScalarProperty Name="presentmentDate" ColumnName="presentmentDate" />
+          <ScalarProperty Name="cycleNo" ColumnName="cycleNo" />
+          <ScalarProperty Name="currencyInd" ColumnName="currencyInd" />
+          <ScalarProperty Name="DepositorAcct" ColumnName="DepositorAcct" />
+          <ScalarProperty Name="BOFDBusDate" ColumnName="BOFDBusDate" />
+          <ScalarProperty Name="instrumentType" ColumnName="instrumentType" />
+          <ScalarProperty Name="confirmedAccountMandate" ColumnName="confirmedAccountMandate" />
+          <ScalarProperty Name="confirmedFundsBalance" ColumnName="confirmedFundsBalance" />
+          <ScalarProperty Name="confirmedCheque" ColumnName="confirmedCheque" />
+          <ScalarProperty Name="confirmedAccountMandateUser" ColumnName="confirmedAccountMandateUser" />
+          <ScalarProperty Name="confirmedFundsBalanceUser" ColumnName="confirmedFundsBalanceUser" />
+          <ScalarProperty Name="confirmedChequeUser" ColumnName="confirmedChequeUser" />
+          <ScalarProperty Name="udf1" ColumnName="udf1" />
+          <ScalarProperty Name="udf2" ColumnName="udf2" />
+          <ScalarProperty Name="udf3" ColumnName="udf3" />
+          <ScalarProperty Name="udf4" ColumnName="udf4" />
+          <ScalarProperty Name="udf5" ColumnName="udf5" />
+          <ScalarProperty Name="udf6" ColumnName="udf6" />
+          <ScalarProperty Name="udf7" ColumnName="udf7" />
+          <ScalarProperty Name="udf8" ColumnName="udf8" />
+          <ScalarProperty Name="udf9" ColumnName="udf9" />
+          <ScalarProperty Name="udf10" ColumnName="udf10" />
+          <ScalarProperty Name="SentFundMailAO" ColumnName="SentFundMailAO" />
+          <ScalarProperty Name="SentFundMailBranch" ColumnName="SentFundMailBranch" />
+          <ScalarProperty Name="SentChqConfrmMailAO" ColumnName="SentChqConfrmMailAO" />
+          <ScalarProperty Name="SentChqConfrmMailBranch" ColumnName="SentChqConfrmMailBranch" />
+          <ScalarProperty Name="ErrMsg" ColumnName="ErrMsg" />
+          <ScalarProperty Name="Validated" ColumnName="Validated" />
+          <ScalarProperty Name="udf11" ColumnName="udf11" />
+          <ScalarProperty Name="udf12" ColumnName="udf12" />
+          <ScalarProperty Name="udf13" ColumnName="udf13" />
+          <ScalarProperty Name="udf14" ColumnName="udf14" />
+          <ScalarProperty Name="udf15" ColumnName="udf15" />
+          <ScalarProperty Name="udf16" ColumnName="udf16" />
+          <ScalarProperty Name="udf17" ColumnName="udf17" />
+          <ScalarProperty Name="udf18" ColumnName="udf18" />
+          <ScalarProperty Name="udf19" ColumnName="udf19" />
+          <ScalarProperty Name="udf20" ColumnName="udf20" />
+          <ScalarProperty Name="beneficiaryBVN" ColumnName="beneficiaryBVN" />
+          <ScalarProperty Name="payerBVN" ColumnName="payerBVN" />
+          <ScalarProperty Name="beneficiaryAccountNo" ColumnName="beneficiaryAccountNo" />
+          <ScalarProperty Name="processed" ColumnName="processed" />
+          <ScalarProperty Name="accepted" ColumnName="accepted" />
+          <ScalarProperty Name="SettlementDateTime" ColumnName="SettlementDateTime" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="PostBatch" ColumnName="PostBatch" />
+          <ScalarProperty Name="PostStatus" ColumnName="PostStatus" />
+          <ScalarProperty Name="CBAResponse" ColumnName="CBAResponse" />
+          <ScalarProperty Name="PostedAttempted" ColumnName="PostedAttempted" />
+          <ScalarProperty Name="CBABeneficiary" ColumnName="CBABeneficiary" />
+          <ScalarProperty Name="Match" ColumnName="Match" />
+          <ScalarProperty Name="CheckDigit" ColumnName="CheckDigit" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="xdate" ColumnName="xdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InwardChequeImage">
+      <EntityTypeMapping TypeName="BranchConsoleModel.InwardChequeImage">
+        <MappingFragment StoreEntitySet="InwardChequeImage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="AccNumber" ColumnName="AccNumber" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="Sessionid" ColumnName="Sessionid" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PresentingBankSortcode" ColumnName="PresentingBankSortcode" />
+          <ScalarProperty Name="FrontImage" ColumnName="FrontImage" />
+          <ScalarProperty Name="FrontImage2" ColumnName="FrontImage2" />
+          <ScalarProperty Name="RearImage" ColumnName="RearImage" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="CaptureFileDate" ColumnName="CaptureFileDate" />
+          <ScalarProperty Name="CaptureFileTime" ColumnName="CaptureFileTime" />
+          <ScalarProperty Name="cautioned" ColumnName="cautioned" />
+          <ScalarProperty Name="cheque_ref" ColumnName="cheque_ref" />
+          <ScalarProperty Name="scanDate" ColumnName="scanDate" />
+          <ScalarProperty Name="returned" ColumnName="returned" />
+          <ScalarProperty Name="returnedDate" ColumnName="returnedDate" />
+          <ScalarProperty Name="returnSession" ColumnName="returnSession" />
+          <ScalarProperty Name="returnCustomerAccNo" ColumnName="returnCustomerAccNo" />
+          <ScalarProperty Name="returnReason" ColumnName="returnReason" />
+          <ScalarProperty Name="presentmentDate" ColumnName="presentmentDate" />
+          <ScalarProperty Name="DownloadBatchId" ColumnName="DownloadBatchId" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InwardMessages">
+      <EntityTypeMapping TypeName="BranchConsoleModel.InwardMessages">
+        <MappingFragment StoreEntitySet="InwardMessages">
+          <ScalarProperty Name="msgID" ColumnName="msgID" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="ItemCount" ColumnName="ItemCount" />
+          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+          <ScalarProperty Name="SettlementWindow" ColumnName="SettlementWindow" />
+          <ScalarProperty Name="SettlementTime" ColumnName="SettlementTime" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="SystemDate" ColumnName="SystemDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iTellerTimeStamp">
+      <EntityTypeMapping TypeName="BranchConsoleModel.iTellerTimeStamp">
+        <MappingFragment StoreEntitySet="iTellerTimeStamp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="LastTimeStamp" ColumnName="LastTimeStamp" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KioskCustomerAcctDetails">
+      <EntityTypeMapping TypeName="BranchConsoleModel.KioskCustomerAcctDetails">
+        <MappingFragment StoreEntitySet="KioskCustomerAcctDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="CautionAmount" ColumnName="CautionAmount" />
+          <ScalarProperty Name="CautionAge" ColumnName="CautionAge" />
+          <ScalarProperty Name="PAN" ColumnName="PAN" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="LastDateModified" ColumnName="LastDateModified" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kiosks">
+      <EntityTypeMapping TypeName="BranchConsoleModel.Kiosks">
+        <MappingFragment StoreEntitySet="Kiosks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KioskId" ColumnName="KioskId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="ServicePointID" ColumnName="ServicePointID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoggedOnUsers">
+      <EntityTypeMapping TypeName="BranchConsoleModel.LoggedOnUsers">
+        <MappingFragment StoreEntitySet="LoggedOnUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogOnUserRecord">
+      <EntityTypeMapping TypeName="BranchConsoleModel.LogOnUserRecord">
+        <MappingFragment StoreEntitySet="LogOnUserRecord">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TillStatus" ColumnName="TillStatus" />
+          <ScalarProperty Name="TellerId" ColumnName="TellerId" />
+          <ScalarProperty Name="CreditAmount" ColumnName="CreditAmount" />
+          <ScalarProperty Name="DebitAmount" ColumnName="DebitAmount" />
+          <ScalarProperty Name="TimeOpened" ColumnName="TimeOpened" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserTillBranch" ColumnName="UserTillBranch" />
+          <ScalarProperty Name="LocalCurrencyAmount" ColumnName="LocalCurrencyAmount" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="ProfileStartTime" ColumnName="ProfileStartTime" />
+          <ScalarProperty Name="ProfileEndTime" ColumnName="ProfileEndTime" />
+          <ScalarProperty Name="UserBranch" ColumnName="UserBranch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MakerChecker">
+      <EntityTypeMapping TypeName="BranchConsoleModel.MakerChecker">
+        <MappingFragment StoreEntitySet="MakerChecker">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RESOURCES" ColumnName="RESOURCES" />
+          <ScalarProperty Name="MODE" ColumnName="MODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="messageCounter">
+      <EntityTypeMapping TypeName="BranchConsoleModel.messageCounter">
+        <MappingFragment StoreEntitySet="messageCounter">
+          <ScalarProperty Name="msgid" ColumnName="msgid" />
+          <ScalarProperty Name="freshItems" ColumnName="freshItems" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="itemCount" ColumnName="itemCount" />
+          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+          <ScalarProperty Name="generationTime" ColumnName="generationTime" />
+          <ScalarProperty Name="sent" ColumnName="sent" />
+          <ScalarProperty Name="SettlementWindowID" ColumnName="SettlementWindowID" />
+          <ScalarProperty Name="failedItems" ColumnName="failedItems" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="BranchConsoleModel.Modules">
+        <MappingFragment StoreEntitySet="Modules">
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="FontIcon" ColumnName="FontIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resources">
+      <EntityTypeMapping TypeName="BranchConsoleModel.Resources">
+        <MappingFragment StoreEntitySet="Resources">
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="ResourceName" ColumnName="ResourceName" />
+          <ScalarProperty Name="ResourceDesc" ColumnName="ResourceDesc" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="NeedMakerChecker" ColumnName="NeedMakerChecker" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="Show" ColumnName="Show" />
+          <ScalarProperty Name="ShowMenu" ColumnName="ShowMenu" />
+          <ScalarProperty Name="SubMenu" ColumnName="SubMenu" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="FontIcon" ColumnName="FontIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReturnedChequeImages">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ReturnedChequeImages">
+        <MappingFragment StoreEntitySet="ReturnedChequeImages">
+          <ScalarProperty Name="frontImage" ColumnName="frontImage" />
+          <ScalarProperty Name="rearImage" ColumnName="rearImage" />
+          <ScalarProperty Name="frontImage2" ColumnName="frontImage2" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReturnInwardFile">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ReturnInwardFile">
+        <MappingFragment StoreEntitySet="ReturnInwardFile">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fileDate" ColumnName="fileDate" />
+          <ScalarProperty Name="Session" ColumnName="Session" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+          <ScalarProperty Name="fileName" ColumnName="fileName" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="SettlementWindowID" ColumnName="SettlementWindowID" />
+          <ScalarProperty Name="SettlementTime" ColumnName="SettlementTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleResources">
+      <EntityTypeMapping TypeName="BranchConsoleModel.RoleResources">
+        <MappingFragment StoreEntitySet="RoleResources">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleDesc" ColumnName="RoleDesc" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScannerDetail">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ScannerDetail">
+        <MappingFragment StoreEntitySet="ScannerDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ScannerType" ColumnName="ScannerType" />
+          <ScalarProperty Name="ScannerSerialNo" ColumnName="ScannerSerialNo" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScannerStore">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ScannerStore">
+        <MappingFragment StoreEntitySet="ScannerStore">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SCANNER" ColumnName="SCANNER" />
+          <ScalarProperty Name="FOLDER" ColumnName="FOLDER" />
+          <ScalarProperty Name="APPLICATION_NAME" ColumnName="APPLICATION_NAME" />
+          <ScalarProperty Name="LITE" ColumnName="LITE" />
+          <ScalarProperty Name="DELETE" ColumnName="DELETE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SettlementTimes">
+      <EntityTypeMapping TypeName="BranchConsoleModel.SettlementTimes">
+        <MappingFragment StoreEntitySet="SettlementTimes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="settlementTime" ColumnName="settlementTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemConfiguration">
+      <EntityTypeMapping TypeName="BranchConsoleModel.SystemConfiguration">
+        <MappingFragment StoreEntitySet="SystemConfiguration">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KeyName" ColumnName="KeyName" />
+          <ScalarProperty Name="KeyValue" ColumnName="KeyValue" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserEditable" ColumnName="UserEditable" />
+          <ScalarProperty Name="Autofield" ColumnName="Autofield" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TillAssignment">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TillAssignment">
+        <MappingFragment StoreEntitySet="TillAssignment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TillNo" ColumnName="TillNo" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="MaxAmount" ColumnName="MaxAmount" />
+          <ScalarProperty Name="TillID" ColumnName="TillID" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TillAssignmentHistory">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TillAssignmentHistory">
+        <MappingFragment StoreEntitySet="TillAssignmentHistory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TillNos" ColumnName="TillNos" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TillID" ColumnName="TillID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TillManagement">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TillManagement">
+        <MappingFragment StoreEntitySet="TillManagement">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransactionBranch" ColumnName="TransactionBranch" />
+          <ScalarProperty Name="TellerId" ColumnName="TellerId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="IsHeadTeller" ColumnName="IsHeadTeller" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Approve" ColumnName="Approve" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="IsClosed" ColumnName="IsClosed" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="CBAResponse" ColumnName="CBAResponse" />
+          <ScalarProperty Name="ClosingBalance" ColumnName="ClosingBalance" />
+          <ScalarProperty Name="ShortageOverageAmount" ColumnName="ShortageOverageAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TillSetup">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TillSetup">
+        <MappingFragment StoreEntitySet="TillSetup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TillNo" ColumnName="TillNo" />
+          <ScalarProperty Name="TillDesc" ColumnName="TillDesc" />
+          <ScalarProperty Name="GLAcctNo" ColumnName="GLAcctNo" />
+          <ScalarProperty Name="IsVault" ColumnName="IsVault" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="GLAcctName" ColumnName="GLAcctName" />
+          <ScalarProperty Name="GLAcctCurrency" ColumnName="GLAcctCurrency" />
+          <ScalarProperty Name="MinTillAmount" ColumnName="MinTillAmount" />
+          <ScalarProperty Name="MaxTillAmount" ColumnName="MaxTillAmount" />
+          <ScalarProperty Name="GLAccountID" ColumnName="GLAccountID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TillTransfer">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TillTransfer">
+        <MappingFragment StoreEntitySet="TillTransfer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="ReceiverTillNo" ColumnName="ReceiverTillNo" />
+          <ScalarProperty Name="ReceiverUser" ColumnName="ReceiverUser" />
+          <ScalarProperty Name="GiverTillNo" ColumnName="GiverTillNo" />
+          <ScalarProperty Name="GiverUser" ColumnName="GiverUser" />
+          <ScalarProperty Name="CashierID" ColumnName="CashierID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AmountReleased" ColumnName="AmountReleased" />
+          <ScalarProperty Name="IsFufilled" ColumnName="IsFufilled" />
+          <ScalarProperty Name="Accepted" ColumnName="Accepted" />
+          <ScalarProperty Name="TransferMode" ColumnName="TransferMode" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="CBA" ColumnName="CBA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionFiles">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransactionFiles">
+        <MappingFragment StoreEntitySet="TransactionFiles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="DateUploaded" ColumnName="DateUploaded" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionsMaster">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransactionsMaster">
+        <MappingFragment StoreEntitySet="TransactionsMaster">
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TellerId" ColumnName="TellerId" />
+          <ScalarProperty Name="ToTellerId" ColumnName="ToTellerId" />
+          <ScalarProperty Name="TransacterName" ColumnName="TransacterName" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountOfficer" ColumnName="AccountOfficer" />
+          <ScalarProperty Name="TransacterEmail" ColumnName="TransacterEmail" />
+          <ScalarProperty Name="TransacterPhoneNo" ColumnName="TransacterPhoneNo" />
+          <ScalarProperty Name="TransactionParty" ColumnName="TransactionParty" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="ValueDate" ColumnName="ValueDate" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="TransRef" ColumnName="TransRef" />
+          <ScalarProperty Name="hasMemo" ColumnName="hasMemo" />
+          <ScalarProperty Name="hasMandate" ColumnName="hasMandate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="NeededApproval" ColumnName="NeededApproval" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="WhenApproved" ColumnName="WhenApproved" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="IsReversed" ColumnName="IsReversed" />
+          <ScalarProperty Name="DisapprovalReason" ColumnName="DisapprovalReason" />
+          <ScalarProperty Name="DisapprovedBy" ColumnName="DisapprovedBy" />
+          <ScalarProperty Name="WhenDisapproved" ColumnName="WhenDisapproved" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="Posted" ColumnName="Posted" />
+          <ScalarProperty Name="CBAResponse" ColumnName="CBAResponse" />
+          <ScalarProperty Name="CBACode" ColumnName="CBACode" />
+          <ScalarProperty Name="CBA" ColumnName="CBA" />
+          <ScalarProperty Name="ReversedTranId" ColumnName="ReversedTranId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransDetails">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransDetails">
+        <MappingFragment StoreEntitySet="TransDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransferDetails">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransferDetails">
+        <MappingFragment StoreEntitySet="TransferDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="BenAccountNumber" ColumnName="BenAccountNumber" />
+          <ScalarProperty Name="BenAccountName" ColumnName="BenAccountName" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="ApplicableCharge" ColumnName="ApplicableCharge" />
+          <ScalarProperty Name="TransRef" ColumnName="TransRef" />
+          <ScalarProperty Name="Posted" ColumnName="Posted" />
+          <ScalarProperty Name="CBAResponse" ColumnName="CBAResponse" />
+          <ScalarProperty Name="CBAResponseCode" ColumnName="CBAResponseCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransferHeader">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransferHeader">
+        <MappingFragment StoreEntitySet="TransferHeader">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="InstrumentNumber" ColumnName="InstrumentNumber" />
+          <ScalarProperty Name="ApplicableCharge" ColumnName="ApplicableCharge" />
+          <ScalarProperty Name="IsBulkTran" ColumnName="IsBulkTran" />
+          <ScalarProperty Name="ChargeType" ColumnName="ChargeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransferType">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransferType">
+        <MappingFragment StoreEntitySet="TransferType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransferType1" ColumnName="TransferType" />
+          <ScalarProperty Name="TransferName" ColumnName="TransferName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransMaster">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransMaster">
+        <MappingFragment StoreEntitySet="TransMaster">
+          <ScalarProperty Name="CustomerAcctNos" ColumnName="CustomerAcctNos" />
+          <ScalarProperty Name="TotalAmt" ColumnName="TotalAmt" />
+          <ScalarProperty Name="CashierID" ColumnName="CashierID" />
+          <ScalarProperty Name="CashierTillNos" ColumnName="CashierTillNos" />
+          <ScalarProperty Name="CashierTillGL" ColumnName="CashierTillGL" />
+          <ScalarProperty Name="DepositorName" ColumnName="DepositorName" />
+          <ScalarProperty Name="DepositorPhoneNo" ColumnName="DepositorPhoneNo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="WhenApproved" ColumnName="WhenApproved" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="ValueDate" ColumnName="ValueDate" />
+          <ScalarProperty Name="SupervisoryUser" ColumnName="SupervisoryUser" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="MotherMaidenNAme" ColumnName="MotherMaidenNAme" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IDType" ColumnName="IDType" />
+          <ScalarProperty Name="IDNo" ColumnName="IDNo" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="NeededApproval" ColumnName="NeededApproval" />
+          <ScalarProperty Name="Beneficiary" ColumnName="Beneficiary" />
+          <ScalarProperty Name="Chequeno" ColumnName="Chequeno" />
+          <ScalarProperty Name="DateonCheque" ColumnName="DateonCheque" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="hasMemo" ColumnName="hasMemo" />
+          <ScalarProperty Name="hasMandate" ColumnName="hasMandate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TransRef" ColumnName="TransRef" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransMasterDetails">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransMasterDetails">
+        <MappingFragment StoreEntitySet="TransMasterDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransSetup">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransSetup">
+        <MappingFragment StoreEntitySet="TransSetup">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Denominations" ColumnName="Denominations" />
+          <ScalarProperty Name="WeightValue" ColumnName="WeightValue" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreasuryInterest">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TreasuryInterest">
+        <MappingFragment StoreEntitySet="TreasuryInterest">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DealId" ColumnName="DealId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="NoOfDaysInYear" ColumnName="NoOfDaysInYear" />
+          <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+          <ScalarProperty Name="InterestAmount" ColumnName="InterestAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserActivity">
+      <EntityTypeMapping TypeName="BranchConsoleModel.UserActivity">
+        <MappingFragment StoreEntitySet="UserActivity">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="isLoggedIn" ColumnName="isLoggedIn" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="ActivityDate" ColumnName="ActivityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogins">
+      <EntityTypeMapping TypeName="BranchConsoleModel.UserLogins">
+        <MappingFragment StoreEntitySet="UserLogins">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Staffid" ColumnName="Staffid" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Middlename" ColumnName="Middlename" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LoginAttempts" ColumnName="LoginAttempts" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="Successful" ColumnName="Successful" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERROLES">
+      <EntityTypeMapping TypeName="BranchConsoleModel.USERROLES">
+        <MappingFragment StoreEntitySet="USERROLES">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="APPID" ColumnName="APPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BranchConsoleModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="LowerLimit" ColumnName="LowerLimit" />
+          <ScalarProperty Name="UpperLimit" ColumnName="UpperLimit" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Expired" ColumnName="Expired" />
+          <ScalarProperty Name="ValidDays" ColumnName="ValidDays" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BankCode" ColumnName="BankCode" />
+          <ScalarProperty Name="Supervisory" ColumnName="Supervisory" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="LastLogingTime" ColumnName="LastLogingTime" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS_IN_GROUP">
+      <EntityTypeMapping TypeName="BranchConsoleModel.USERS_IN_GROUP">
+        <MappingFragment StoreEntitySet="USERS_IN_GROUP">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="accountmandates">
+      <EntityTypeMapping TypeName="BranchConsoleModel.accountmandates">
+        <MappingFragment StoreEntitySet="accountmandates">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="Signatoryname" ColumnName="Signatoryname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bank">
+      <EntityTypeMapping TypeName="BranchConsoleModel.Bank">
+        <MappingFragment StoreEntitySet="Bank">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BankCode" ColumnName="BankCode" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RoutingNumber" ColumnName="RoutingNumber" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cards">
+      <EntityTypeMapping TypeName="BranchConsoleModel.cards">
+        <MappingFragment StoreEntitySet="cards">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="Pan" ColumnName="Pan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CautionHeaderFooter">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CautionHeaderFooter">
+        <MappingFragment StoreEntitySet="CautionHeaderFooter">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CautionHeader" ColumnName="CautionHeader" />
+          <ScalarProperty Name="CautionFooter" ColumnName="CautionFooter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CautionNotice">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CautionNotice">
+        <MappingFragment StoreEntitySet="CautionNotice">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CautionCode" ColumnName="CautionCode" />
+          <ScalarProperty Name="CautionDescription" ColumnName="CautionDescription" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CautionSignatures">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CautionSignatures">
+        <MappingFragment StoreEntitySet="CautionSignatures">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Idfield" ColumnName="Idfield" />
+          <ScalarProperty Name="Signatory1" ColumnName="Signatory1" />
+          <ScalarProperty Name="Designation1" ColumnName="Designation1" />
+          <ScalarProperty Name="Sign1" ColumnName="Sign1" />
+          <ScalarProperty Name="Signatory2" ColumnName="Signatory2" />
+          <ScalarProperty Name="Designation2" ColumnName="Designation2" />
+          <ScalarProperty Name="Sign2" ColumnName="Sign2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeBeneficiary">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ChequeBeneficiary">
+        <MappingFragment StoreEntitySet="ChequeBeneficiary">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChequeRef" ColumnName="ChequeRef" />
+          <ScalarProperty Name="AcctNo" ColumnName="AcctNo" />
+          <ScalarProperty Name="Beneficiary" ColumnName="Beneficiary" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="PresentingbankSortcode" ColumnName="PresentingbankSortcode" />
+          <ScalarProperty Name="SMSSent" ColumnName="SMSSent" />
+          <ScalarProperty Name="EmailSent" ColumnName="EmailSent" />
+          <ScalarProperty Name="Drawer" ColumnName="Drawer" />
+          <ScalarProperty Name="BVNBeneficiary" ColumnName="BVNBeneficiary" />
+          <ScalarProperty Name="BVNPayer" ColumnName="BVNPayer" />
+          <ScalarProperty Name="ChannelId" ColumnName="ChannelId" />
+          <ScalarProperty Name="Reviewed" ColumnName="Reviewed" />
+          <ScalarProperty Name="MICRRepair" ColumnName="MICRRepair" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeCaution">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ChequeCaution">
+        <MappingFragment StoreEntitySet="ChequeCaution">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChequeRef" ColumnName="ChequeRef" />
+          <ScalarProperty Name="CautionCode" ColumnName="CautionCode" />
+          <ScalarProperty Name="PresentingBankSortcode" ColumnName="PresentingBankSortcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeDetailsCheckLog">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ChequeDetailsCheckLog">
+        <MappingFragment StoreEntitySet="ChequeDetailsCheckLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="AcctNumber" ColumnName="AcctNumber" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PresentingBankSortcode" ColumnName="PresentingBankSortcode" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="CaptureFileDate" ColumnName="CaptureFileDate" />
+          <ScalarProperty Name="CaptureFileTime" ColumnName="CaptureFileTime" />
+          <ScalarProperty Name="Cautioned" ColumnName="Cautioned" />
+          <ScalarProperty Name="ChequeRef" ColumnName="ChequeRef" />
+          <ScalarProperty Name="ScanDate" ColumnName="ScanDate" />
+          <ScalarProperty Name="Uploaded" ColumnName="Uploaded" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="Returned" ColumnName="Returned" />
+          <ScalarProperty Name="ReturnedDate" ColumnName="ReturnedDate" />
+          <ScalarProperty Name="ReturnSession" ColumnName="ReturnSession" />
+          <ScalarProperty Name="ReturnCustomerAccNo" ColumnName="ReturnCustomerAccNo" />
+          <ScalarProperty Name="ReturnReason" ColumnName="ReturnReason" />
+          <ScalarProperty Name="KioskID" ColumnName="KioskID" />
+          <ScalarProperty Name="TransID" ColumnName="TransID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeDump_Trigger">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ChequeDump_Trigger">
+        <MappingFragment StoreEntitySet="ChequeDump_Trigger">
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="AccNumber" ColumnName="AccNumber" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PresentingBankSortcode" ColumnName="PresentingBankSortcode" />
+          <ScalarProperty Name="locked" ColumnName="locked" />
+          <ScalarProperty Name="idfield" ColumnName="idfield" />
+          <ScalarProperty Name="scanDate" ColumnName="scanDate" />
+          <ScalarProperty Name="batchID" ColumnName="batchID" />
+          <ScalarProperty Name="kioskID" ColumnName="kioskID" />
+          <ScalarProperty Name="transID" ColumnName="transID" />
+          <ScalarProperty Name="captureDateTime" ColumnName="captureDateTime" />
+          <ScalarProperty Name="checkingOfficer" ColumnName="checkingOfficer" />
+          <ScalarProperty Name="checkingTime" ColumnName="checkingTime" />
+          <ScalarProperty Name="approvingOfficer" ColumnName="approvingOfficer" />
+          <ScalarProperty Name="approvingTime" ColumnName="approvingTime" />
+          <ScalarProperty Name="cautioned" ColumnName="cautioned" />
+          <ScalarProperty Name="sessionid" ColumnName="sessionid" />
+          <ScalarProperty Name="valueDate" ColumnName="valueDate" />
+          <ScalarProperty Name="approved" ColumnName="approved" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="returnReason" ColumnName="returnReason" />
+          <ScalarProperty Name="isInward" ColumnName="isInward" />
+          <ScalarProperty Name="valueDateCaptured" ColumnName="valueDateCaptured" />
+          <ScalarProperty Name="rejected" ColumnName="rejected" />
+          <ScalarProperty Name="posted" ColumnName="posted" />
+          <ScalarProperty Name="postCount" ColumnName="postCount" />
+          <ScalarProperty Name="notifiedFailure" ColumnName="notifiedFailure" />
+          <ScalarProperty Name="sent2Clearing" ColumnName="sent2Clearing" />
+          <ScalarProperty Name="servicePointID" ColumnName="servicePointID" />
+          <ScalarProperty Name="depositor" ColumnName="depositor" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="currencyCode" ColumnName="currencyCode" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="CaptureFileTime" ColumnName="CaptureFileTime" />
+          <ScalarProperty Name="CaptureFileDate" ColumnName="CaptureFileDate" />
+          <ScalarProperty Name="scanBranchSortCode" ColumnName="scanBranchSortCode" />
+          <ScalarProperty Name="ChequeOperation_type" ColumnName="ChequeOperation_type" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="floatDays" ColumnName="floatDays" />
+          <ScalarProperty Name="xdate" ColumnName="xdate" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="callovermodestatus" ColumnName="callovermodestatus" />
+          <ScalarProperty Name="CheckDigit" ColumnName="CheckDigit" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="PostingFileBatch" ColumnName="PostingFileBatch" />
+          <ScalarProperty Name="CaptureFileBatch" ColumnName="CaptureFileBatch" />
+          <ScalarProperty Name="CBABeneficiary" ColumnName="CBABeneficiary" />
+          <ScalarProperty Name="Match" ColumnName="Match" />
+          <ScalarProperty Name="MailStatus" ColumnName="MailStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chequeimageuv">
+      <EntityTypeMapping TypeName="BranchConsoleModel.chequeimageuv">
+        <MappingFragment StoreEntitySet="chequeimageuv">
+          <ScalarProperty Name="cheque_ref" ColumnName="cheque_ref" />
+          <ScalarProperty Name="frontImage" ColumnName="frontImage" />
+          <ScalarProperty Name="rearImage" ColumnName="rearImage" />
+          <ScalarProperty Name="commited" ColumnName="commited" />
+          <ScalarProperty Name="machineName" ColumnName="machineName" />
+          <ScalarProperty Name="isnax" ColumnName="isnax" />
+          <ScalarProperty Name="presentingbanksortcode" ColumnName="presentingbanksortcode" />
+          <ScalarProperty Name="uploaded" ColumnName="uploaded" />
+          <ScalarProperty Name="uploadedDate" ColumnName="uploadedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequesForCashWithdrawal">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ChequesForCashWithdrawal">
+        <MappingFragment StoreEntitySet="ChequesForCashWithdrawal">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="AcctNumber" ColumnName="AcctNumber" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PresentingBankSortcode" ColumnName="PresentingBankSortcode" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="Idfield" ColumnName="Idfield" />
+          <ScalarProperty Name="ScanDate" ColumnName="ScanDate" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="KioskID" ColumnName="KioskID" />
+          <ScalarProperty Name="TransID" ColumnName="TransID" />
+          <ScalarProperty Name="CaptureDateTime" ColumnName="CaptureDateTime" />
+          <ScalarProperty Name="CheckingOfficer" ColumnName="CheckingOfficer" />
+          <ScalarProperty Name="CheckingTime" ColumnName="CheckingTime" />
+          <ScalarProperty Name="ApprovingOfficer" ColumnName="ApprovingOfficer" />
+          <ScalarProperty Name="ApprovingTime" ColumnName="ApprovingTime" />
+          <ScalarProperty Name="Cautioned" ColumnName="Cautioned" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="ValueDate" ColumnName="ValueDate" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReturnReason" ColumnName="ReturnReason" />
+          <ScalarProperty Name="IsInward" ColumnName="IsInward" />
+          <ScalarProperty Name="ValueDateCaptured" ColumnName="ValueDateCaptured" />
+          <ScalarProperty Name="Rejected" ColumnName="Rejected" />
+          <ScalarProperty Name="Posted" ColumnName="Posted" />
+          <ScalarProperty Name="PostCount" ColumnName="PostCount" />
+          <ScalarProperty Name="NotifiedFailure" ColumnName="NotifiedFailure" />
+          <ScalarProperty Name="Sent2Clearing" ColumnName="Sent2Clearing" />
+          <ScalarProperty Name="ServicePointID" ColumnName="ServicePointID" />
+          <ScalarProperty Name="Depositor" ColumnName="Depositor" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="ChequeDate" ColumnName="ChequeDate" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="CaptureFileTime" ColumnName="CaptureFileTime" />
+          <ScalarProperty Name="CaptureFileDate" ColumnName="CaptureFileDate" />
+          <ScalarProperty Name="CashTranID" ColumnName="CashTranID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chq_bene">
+      <EntityTypeMapping TypeName="BranchConsoleModel.chq_bene">
+        <MappingFragment StoreEntitySet="chq_bene">
+          <ScalarProperty Name="cheque_ref" ColumnName="cheque_ref" />
+          <ScalarProperty Name="acct_no" ColumnName="acct_no" />
+          <ScalarProperty Name="beneficiary" ColumnName="beneficiary" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="presentingbanksortcode" ColumnName="presentingbanksortcode" />
+          <ScalarProperty Name="beneficiary_bvn" ColumnName="beneficiary_bvn" />
+          <ScalarProperty Name="chequedate" ColumnName="chequedate" />
+          <ScalarProperty Name="drawer" ColumnName="drawer" />
+          <ScalarProperty Name="payer_bvn" ColumnName="payer_bvn" />
+          <ScalarProperty Name="MICRRepair" ColumnName="MICRRepair" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientScanners">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ClientScanners">
+        <MappingFragment StoreEntitySet="ClientScanners">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ScannerID" ColumnName="ScannerID" />
+          <ScalarProperty Name="ScannerTag" ColumnName="ScannerTag" />
+          <ScalarProperty Name="ScannerType" ColumnName="ScannerType" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="DisapprovalReason" ColumnName="DisapprovalReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyLogo">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CompanyLogo">
+        <MappingFragment StoreEntitySet="CompanyLogo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="CompanyLogo1" ColumnName="CompanyLogo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Currency">
+      <EntityTypeMapping TypeName="BranchConsoleModel.Currency">
+        <MappingFragment StoreEntitySet="Currency">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Currency1" ColumnName="Currency" />
+          <ScalarProperty Name="Abbrev" ColumnName="Abbrev" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrencySubunit">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CurrencySubunit">
+        <MappingFragment StoreEntitySet="CurrencySubunit">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="SubunitName" ColumnName="SubunitName" />
+          <ScalarProperty Name="RelationshipUnit" ColumnName="RelationshipUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InwardChequedump">
+      <EntityTypeMapping TypeName="BranchConsoleModel.InwardChequedump">
+        <MappingFragment StoreEntitySet="InwardChequedump">
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="PreBankSeqNumber" ColumnName="PreBankSeqNumber" />
+          <ScalarProperty Name="PayBankRoutNumber" ColumnName="PayBankRoutNumber" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="TransactionCode" ColumnName="TransactionCode" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+          <ScalarProperty Name="BankOfFirstDepoSortCode" ColumnName="BankOfFirstDepoSortCode" />
+          <ScalarProperty Name="MICRRepairFlags" ColumnName="MICRRepairFlags" />
+          <ScalarProperty Name="Beneficiary" ColumnName="Beneficiary" />
+          <ScalarProperty Name="Marked" ColumnName="Marked" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Charges" ColumnName="Charges" />
+          <ScalarProperty Name="Payment_Date" ColumnName="Payment_Date" />
+          <ScalarProperty Name="Entry_Generated" ColumnName="Entry_Generated" />
+          <ScalarProperty Name="Cancel_Reason" ColumnName="Cancel_Reason" />
+          <ScalarProperty Name="payer" ColumnName="payer" />
+          <ScalarProperty Name="payee" ColumnName="payee" />
+          <ScalarProperty Name="trans_narration" ColumnName="trans_narration" />
+          <ScalarProperty Name="collectionType" ColumnName="collectionType" />
+          <ScalarProperty Name="downloadBatchID" ColumnName="downloadBatchID" />
+          <ScalarProperty Name="presentingBankSortCode" ColumnName="presentingBankSortCode" />
+          <ScalarProperty Name="presentmentDate" ColumnName="presentmentDate" />
+          <ScalarProperty Name="cycleNo" ColumnName="cycleNo" />
+          <ScalarProperty Name="currencyInd" ColumnName="currencyInd" />
+          <ScalarProperty Name="DepositorAcct" ColumnName="DepositorAcct" />
+          <ScalarProperty Name="BOFDBusDate" ColumnName="BOFDBusDate" />
+          <ScalarProperty Name="instrumentType" ColumnName="instrumentType" />
+          <ScalarProperty Name="confirmedAccountMandate" ColumnName="confirmedAccountMandate" />
+          <ScalarProperty Name="confirmedFundsBalance" ColumnName="confirmedFundsBalance" />
+          <ScalarProperty Name="confirmedCheque" ColumnName="confirmedCheque" />
+          <ScalarProperty Name="confirmedAccountMandateUser" ColumnName="confirmedAccountMandateUser" />
+          <ScalarProperty Name="confirmedFundsBalanceUser" ColumnName="confirmedFundsBalanceUser" />
+          <ScalarProperty Name="confirmedChequeUser" ColumnName="confirmedChequeUser" />
+          <ScalarProperty Name="udf1" ColumnName="udf1" />
+          <ScalarProperty Name="udf2" ColumnName="udf2" />
+          <ScalarProperty Name="udf3" ColumnName="udf3" />
+          <ScalarProperty Name="udf4" ColumnName="udf4" />
+          <ScalarProperty Name="udf5" ColumnName="udf5" />
+          <ScalarProperty Name="udf6" ColumnName="udf6" />
+          <ScalarProperty Name="udf7" ColumnName="udf7" />
+          <ScalarProperty Name="udf8" ColumnName="udf8" />
+          <ScalarProperty Name="udf9" ColumnName="udf9" />
+          <ScalarProperty Name="udf10" ColumnName="udf10" />
+          <ScalarProperty Name="SentFundMailAO" ColumnName="SentFundMailAO" />
+          <ScalarProperty Name="SentFundMailBranch" ColumnName="SentFundMailBranch" />
+          <ScalarProperty Name="SentChqConfrmMailAO" ColumnName="SentChqConfrmMailAO" />
+          <ScalarProperty Name="SentChqConfrmMailBranch" ColumnName="SentChqConfrmMailBranch" />
+          <ScalarProperty Name="ErrMsg" ColumnName="ErrMsg" />
+          <ScalarProperty Name="Validated" ColumnName="Validated" />
+          <ScalarProperty Name="udf11" ColumnName="udf11" />
+          <ScalarProperty Name="udf12" ColumnName="udf12" />
+          <ScalarProperty Name="udf13" ColumnName="udf13" />
+          <ScalarProperty Name="udf14" ColumnName="udf14" />
+          <ScalarProperty Name="udf15" ColumnName="udf15" />
+          <ScalarProperty Name="udf16" ColumnName="udf16" />
+          <ScalarProperty Name="udf17" ColumnName="udf17" />
+          <ScalarProperty Name="udf18" ColumnName="udf18" />
+          <ScalarProperty Name="udf19" ColumnName="udf19" />
+          <ScalarProperty Name="udf20" ColumnName="udf20" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="beneficiaryBVN" ColumnName="beneficiaryBVN" />
+          <ScalarProperty Name="payerBVN" ColumnName="payerBVN" />
+          <ScalarProperty Name="beneficiaryAccountNo" ColumnName="beneficiaryAccountNo" />
+          <ScalarProperty Name="processed" ColumnName="processed" />
+          <ScalarProperty Name="accepted" ColumnName="accepted" />
+          <ScalarProperty Name="Settlementdatetime" ColumnName="Settlementdatetime" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="PostBatch" ColumnName="PostBatch" />
+          <ScalarProperty Name="PostStatus" ColumnName="PostStatus" />
+          <ScalarProperty Name="CBAResponse" ColumnName="CBAResponse" />
+          <ScalarProperty Name="PostedAttempted" ColumnName="PostedAttempted" />
+          <ScalarProperty Name="CBABeneficiary" ColumnName="CBABeneficiary" />
+          <ScalarProperty Name="Match" ColumnName="Match" />
+          <ScalarProperty Name="CheckDigit" ColumnName="CheckDigit" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="TransRef" ColumnName="TransRef" />
+          <ScalarProperty Name="PostRefID" ColumnName="PostRefID" />
+          <ScalarProperty Name="PostingFileBatch" ColumnName="PostingFileBatch" />
+          <ScalarProperty Name="CaptureFileBatch" ColumnName="CaptureFileBatch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kioskLogos">
+      <EntityTypeMapping TypeName="BranchConsoleModel.kioskLogos">
+        <MappingFragment StoreEntitySet="kioskLogos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Footer" ColumnName="Footer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KioskRejectedCheques">
+      <EntityTypeMapping TypeName="BranchConsoleModel.KioskRejectedCheques">
+        <MappingFragment StoreEntitySet="KioskRejectedCheques">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KioskID" ColumnName="KioskID" />
+          <ScalarProperty Name="ChequeRef" ColumnName="ChequeRef" />
+          <ScalarProperty Name="RejectionReason" ColumnName="RejectionReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KioskRejectionReasons">
+      <EntityTypeMapping TypeName="BranchConsoleModel.KioskRejectionReasons">
+        <MappingFragment StoreEntitySet="KioskRejectionReasons">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
+          <ScalarProperty Name="ReasonDescription" ColumnName="ReasonDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KioskReturnedCheques">
+      <EntityTypeMapping TypeName="BranchConsoleModel.KioskReturnedCheques">
+        <MappingFragment StoreEntitySet="KioskReturnedCheques">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KioskID" ColumnName="KioskID" />
+          <ScalarProperty Name="ChequeRef" ColumnName="ChequeRef" />
+          <ScalarProperty Name="ReturnReason" ColumnName="ReturnReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSPosting">
+      <EntityTypeMapping TypeName="BranchConsoleModel.POSPosting">
+        <MappingFragment StoreEntitySet="POSPosting">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="POSId" ColumnName="POSId" />
+          <ScalarProperty Name="TerminalId" ColumnName="TerminalId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="Deliver" ColumnName="Deliver" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReturnedCheques">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ReturnedCheques">
+        <MappingFragment StoreEntitySet="ReturnedCheques">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="AccNumber" ColumnName="AccNumber" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PresentingBankSortcode" ColumnName="PresentingBankSortcode" />
+          <ScalarProperty Name="locked" ColumnName="locked" />
+          <ScalarProperty Name="idfield" ColumnName="idfield" />
+          <ScalarProperty Name="scanDate" ColumnName="scanDate" />
+          <ScalarProperty Name="batchID" ColumnName="batchID" />
+          <ScalarProperty Name="kioskID" ColumnName="kioskID" />
+          <ScalarProperty Name="transID" ColumnName="transID" />
+          <ScalarProperty Name="captureDateTime" ColumnName="captureDateTime" />
+          <ScalarProperty Name="checkingOfficer" ColumnName="checkingOfficer" />
+          <ScalarProperty Name="checkingTime" ColumnName="checkingTime" />
+          <ScalarProperty Name="approvingOfficer" ColumnName="approvingOfficer" />
+          <ScalarProperty Name="approvingTime" ColumnName="approvingTime" />
+          <ScalarProperty Name="cautioned" ColumnName="cautioned" />
+          <ScalarProperty Name="sessionid" ColumnName="sessionid" />
+          <ScalarProperty Name="valueDate" ColumnName="valueDate" />
+          <ScalarProperty Name="approved" ColumnName="approved" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="returnReason" ColumnName="returnReason" />
+          <ScalarProperty Name="isInward" ColumnName="isInward" />
+          <ScalarProperty Name="valueDateCaptured" ColumnName="valueDateCaptured" />
+          <ScalarProperty Name="rejected" ColumnName="rejected" />
+          <ScalarProperty Name="posted" ColumnName="posted" />
+          <ScalarProperty Name="postCount" ColumnName="postCount" />
+          <ScalarProperty Name="notifiedFailure" ColumnName="notifiedFailure" />
+          <ScalarProperty Name="sent2Clearing" ColumnName="sent2Clearing" />
+          <ScalarProperty Name="servicePointID" ColumnName="servicePointID" />
+          <ScalarProperty Name="depositor" ColumnName="depositor" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="currencyCode" ColumnName="currencyCode" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="CaptureFileTime" ColumnName="CaptureFileTime" />
+          <ScalarProperty Name="CaptureFileDate" ColumnName="CaptureFileDate" />
+          <ScalarProperty Name="scanBranchSortCode" ColumnName="scanBranchSortCode" />
+          <ScalarProperty Name="ChequeOperation_type" ColumnName="ChequeOperation_type" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="floatDays" ColumnName="floatDays" />
+          <ScalarProperty Name="foreignId" ColumnName="foreignId" />
+          <ScalarProperty Name="acceptedstatus" ColumnName="acceptedstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReturnReasons">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ReturnReasons">
+        <MappingFragment StoreEntitySet="ReturnReasons">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
+          <ScalarProperty Name="ReasonDescription" ColumnName="ReasonDescription" />
+          <ScalarProperty Name="CBACode" ColumnName="CBACode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="scorpion">
+      <EntityTypeMapping TypeName="BranchConsoleModel.scorpion">
+        <MappingFragment StoreEntitySet="scorpion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="column1" ColumnName="column1" />
+          <ScalarProperty Name="column2" ColumnName="column2" />
+          <ScalarProperty Name="column3" ColumnName="column3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemConfiguration_Trigger">
+      <EntityTypeMapping TypeName="BranchConsoleModel.SystemConfiguration_Trigger">
+        <MappingFragment StoreEntitySet="SystemConfiguration_Trigger">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KeyName" ColumnName="KeyName" />
+          <ScalarProperty Name="KeyValue" ColumnName="KeyValue" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserEditable" ColumnName="UserEditable" />
+          <ScalarProperty Name="Autofield" ColumnName="Autofield" />
+          <ScalarProperty Name="TimeChanged" ColumnName="TimeChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TerminalPosMap">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TerminalPosMap">
+        <MappingFragment StoreEntitySet="TerminalPosMap">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="POSId" ColumnName="POSId" />
+          <ScalarProperty Name="TerminalId" ColumnName="TerminalId" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TillSetupDeleted">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TillSetupDeleted">
+        <MappingFragment StoreEntitySet="TillSetupDeleted">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TillNos" ColumnName="TillNos" />
+          <ScalarProperty Name="TillDesc" ColumnName="TillDesc" />
+          <ScalarProperty Name="GLAcctNo" ColumnName="GLAcctNo" />
+          <ScalarProperty Name="IsVault" ColumnName="IsVault" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="GLAcctName" ColumnName="GLAcctName" />
+          <ScalarProperty Name="GLAcctCurrency" ColumnName="GLAcctCurrency" />
+          <ScalarProperty Name="DateDeleted" ColumnName="DateDeleted" />
+          <ScalarProperty Name="WhoDeleted" ColumnName="WhoDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TillTransferDisapproval">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TillTransferDisapproval">
+        <MappingFragment StoreEntitySet="TillTransferDisapproval">
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="WhenDisApproved" ColumnName="WhenDisApproved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionCodeToDETypeMapping">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransactionCodeToDETypeMapping">
+        <MappingFragment StoreEntitySet="TransactionCodeToDETypeMapping">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransactionCode" ColumnName="TransactionCode" />
+          <ScalarProperty Name="DEType" ColumnName="DEType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransDepCounter">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransDepCounter">
+        <MappingFragment StoreEntitySet="TransDepCounter">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransTypes">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransTypes">
+        <MappingFragment StoreEntitySet="TransTypes">
+          <ScalarProperty Name="TransTypeCode" ColumnName="TransTypeCode" />
+          <ScalarProperty Name="TransTypeName" ColumnName="TransTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserBranches">
+      <EntityTypeMapping TypeName="BranchConsoleModel.UserBranches">
+        <MappingFragment StoreEntitySet="UserBranches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserCurrencies">
+      <EntityTypeMapping TypeName="BranchConsoleModel.UserCurrencies">
+        <MappingFragment StoreEntitySet="UserCurrencies">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSignature">
+      <EntityTypeMapping TypeName="BranchConsoleModel.UserSignature">
+        <MappingFragment StoreEntitySet="UserSignature">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TerminationInstruction">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TerminationInstruction">
+        <MappingFragment StoreEntitySet="TerminationInstruction">
+          <ScalarProperty Name="CBACode" ColumnName="CBACode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionCodes">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TransactionCodes">
+        <MappingFragment StoreEntitySet="TransactionCodes">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiscountedTreasuryProduct">
+      <EntityTypeMapping TypeName="BranchConsoleModel.DiscountedTreasuryProduct">
+        <MappingFragment StoreEntitySet="DiscountedTreasuryProduct">
+          <ScalarProperty Name="InterestPenaltyAccount" ColumnName="InterestPenaltyAccount" />
+          <ScalarProperty Name="WHTPayableAccount" ColumnName="WHTPayableAccount" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="CBAProductCode" ColumnName="CBAProductCode" />
+          <ScalarProperty Name="MinTaxablePrincipal" ColumnName="MinTaxablePrincipal" />
+          <ScalarProperty Name="Tenured" ColumnName="Tenured" />
+          <ScalarProperty Name="WHTMinAmt" ColumnName="WHTMinAmt" />
+          <ScalarProperty Name="Discounted" ColumnName="Discounted" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MCCharge">
+      <EntityTypeMapping TypeName="BranchConsoleModel.MCCharge">
+        <MappingFragment StoreEntitySet="MCCharge">
+          <ScalarProperty Name="IsPercentage" ColumnName="IsPercentage" />
+          <ScalarProperty Name="ChargeAccount" ColumnName="ChargeAccount" />
+          <ScalarProperty Name="MinimumCharge" ColumnName="MinimumCharge" />
+          <ScalarProperty Name="ChargeWithdrawn" ColumnName="ChargeWithdrawn" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ChargeCode" ColumnName="ChargeCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MCAccount">
+      <EntityTypeMapping TypeName="BranchConsoleModel.MCAccount">
+        <MappingFragment StoreEntitySet="MCAccount">
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreasuryDetails">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TreasuryDetails">
+        <MappingFragment StoreEntitySet="TreasuryDetails">
+          <ScalarProperty Name="IsReversed" ColumnName="IsReversed" />
+          <ScalarProperty Name="CBAResponseCode" ColumnName="CBAResponseCode" />
+          <ScalarProperty Name="CBAResponse" ColumnName="CBAResponse" />
+          <ScalarProperty Name="Posted" ColumnName="Posted" />
+          <ScalarProperty Name="TransRef" ColumnName="TransRef" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Naration" ColumnName="Naration" />
+          <ScalarProperty Name="CrDr" ColumnName="CrDr" />
+          <ScalarProperty Name="DealId" ColumnName="DealId" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cheque_Template">
+      <EntityTypeMapping TypeName="BranchConsoleModel.Cheque_Template">
+        <MappingFragment StoreEntitySet="Cheque_Template">
+          <ScalarProperty Name="sign4_height" ColumnName="sign4_height" />
+          <ScalarProperty Name="sign4_width" ColumnName="sign4_width" />
+          <ScalarProperty Name="sign3_height" ColumnName="sign3_height" />
+          <ScalarProperty Name="sign3_width" ColumnName="sign3_width" />
+          <ScalarProperty Name="sign2_height" ColumnName="sign2_height" />
+          <ScalarProperty Name="sign2_width" ColumnName="sign2_width" />
+          <ScalarProperty Name="sign1_height" ColumnName="sign1_height" />
+          <ScalarProperty Name="sign1_width" ColumnName="sign1_width" />
+          <ScalarProperty Name="artworkWidth" ColumnName="artworkWidth" />
+          <ScalarProperty Name="artworkHeight" ColumnName="artworkHeight" />
+          <ScalarProperty Name="artworkY" ColumnName="artworkY" />
+          <ScalarProperty Name="artworkX" ColumnName="artworkX" />
+          <ScalarProperty Name="cheque_width" ColumnName="cheque_width" />
+          <ScalarProperty Name="Print_Stub" ColumnName="Print_Stub" />
+          <ScalarProperty Name="Stub_Bene_Height" ColumnName="Stub_Bene_Height" />
+          <ScalarProperty Name="Stub_Bene_Width" ColumnName="Stub_Bene_Width" />
+          <ScalarProperty Name="Stub_Bene_Left" ColumnName="Stub_Bene_Left" />
+          <ScalarProperty Name="Stub_Bene_Top" ColumnName="Stub_Bene_Top" />
+          <ScalarProperty Name="Stub_Date_Height" ColumnName="Stub_Date_Height" />
+          <ScalarProperty Name="Stub_Date_Width" ColumnName="Stub_Date_Width" />
+          <ScalarProperty Name="Stub_Date_Left" ColumnName="Stub_Date_Left" />
+          <ScalarProperty Name="Stub_Date_Top" ColumnName="Stub_Date_Top" />
+          <ScalarProperty Name="Stub_Amt_Height" ColumnName="Stub_Amt_Height" />
+          <ScalarProperty Name="Stub_Amt_Width" ColumnName="Stub_Amt_Width" />
+          <ScalarProperty Name="Stub_Amt_Left" ColumnName="Stub_Amt_Left" />
+          <ScalarProperty Name="Stub_Amt_Top" ColumnName="Stub_Amt_Top" />
+          <ScalarProperty Name="Embossment_Font_Size" ColumnName="Embossment_Font_Size" />
+          <ScalarProperty Name="Embossment_Font_Type" ColumnName="Embossment_Font_Type" />
+          <ScalarProperty Name="Embossment_Font_Name" ColumnName="Embossment_Font_Name" />
+          <ScalarProperty Name="Embossment_Height" ColumnName="Embossment_Height" />
+          <ScalarProperty Name="Embossment_Width" ColumnName="Embossment_Width" />
+          <ScalarProperty Name="Embossment_Left" ColumnName="Embossment_Left" />
+          <ScalarProperty Name="Embossment_Top" ColumnName="Embossment_Top" />
+          <ScalarProperty Name="MICR_font_type" ColumnName="MICR_font_type" />
+          <ScalarProperty Name="MICR_font_size" ColumnName="MICR_font_size" />
+          <ScalarProperty Name="MICR_font_name" ColumnName="MICR_font_name" />
+          <ScalarProperty Name="MICR_Height" ColumnName="MICR_Height" />
+          <ScalarProperty Name="MICR_Width" ColumnName="MICR_Width" />
+          <ScalarProperty Name="MICR_Left" ColumnName="MICR_Left" />
+          <ScalarProperty Name="MICR_Top" ColumnName="MICR_Top" />
+          <ScalarProperty Name="Code_font_Type" ColumnName="Code_font_Type" />
+          <ScalarProperty Name="Code_font_name" ColumnName="Code_font_name" />
+          <ScalarProperty Name="Code_Left" ColumnName="Code_Left" />
+          <ScalarProperty Name="Code_Top" ColumnName="Code_Top" />
+          <ScalarProperty Name="Code_Font_Size" ColumnName="Code_Font_Size" />
+          <ScalarProperty Name="Code_LineY" ColumnName="Code_LineY" />
+          <ScalarProperty Name="Code_LineX" ColumnName="Code_LineX" />
+          <ScalarProperty Name="Reference_Font_Type" ColumnName="Reference_Font_Type" />
+          <ScalarProperty Name="Reference_Font_Size" ColumnName="Reference_Font_Size" />
+          <ScalarProperty Name="Reference_Font_Name" ColumnName="Reference_Font_Name" />
+          <ScalarProperty Name="Cheque_Height" ColumnName="Cheque_Height" />
+          <ScalarProperty Name="Annotation_Left" ColumnName="Annotation_Left" />
+          <ScalarProperty Name="Annotation_Top" ColumnName="Annotation_Top" />
+          <ScalarProperty Name="Annotation_Font_Type" ColumnName="Annotation_Font_Type" />
+          <ScalarProperty Name="Annotation_Font_Size" ColumnName="Annotation_Font_Size" />
+          <ScalarProperty Name="Annotation_Font_Name" ColumnName="Annotation_Font_Name" />
+          <ScalarProperty Name="Company_Left" ColumnName="Company_Left" />
+          <ScalarProperty Name="Company_Top" ColumnName="Company_Top" />
+          <ScalarProperty Name="Company_Font_Type" ColumnName="Company_Font_Type" />
+          <ScalarProperty Name="Company_Font_Size" ColumnName="Company_Font_Size" />
+          <ScalarProperty Name="Company_Font_Name" ColumnName="Company_Font_Name" />
+          <ScalarProperty Name="Ref_Width" ColumnName="Ref_Width" />
+          <ScalarProperty Name="Ref_Height" ColumnName="Ref_Height" />
+          <ScalarProperty Name="Ref_Left" ColumnName="Ref_Left" />
+          <ScalarProperty Name="Ref_Top" ColumnName="Ref_Top" />
+          <ScalarProperty Name="Sign4_left" ColumnName="Sign4_left" />
+          <ScalarProperty Name="Sign3_left" ColumnName="Sign3_left" />
+          <ScalarProperty Name="Sign2_left" ColumnName="Sign2_left" />
+          <ScalarProperty Name="Sign1_left" ColumnName="Sign1_left" />
+          <ScalarProperty Name="Sign4_top" ColumnName="Sign4_top" />
+          <ScalarProperty Name="Sign3_top" ColumnName="Sign3_top" />
+          <ScalarProperty Name="Sign2_top" ColumnName="Sign2_top" />
+          <ScalarProperty Name="Sign1_top" ColumnName="Sign1_top" />
+          <ScalarProperty Name="Bene_Font_Type" ColumnName="Bene_Font_Type" />
+          <ScalarProperty Name="Bene_font_size" ColumnName="Bene_font_size" />
+          <ScalarProperty Name="Bene_Font_Name" ColumnName="Bene_Font_Name" />
+          <ScalarProperty Name="Date_Font_Type" ColumnName="Date_Font_Type" />
+          <ScalarProperty Name="Date_font_size" ColumnName="Date_font_size" />
+          <ScalarProperty Name="Date_Font_Name" ColumnName="Date_Font_Name" />
+          <ScalarProperty Name="Word_Font_Type" ColumnName="Word_Font_Type" />
+          <ScalarProperty Name="Word_font_size" ColumnName="Word_font_size" />
+          <ScalarProperty Name="Word_Font_Name" ColumnName="Word_Font_Name" />
+          <ScalarProperty Name="Amount_Font_Type" ColumnName="Amount_Font_Type" />
+          <ScalarProperty Name="Amount_font_size" ColumnName="Amount_font_size" />
+          <ScalarProperty Name="Amount_Font_Name" ColumnName="Amount_Font_Name" />
+          <ScalarProperty Name="BeneficiaryW" ColumnName="BeneficiaryW" />
+          <ScalarProperty Name="BeneficiaryH" ColumnName="BeneficiaryH" />
+          <ScalarProperty Name="Amount_WordW" ColumnName="Amount_WordW" />
+          <ScalarProperty Name="Amount_WordH" ColumnName="Amount_WordH" />
+          <ScalarProperty Name="AmountW" ColumnName="AmountW" />
+          <ScalarProperty Name="AmountH" ColumnName="AmountH" />
+          <ScalarProperty Name="DateW" ColumnName="DateW" />
+          <ScalarProperty Name="DateH" ColumnName="DateH" />
+          <ScalarProperty Name="BeneficiaryY" ColumnName="BeneficiaryY" />
+          <ScalarProperty Name="BeneficiaryX" ColumnName="BeneficiaryX" />
+          <ScalarProperty Name="Amount_WordY" ColumnName="Amount_WordY" />
+          <ScalarProperty Name="Amount_WordX" ColumnName="Amount_WordX" />
+          <ScalarProperty Name="AmountY" ColumnName="AmountY" />
+          <ScalarProperty Name="AmountX" ColumnName="AmountX" />
+          <ScalarProperty Name="DateY" ColumnName="DateY" />
+          <ScalarProperty Name="DateX" ColumnName="DateX" />
+          <ScalarProperty Name="Template_Name" ColumnName="Template_Name" />
+          <ScalarProperty Name="Template_Code" ColumnName="Template_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DraftIssuedCharges">
+      <EntityTypeMapping TypeName="BranchConsoleModel.DraftIssuedCharges">
+        <MappingFragment StoreEntitySet="DraftIssuedCharges">
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="ChargeAmount" ColumnName="ChargeAmount" />
+          <ScalarProperty Name="ChargeID" ColumnName="ChargeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreasuryProductCode">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TreasuryProductCode">
+        <MappingFragment StoreEntitySet="TreasuryProductCode">
+          <ScalarProperty Name="DrawnDownAccount" ColumnName="DrawnDownAccount" />
+          <ScalarProperty Name="ChargeLiquidationAccount" ColumnName="ChargeLiquidationAccount" />
+          <ScalarProperty Name="InterestExpenseAccount" ColumnName="InterestExpenseAccount" />
+          <ScalarProperty Name="InterestPenaltyAccount" ColumnName="InterestPenaltyAccount" />
+          <ScalarProperty Name="WHTPayableAccount" ColumnName="WHTPayableAccount" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="CBAProductCode" ColumnName="CBAProductCode" />
+          <ScalarProperty Name="MinTaxablePrincipal" ColumnName="MinTaxablePrincipal" />
+          <ScalarProperty Name="Tenured" ColumnName="Tenured" />
+          <ScalarProperty Name="WHTMinAmt" ColumnName="WHTMinAmt" />
+          <ScalarProperty Name="Discounted" ColumnName="Discounted" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountStament">
+      <EntityTypeMapping TypeName="BranchConsoleModel.AccountStament">
+        <MappingFragment StoreEntitySet="AccountStament">
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Debit" ColumnName="Debit" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="ExpenseLine" ColumnName="ExpenseLine" />
+          <ScalarProperty Name="ValDate" ColumnName="ValDate" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreasuryDealsMaster">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TreasuryDealsMaster">
+        <MappingFragment StoreEntitySet="TreasuryDealsMaster">
+          <ScalarProperty Name="IsReversed" ColumnName="IsReversed" />
+          <ScalarProperty Name="DoubleEntrySuccessful" ColumnName="DoubleEntrySuccessful" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CBA" ColumnName="CBA" />
+          <ScalarProperty Name="Posted" ColumnName="Posted" />
+          <ScalarProperty Name="DisapprovalReason" ColumnName="DisapprovalReason" />
+          <ScalarProperty Name="WhenDisapproved" ColumnName="WhenDisapproved" />
+          <ScalarProperty Name="DisapprovedBy" ColumnName="DisapprovedBy" />
+          <ScalarProperty Name="WhenApproved" ColumnName="WhenApproved" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="ProcessStatus" ColumnName="ProcessStatus" />
+          <ScalarProperty Name="ParentDealId" ColumnName="ParentDealId" />
+          <ScalarProperty Name="TransactionStatus" ColumnName="TransactionStatus" />
+          <ScalarProperty Name="WHTAccount" ColumnName="WHTAccount" />
+          <ScalarProperty Name="InterestAccount" ColumnName="InterestAccount" />
+          <ScalarProperty Name="PrincipalAccount" ColumnName="PrincipalAccount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TerminationInstructionCode" ColumnName="TerminationInstructionCode" />
+          <ScalarProperty Name="AccountOfficer" ColumnName="AccountOfficer" />
+          <ScalarProperty Name="PaymentAccount" ColumnName="PaymentAccount" />
+          <ScalarProperty Name="InflowAccount" ColumnName="InflowAccount" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="NetInterestAmount" ColumnName="NetInterestAmount" />
+          <ScalarProperty Name="WHTAmount" ColumnName="WHTAmount" />
+          <ScalarProperty Name="InterestAmount" ColumnName="InterestAmount" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="MaturityDate" ColumnName="MaturityDate" />
+          <ScalarProperty Name="Tenure" ColumnName="Tenure" />
+          <ScalarProperty Name="ValueDate" ColumnName="ValueDate" />
+          <ScalarProperty Name="PrincipalAmount" ColumnName="PrincipalAmount" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="DealersReference" ColumnName="DealersReference" />
+          <ScalarProperty Name="CBADealId" ColumnName="CBADealId" />
+          <ScalarProperty Name="DealId" ColumnName="DealId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTransactionPageAccess">
+      <EntityTypeMapping TypeName="BranchConsoleModel.UserTransactionPageAccess">
+        <MappingFragment StoreEntitySet="UserTransactionPageAccess">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IsActiveOnPage" ColumnName="IsActiveOnPage" />
+          <ScalarProperty Name="DateAccessed" ColumnName="DateAccessed" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerDetails">
+      <EntityTypeMapping TypeName="BranchConsoleModel.CustomerDetails">
+        <MappingFragment StoreEntitySet="CustomerDetails">
+          <ScalarProperty Name="Bvn" ColumnName="Bvn" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="CustomerStatus" ColumnName="CustomerStatus" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreLiquidatedDeal">
+      <EntityTypeMapping TypeName="BranchConsoleModel.PreLiquidatedDeal">
+        <MappingFragment StoreEntitySet="PreLiquidatedDeal">
+          <ScalarProperty Name="CBAReferenceID" ColumnName="CBAReferenceID" />
+          <ScalarProperty Name="IsPartialLiquidation" ColumnName="IsPartialLiquidation" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PenaltyRate" ColumnName="PenaltyRate" />
+          <ScalarProperty Name="LiquidationDate" ColumnName="LiquidationDate" />
+          <ScalarProperty Name="DealID" ColumnName="DealID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TillTransferIMAL">
+      <EntityTypeMapping TypeName="BranchConsoleModel.TillTransferIMAL">
+        <MappingFragment StoreEntitySet="TillTransferIMAL">
+          <ScalarProperty Name="CBA" ColumnName="CBA" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="TransferMode" ColumnName="TransferMode" />
+          <ScalarProperty Name="Accepted" ColumnName="Accepted" />
+          <ScalarProperty Name="IsFufilled" ColumnName="IsFufilled" />
+          <ScalarProperty Name="AmountReleased" ColumnName="AmountReleased" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CashierID" ColumnName="CashierID" />
+          <ScalarProperty Name="GiverUser" ColumnName="GiverUser" />
+          <ScalarProperty Name="GiverTillNo" ColumnName="GiverTillNo" />
+          <ScalarProperty Name="ReceiverUser" ColumnName="ReceiverUser" />
+          <ScalarProperty Name="ReceiverTillNo" ColumnName="ReceiverTillNo" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="TranId" ColumnName="TranId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OutwardChequeDetails">
+      <EntityTypeMapping TypeName="BranchConsoleModel.OutwardChequeDetails">
+        <MappingFragment StoreEntitySet="OutwardChequeDetails">
+          <ScalarProperty Name="CBAResponseCode" ColumnName="CBAResponseCode" />
+          <ScalarProperty Name="CBAResponse" ColumnName="CBAResponse" />
+          <ScalarProperty Name="TransactionReference" ColumnName="TransactionReference" />
+          <ScalarProperty Name="DisapprovalReason" ColumnName="DisapprovalReason" />
+          <ScalarProperty Name="WhenDissaprroved" ColumnName="WhenDissaprroved" />
+          <ScalarProperty Name="DisapprovedBy" ColumnName="DisapprovedBy" />
+          <ScalarProperty Name="WhenApproved" ColumnName="WhenApproved" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="TellerName" ColumnName="TellerName" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DebitValueDate" ColumnName="DebitValueDate" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DrawalName" ColumnName="DrawalName" />
+          <ScalarProperty Name="BankCode" ColumnName="BankCode" />
+          <ScalarProperty Name="BankAddress" ColumnName="BankAddress" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CreditAmount" ColumnName="CreditAmount" />
+          <ScalarProperty Name="DebitAccountName" ColumnName="DebitAccountName" />
+          <ScalarProperty Name="DebitAccountNumber" ColumnName="DebitAccountNumber" />
+          <ScalarProperty Name="CreditAccountName" ColumnName="CreditAccountName" />
+          <ScalarProperty Name="CreditAccountNumber" ColumnName="CreditAccountNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManagerChequeIssuanceDetails">
+      <EntityTypeMapping TypeName="BranchConsoleModel.ManagerChequeIssuanceDetails">
+        <MappingFragment StoreEntitySet="ManagerChequeIssuanceDetails">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="ChargeAmount" ColumnName="ChargeAmount" />
+          <ScalarProperty Name="DebitValueDate" ColumnName="DebitValueDate" />
+          <ScalarProperty Name="DissapprovalReason" ColumnName="DissapprovalReason" />
+          <ScalarProperty Name="RepurchaseRefId" ColumnName="RepurchaseRefId" />
+          <ScalarProperty Name="ValueDate" ColumnName="ValueDate" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="CBAResponseCode" ColumnName="CBAResponseCode" />
+          <ScalarProperty Name="CBAResponse" ColumnName="CBAResponse" />
+          <ScalarProperty Name="WhenDissapproved" ColumnName="WhenDissapproved" />
+          <ScalarProperty Name="DissaprovedBy" ColumnName="DissaprovedBy" />
+          <ScalarProperty Name="WhenApproved" ColumnName="WhenApproved" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="TransactionReference" ColumnName="TransactionReference" />
+          <ScalarProperty Name="BeneficiaryAccount" ColumnName="BeneficiaryAccount" />
+          <ScalarProperty Name="PaidStatus" ColumnName="PaidStatus" />
+          <ScalarProperty Name="BeneficiaryName" ColumnName="BeneficiaryName" />
+          <ScalarProperty Name="PaymentDetails" ColumnName="PaymentDetails" />
+          <ScalarProperty Name="Printed" ColumnName="Printed" />
+          <ScalarProperty Name="TemplateCode" ColumnName="TemplateCode" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="DraftNumber" ColumnName="DraftNumber" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BranchAccounts">
+      <EntityTypeMapping TypeName="BranchConsoleModel.BranchAccounts">
+        <MappingFragment StoreEntitySet="BranchAccounts">
+          <ScalarProperty Name="DrawnAccount" ColumnName="DrawnAccount" />
+          <ScalarProperty Name="InterestAccount" ColumnName="InterestAccount" />
+          <ScalarProperty Name="WHTAccount" ColumnName="WHTAccount" />
+          <ScalarProperty Name="PrincipalAccount" ColumnName="PrincipalAccount" />
+          <ScalarProperty Name="ChargesAccount" ColumnName="ChargesAccount" />
+          <ScalarProperty Name="VATAccount" ColumnName="VATAccount" />
+          <ScalarProperty Name="BranchDBSuspenceAccount" ColumnName="BranchDBSuspenceAccount" />
+          <ScalarProperty Name="BranchCRSuspenceAccount" ColumnName="BranchCRSuspenceAccount" />
+          <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
