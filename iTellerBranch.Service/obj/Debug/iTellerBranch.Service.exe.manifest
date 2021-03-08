@@ -83,26 +83,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iTellerBranch.Model.dll" size="211968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iTellerBranch.Model.dll" size="213504">
       <assemblyIdentity name="iTellerBranch.Model" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uKIt7RtP1GLIQLK+heB7s4jp0TRsHicSDZu9KCwjd6E=</dsig:DigestValue>
+        <dsig:DigestValue>WoiHTasZ9/MycA1iRGGI0mJlgKzZ7cf/Q2HmFoXPr+A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iTellerBranch.Repository.dll" size="1148928">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iTellerBranch.Repository.dll" size="1149952">
       <assemblyIdentity name="iTellerBranch.Repository" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NCaoQeAkz56dg7PJTPQ0bvSiPNwFRx4JETffy8Y7lDk=</dsig:DigestValue>
+        <dsig:DigestValue>KuKcKmvDkzWf6MPBH4MnIlFpHefNGSqM0i7+oydi30U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

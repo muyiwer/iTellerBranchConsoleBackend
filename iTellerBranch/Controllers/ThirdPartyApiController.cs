@@ -89,6 +89,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/LoginUser/InActiveUsers")]
         public IHttpActionResult GetInactiveLoginUsers()
         {
+            Utils.LogNO("api/LoginUser/InActiveUsers:1:Currently Inside This End Point.");
             var result = _userBusiness.GetInActiveUsers(true, "");
 
             return Ok(result);
@@ -98,6 +99,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/LoginUser/Activate")]
         public IHttpActionResult ActivateUser([FromBody] UserLogins userLogins)
         {
+            Utils.LogNO("api/LoginUser/Activate:2:Currently Inside This End Point.");
             try
             {
                 try
@@ -128,6 +130,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/OTP")]
         public IHttpActionResult ValidateOTPToken(OtpValidation otpValidation)
         {
+            Utils.LogNO("api / OTP:3:Currently Inside This End Point.");
             var userLogin = new UserLogins()
             {
                 UserId = otpValidation.username
@@ -321,6 +324,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/OTP/Transaction")]
         public IHttpActionResult ValidateTransactionOTPToken(OtpValidation otpValidation)
         {
+            Utils.LogNO("api/OTP/Transaction:4:Currently Inside This End Point.");
             var userLogin = new UserLogins()
             {
                 UserId = otpValidation.username
@@ -491,6 +495,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/User/GetDetails")]
         public IHttpActionResult GetDetailsByUsername([FromBody] AD_Credentials aD_Credentials)
         {
+            Utils.LogNO("api/User/GetDetails:5:Currently Inside This End Point.");
             try
             {
                 object response = null;
@@ -579,6 +584,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/LoginUserActivity/Create")]
         public IHttpActionResult CreateUserLoginActivity([FromBody] UserActivity userActivity)
         {
+            Utils.LogNO("api/LoginUserActivity/Create:5:Currently Inside This End Point.");
             try
             {
                  _userBusiness.CreateUserLoginActivity(userActivity.UserId);
@@ -648,6 +654,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/LoginUserActivity/LogOut")]
         public IHttpActionResult LogUserActivity([FromBody] UserActivity userActivity)
         {
+            Utils.LogNO("api/LoginUserActivity/LogOut:6:Currently Inside This End Point.");
             try
             {
                 _userBusiness.LogOutUser(userActivity.UserId, userActivity.Branch);
@@ -670,6 +677,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/LoginUserActivity/IsUserLoggedIn")]
         public IHttpActionResult IsUserLogin([FromBody] UserActivity userActivity)
         {
+            Utils.LogNO("api/LoginUserActivity/IsUserLoggedIn:7:Currently Inside This End Point.");
             try
             {
                 var result = _userBusiness.IsUserLogin(userActivity.UserId);
@@ -693,6 +701,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/Login")]
         public IHttpActionResult ValidateUser([FromBody] AD_Credentials aD_Credentials)
         {
+            Utils.LogNO("api/Login:8:Currently Inside This End Point.");
             Utils.LogNO("Login starting------");
             var userLogin = new UserLogins()
             {
@@ -875,6 +884,7 @@ namespace iTellerBranch
         {
             try
             {
+                Utils.LogNO("IsUserValid2Operate........? AD_credentials...");
                 string url = System.Configuration.ConfigurationManager.AppSettings["GetTillIdByUser"];
                 url = url + "/" + aD_Credentials.AD_Username;
                 string tokenUrl = System.Configuration.ConfigurationManager.AppSettings["GenerateToken"];
@@ -908,8 +918,9 @@ namespace iTellerBranch
         }
 
         [HttpGet, Route("api/RMDetails/{accountCode}/Token/{access_token}")]
-        public IHttpActionResult RMDetails([FromUri] string accountCode,  string access_token) 
+        public IHttpActionResult RMDetails([FromUri] string accountCode,  string access_token)
         {
+            Utils.LogNO("api/RMDetails/{accountCode}/Token/{access_token}:9:Currently Inside This End Point.");
             try
             {
                 if (isDemo == "true")
@@ -917,7 +928,7 @@ namespace iTellerBranch
                     return Ok(new
                     {
                         success = true,
-                        data = "Muyiwa Aro"
+                        data = "Sunday ola"
                     });
                 }
                 else
@@ -954,6 +965,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/NameEnquiry/{accountNo}/Token/{access_token}")]
         public IHttpActionResult GetCustomerDetails([FromUri] string accountNo, string access_token) // can u achieve it- yes ook. When I m done I willc all ub 
         {
+            Utils.LogNO("api/NameEnquiry/{accountNo}/Token/{access_token}:10:Currently Inside This End Point.");
             try
             {
                 object response = null;
@@ -983,6 +995,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/TellerAccount/{userId}/CurrCode/{currCode}/Token/{access_token}")]
         public IHttpActionResult GetTellerAccount([FromUri] string userId, string currCode, string access_token)
         {
+            Utils.LogNO("api/TellerAccount/{userId}/CurrCode/{currCode}/Token/{access_token}:11:Currently Inside This End Point.");
             try
             {
                 if (isDemo == "true")
@@ -1033,6 +1046,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/CustomerDetails/{CustId}/Token/{access_token}")]
         public IHttpActionResult GetCustomerDetailsById([FromUri] string CustId, string access_token) // can u achieve it- yes ook. When I m done I willc all ub 
         {
+            Utils.LogNO("api/CustomerDetails/{CustId}/Token/{access_token}:12:Currently Inside This End Point.");
             try
             {
                 object response = null;
@@ -1061,6 +1075,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/ImalNameEnquiry/{accountNo}/Token/{access_token}")]
         public IHttpActionResult GetImalCustomerDetails([FromUri] string accountNo, string access_token) // can u achieve it- yes ook. When I m done I willc all ub 
         {
+            Utils.LogNO("api/ImalNameEnquiry/{accountNo}/Token/{access_token}:12:Currently Inside This End Point.");
             try
             {
                 object response = null;
@@ -1099,6 +1114,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/ChequeEnquiry/{accountNo}/{chequeNum}/{access_token}")]
         public IHttpActionResult GetChequeDetails([FromUri] string accountNo, string chequeNum, string access_token)
         {
+            Utils.LogNO("api/ChequeEnquiry/{accountNo}/{chequeNum}/{access_token}:13:Currently Inside This End Point.");
             string url = System.Configuration.ConfigurationManager.AppSettings["ChequeStatus"] + "/" + accountNo+"/"+ chequeNum;
             try
             {
@@ -1226,6 +1242,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/PushDetails/")]
         public IHttpActionResult PushCustomerDetails([FromBody]CustomerDetailModel customerDetails)
         {
+            Utils.LogNO("api/PushDetails/:13:Currently Inside This End Point.");
             try
             {
 
@@ -1269,7 +1286,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/GetAccountMemo/{accountNo}")]
         public IHttpActionResult GetAccountMemo([FromUri]string accountNo)
         {
-
+            Utils.LogNO("api/GetAccountMemo/{accountNo}:14:Currently Inside This End Point.");
             try
             {
                 AccountMemoInfo acctMemoInfo = new AccountMemoInfo();
@@ -1329,7 +1346,8 @@ namespace iTellerBranch
 
         [HttpPost, Route("api/GetMandateImage")]
         public IHttpActionResult GetMandateImage([FromBody]TransactionModel transaction)
-        {            
+        {
+            Utils.LogNO("api/GetMandateImage:15:Currently Inside This End Point.");
             string username = System.Configuration.ConfigurationManager.AppSettings["ImageUserName"];
             string password = System.Configuration.ConfigurationManager.AppSettings["ImagePassword"];
             string networkPath = System.Configuration.ConfigurationManager.AppSettings["NetworkPath"];
@@ -1348,6 +1366,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/GetAccountMandate/{accountNo}/Token/{access_token}")]
         public IHttpActionResult GetAccountMandate([FromUri]string accountNo, string access_token)
         {
+            Utils.LogNO("api/GetAccountMandate/{accountNo}/Token/{access_token}:16:Currently Inside This End Point.");
             try
             {
                 if (isDemo == "false")
@@ -1449,6 +1468,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/GetImalAccountMandate")]
         public IHttpActionResult GetImalAccountMandate([FromBody]ImalAccountMandateClientRequest accountMandate) 
         {
+            Utils.LogNO("api/GetImalAccountMandate:17:Currently Inside This End Point.");
             try
             {
                 if (isDemo == "false")
@@ -1531,6 +1551,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/PostCashDepoist/")]
         public IHttpActionResult PushCashDeposit([FromBody]TransactionModel transdetail)
         {
+            Utils.LogNO("api/PostCashDepoist/:18:Currently Inside This End Point.");
             try
             {
 
@@ -1571,6 +1592,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/PostCashWithdrawal/")]
         public IHttpActionResult PostCashWithdrawal([FromBody]TransactionModel transdetail)
         {
+            Utils.LogNO("api/PostCashWithdrawal/:19:Currently Inside This End Point.");
             try
             {
                 var tran = new transactionDetails[1];
@@ -1612,6 +1634,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/Till/ApproveCloseTill")]
         public IHttpActionResult ApproveCloseTill([FromBody]TillAssignmentModel tillAssignmentModel)
         {
+            Utils.LogNO("api/Till/ApproveCloseTill:20:Currently Inside This End Point.");
             try
             {
                 TillManagement tillManagement = _TillBusiness.GetTillManagement(tillAssignmentModel.Id);
@@ -1704,6 +1727,7 @@ namespace iTellerBranch
         [HttpPost, Route("api/Till/Open")]
         public IHttpActionResult OpenTill([FromBody]ReopenTill openTill)
         {
+            Utils.LogNO("api/Till/Open:21:Currently Inside This End Point.");
             try
             {
                 if (isDemo == "false")
@@ -1785,6 +1809,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/Security/Encrypt")]
         public IHttpActionResult Encrypt([FromUri]string plaintText)
         {
+            Utils.LogNO("api/Security/Encrypt:22:Currently Inside This End Point.");
             try
             {
                 string sharedkeyval = System.Configuration.ConfigurationManager.AppSettings["Sharedkeyval"].ToString();
@@ -1801,6 +1826,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/Security/Decrypt")]
         public IHttpActionResult Decrypt([FromUri]string plaintText)
         {
+            Utils.LogNO("api/Security/Decrypt:23:Currently Inside This End Point.");
             try
             {
                 string sharedkeyval = System.Configuration.ConfigurationManager.AppSettings["Sharedkeyval"].ToString();
@@ -1815,6 +1841,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/User/UserDetails")]
         public IHttpActionResult GetUserDetails([FromUri]string userId, string access_token)
         {
+            Utils.LogNO("api/User/UserDetails:24:Currently Inside This End Point.");
             try
             {
                 if (isDemo == "false")
@@ -1932,6 +1959,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/User/TellerDetails")]
         public IHttpActionResult GetTellerDetails([FromUri]string tellerId, string access_token)
         {
+            Utils.LogNO("api/User/TellerDetails:25:Currently Inside This End Point.");
             try
             {
                 if (isDemo == "false")
@@ -2020,8 +2048,9 @@ namespace iTellerBranch
 
 
         [HttpGet, Route("api/User/VaultDetails/Vault/{vaultId}/Branch/{branchCode}/Currency/{curAbbrev}/{access_token}")]
-        public IHttpActionResult GetVaultDetails(string vaultId,string branchCode, string curAbbrev, string access_token) 
+        public IHttpActionResult GetVaultDetails(string vaultId,string branchCode, string curAbbrev, string access_token)
         {
+            Utils.LogNO("api/User/VaultDetails/Vault/{vaultId}/Branch/{branchCode}/Currency/{curAbbrev}/{access_token}:26:Currently Inside This End Point.");
             try
             {
                 if (isDemo == "false")
@@ -2112,6 +2141,7 @@ namespace iTellerBranch
         [HttpGet, Route("api/Currency/GetRate/{currAbbrev}/Token/{access_token}")]
         public IHttpActionResult GetRates(string currAbbrev, string access_token)
         {
+            Utils.LogNO("api/Currency/GetRate/{currAbbrev}/Token/{access_token}:26:Currently Inside This End Point.");
             try
             {
                 if (isDemo == "false")

@@ -476,6 +476,7 @@ namespace iTellerBranch.Repository.Service
 
         public string BuildNarration(string SerialNo, string Beneficiary, string transRef, string remarks) //ok lets factor what MD said as per narration here
         {
+            Utils.LogNO("Building Narration inside Controller. TransRef:" + transRef + ", serialNo:" + SerialNo + ", status:" + "" + ", transtype:" + "");
             string narration = string.Empty;
             narration = @" " + transRef + @" CASH Deposit B/O " + @" " + Beneficiary  + @" " + remarks;
             return narration;

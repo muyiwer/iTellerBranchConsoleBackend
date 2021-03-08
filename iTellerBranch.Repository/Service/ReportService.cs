@@ -291,9 +291,9 @@ namespace iTellerBranch.Repository.Service
                     x.TransactionParty,
                     //TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
                     //                : x.TransType == cheque ? "InHouse Cheque Deposit" : x.TransType == chequeLodgement ? "Cash Withdrwal with Cheque" : "In-House Transfer",
-                    //TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
-                    //                : x.TransType == cheque ? "InHouse Cheque Deposit" : x.TransType == chequeLodgement?"Cash Withdrawal With Cheque": x.TransType == cashWTDCounter ? "Cash Withdrwal with Counter Cheque" : x.TransType == transfer ? "In-House Transfer" : "Others",
-                    TransTypeName = TransType.getTranTypeName(x.TransType),
+                    TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
+                                    : x.TransType == cheque ? "InHouse Cheque Deposit" : x.TransType == chequeLodgement?"Cash Withdrawal With Cheque": x.TransType == cashWTDCounter ? "Cash Withdrwal with Counter Cheque" : x.TransType == transfer ? "In-House Transfer" : "Others",
+                    //TransTypeName = TransType.getTranTypeName(x.TransType),
                     IsWithdrawal = x.TransType == withdrawal || x.TransType == chequeLodgement ? true : false,
                     IsDeposit = x.TransType == deposit ? true : false
                 }).OrderByDescending(x => x.CreationDate)
@@ -349,9 +349,9 @@ namespace iTellerBranch.Repository.Service
                     IsCheque = x.TransType == cheque ? true : false,
                     //TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
                     //                : x.TransType == cheque ? "InHouse Cheque Deposit" : x.TransType == chequeLodgement ? "Cash Withdrwal with Cheque": "In-House Transfer",
-                    //TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
-                    //                : x.TransType == cheque ? "InHouse Cheque Deposit" : x.TransType == chequeLodgement ? "Cash Withdrawal With Cheque" : x.TransType == cashWTDCounter ? "Cash Withdrwal with Counter Cheque" : x.TransType == transfer ? "In-House Transfer" : "Others",
-                    TransTypeName = TransType.getTranTypeName(x.TransType),
+                    TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
+                                    : x.TransType == cheque ? "InHouse Cheque Deposit" : x.TransType == chequeLodgement ? "Cash Withdrawal With Cheque" : x.TransType == cashWTDCounter ? "Cash Withdrwal with Counter Cheque" : x.TransType == transfer ? "In-House Transfer" : "Others",
+                    //TransTypeName = TransType.getTranTypeName(x.TransType),
                     Beneficiaries = db.TransferDetails.Where(z => z.TranId == x.TranId).ToArray()
                 }).OrderByDescending(x => x.CreationDate)
             };

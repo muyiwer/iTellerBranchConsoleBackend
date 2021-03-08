@@ -20,6 +20,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/getBalanceByCategory/{categoryCode}/{branchCode}/{access_token}")]
         public IHttpActionResult GetBalanceByCategory(string branchCode, string categoryCode, string access_token)
         {
+            Utils.LogNO("api/getBalanceByCategory/{categoryCode}/{branchCode}/{access_token}:1:Currently Inside This End Point.");
             if (isDemo == "false")
             {
                 string url = ConfigurationManager.AppSettings["BalanceByCategory"] + "/" + branchCode + "/" + categoryCode;

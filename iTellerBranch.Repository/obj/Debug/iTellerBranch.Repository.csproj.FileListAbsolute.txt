@@ -41,4 +41,3 @@ C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Repository\bin\
 C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Repository\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Repository\obj\Debug\iTellerBranch.Repository.dll
 C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Repository\obj\Debug\iTellerBranch.Repository.pdb
-C:\Users\PFS\Documents\GitHub\iTellerBranchConsole\iTellerBranch.Repository\bin\Debug\Newtonsoft.Json.xml

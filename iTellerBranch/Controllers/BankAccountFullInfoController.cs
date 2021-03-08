@@ -25,6 +25,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/AccountEnquiry/PLEntries")]
         public IHttpActionResult PlEntriesForLocal([FromBody] PLEntriesRequest PLEntriesRequest)
         {
+            Utils.LogNO("api/AccountEnquiry/PLEntries:1:Currently Inside This End Point.");
             if (isDemo == "false") 
             {
                 var PlEntriesUrl = ConfigurationManager.AppSettings["PlEntries"]; 
@@ -41,6 +42,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/AccountEnquiry/AccountDetails/{accountNumber}/{access_token}")]
         public IHttpActionResult GetAccountDetails(string accountNumber, string access_token)
         {
+            Utils.LogNO("api/AccountEnquiry/AccountDetails/{accountNumber}/{access_token}:2:Currently Inside This End Point.");
             if (isDemo == "false")
             {
                 var baseAccountEnquiryUrl = ConfigurationManager.AppSettings["AccountEnquiry"];
@@ -57,6 +59,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/AccountEnquiry/AccountByCustomerId/{customerId}/Token/{access_token}")]
         public IHttpActionResult GetCustomerAccountFullInfo([FromUri]string customerId, string access_token)
         {
+            Utils.LogNO("api/AccountEnquiry/AccountByCustomerId/{customerId}/Token/{access_token}:3:Currently Inside This End Point.");
             if (isDemo == "false")
             {
                 string baseAccountEnquiryUrl =ConfigurationManager.AppSettings["AccountByCustomerID"];
@@ -76,6 +79,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/AccountEnquiry/AccountByAccountNumber/{acctNumber}/Token/{access_token}")]
         public IHttpActionResult GetCustomerAccountFullInfoByAccount([FromUri]string acctNumber, string access_token) 
         {
+            Utils.LogNO("api/AccountEnquiry/AccountByAccountNumber/{acctNumber}/Token/{access_token}:3:Currently Inside This End Point.");
             if (isDemo == "false")
             {
                 string url = ConfigurationManager.AppSettings["NameEnquiry"] + "/" + acctNumber;

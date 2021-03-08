@@ -184,6 +184,7 @@ namespace iTellerBranch.Business.Transaction
         }
         public string BuildNarration(string SerialNo, string Beneficiary, string transRef, string remarks, string depositor, int status, string transType="") //ok lets factor what MD said as per narration here
         {
+            Utils.LogNO("Building Narration inside Transaction Biz. TransRef:" + transRef + ", serialNo:" + SerialNo + ", status:" + status + ", transtype:" + transType);
             string narration = string.Empty;
             if (status == 1)//cheque withdrawal
                 narration = @" " + transRef + @" CASH WTD B/O " + @" " + Beneficiary + @" CASH" + @" " +

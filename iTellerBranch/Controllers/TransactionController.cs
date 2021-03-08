@@ -36,6 +36,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/CashDeposit")]
         public IHttpActionResult GetDepositTrans()
         {
+            Utils.LogNO("api/CashDeposit:1:Currently Inside This End Point.");
             var result = _transactionBusiness.GetTransactionDeposit(true, "");
             return Ok(result);
         }
@@ -43,6 +44,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/Branch/GetBranchAccounts/{branchCode}")]
         public IHttpActionResult GetBranchAccounts(string branchCode) 
         {
+            Utils.LogNO("api/Branch/GetBranchAccounts/{branchCode}:2:Currently Inside This End Point.");
             var result = _transactionService.BranchAccounts(branchCode);
             return Ok(result);
         }
@@ -71,6 +73,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/ImalTransaction/Create/CashTrans")]
         public IHttpActionResult CreateImalDepositWithdrawalTrans([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/ImalTransaction/Create/CashTrans:3:Currently Inside This End Point.");
             try
             {
                 transMaster.CBA = "IMAL";
@@ -177,6 +180,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Create/CashTrans")]
         public IHttpActionResult CreateDepositWithdrawalTrans([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/Create/CashTrans:4:Currently Inside This End Point.");
             try
             {
                 transMaster.CBA = "T24";
@@ -261,6 +265,7 @@ namespace iTellerBranch.Controllers
             TellerRequest request = new TellerRequest();
             request.Teller = new Teller();
             request.Teller.access_token = transMaster.access_token;
+  
             var narration = transMaster.Remark;
             if (transMaster.CurrCode != "NGN")
             {
@@ -283,7 +288,7 @@ namespace iTellerBranch.Controllers
             request.Teller.Rate = "";
             if (transMaster.CurrCode == "NGN")
             {
-                Utils.LogNO("NGN");
+                Utils.LogNO("CBA DEPOSIT - NGN");
                 Utils.LogNO("Details " + request.Teller.TxnCurr + " " + request.Teller.TellerId + " " +
                     request.Teller.CustAcct + " ");
                 url = System.Configuration.ConfigurationManager.AppSettings["CashDepositLCY"];
@@ -291,7 +296,7 @@ namespace iTellerBranch.Controllers
             }
             else
             {
-                Utils.LogNO("FCY");
+                Utils.LogNO("CBA DEPOSIT - FCY");
                 url = System.Configuration.ConfigurationManager.AppSettings["CashDepositForeign"];
                 response = Transaction.CashDepositForeign(url, request);
             }
@@ -302,7 +307,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/getCashTrans")]
         public IHttpActionResult GetAllTrans()
         {
-
+            Utils.LogNO("api/getCashTrans:5:Currently Inside This End Point.");
             var result = _transactionBusiness.GetAllTrans(true, "");
             return Ok(result);
         }
@@ -310,7 +315,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/getUnApprovedTrans")]
         public IHttpActionResult GetUnApprovedTrans()
         {
-
+            Utils.LogNO("api/getUnApprovedTrans:6:Currently Inside This End Point.");
             var result = _transactionService.GetUnApprovedTrans(true, ""); 
             return Ok(result);
         }
@@ -318,7 +323,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/getInHouseTransferTransaction")]
         public IHttpActionResult GetInHouseTransferTransaction() 
         {
-
+            Utils.LogNO("api/getInHouseTransferTransaction:7:Currently Inside This End Point.");
             var result = _transactionService.GetInHouseTransferTransaction(true, ""); 
             return Ok(result);
         }
@@ -326,7 +331,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/getProductDetails")]
         public IHttpActionResult GetProductCodeDetails()
         {
-
+            Utils.LogNO("api/getProductDetails:8:Currently Inside This End Point.");
             var result = _transactionService.GetTreasuryProductDetails(true, "");
             return Ok(result);
         }
@@ -334,7 +339,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/getTerminationInstruction")]
         public IHttpActionResult GetAllTerminationInstructions()
         {
-
+            Utils.LogNO("api/getTerminationInstruction:9:Currently Inside This End Point.");
             var result = _transactionService.GetTerminationInstruction(true, "");
             return Ok(result);
         }
@@ -343,7 +348,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/getTransactionFile")]
         public IHttpActionResult GetTransacctionFile([FromBody] TransactionFiles files)
         {
-
+            Utils.LogNO("api/getTransactionFile:10:Currently Inside This End Point.");
             var result = _transactionService.GetTransactionFile(files);
             if(result == null)
             {
@@ -371,6 +376,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/getTreasuryTrans/{TranId}")]
         public IHttpActionResult GetAllTreasuryDealsById([FromUri] int TranId)
         {
+            Utils.LogNO("api/getTreasuryTrans/{TranId}:11:Currently Inside This End Point.");
             var result = _transactionBusiness.GetAllTreasuryTransById(TranId);
             return Ok(result);
 
@@ -379,6 +385,7 @@ namespace iTellerBranch.Controllers
         [HttpGet, Route("api/CashWithdrawal")]
         public IHttpActionResult GetWithdrawalTrans()
         {
+            Utils.LogNO("api/CashWithdrawal:12:Currently Inside This End Point.");
             var result = _transactionBusiness.GetWithdrawalTrans(true, "");
             return Ok(result);
         }
@@ -387,6 +394,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/ImalTransaction/Create/CashWithdrawal")]
         public IHttpActionResult PostImalCash([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/ImalTransaction/Create/CashWithdrawal:13:Currently Inside This End Point.");
             try
             {
                 transMaster.CBA = "IMAL";
@@ -514,6 +522,7 @@ namespace iTellerBranch.Controllers
         public string BuildNarration(string SerialNo, string Beneficiary, string transRef, string remarks, string depositor, int status, string transType="") //ok lets factor what MD said as per narration here
         {
             string narration = string.Empty;
+            Utils.LogNO("Building Narration inside Controller. TransRef:"+ transRef+", serialNo:"+ SerialNo+", status:"+ status+", transtype:"+ transType);
             //if (status == 1)//cheque withdrawal
             //    narration = @" " + transRef + @" CASH WTD B/O " + @" " + Beneficiary + @" CHQ" + @" " +
             //                SerialNo + @" " + remarks;
@@ -556,6 +565,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/ImalTransaction/Approve/CashTrans")]
         public IHttpActionResult PostApproveImalCash([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/ImalTransaction/Approve/CashTrans:14:Currently Inside This End Point.");
             try
             {
                 transMaster.CBA = "IMAL";
@@ -664,6 +674,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Approve/ImalTransaction/TillTransfer")]
         public IHttpActionResult ApproveImalTillTransfer([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/Approve/ImalTransaction/TillTransfer:15:Currently Inside This End Point.");
             try
             {
                 transMaster.CBA = "IMAL";
@@ -755,6 +766,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/ImalTransaction/TillTransfer")]
         public IHttpActionResult PostImalTillTransfer([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/ImalTransaction/TillTransfer:16:Currently Inside This End Point.");
             try
             {
                 transMaster.CBA = "IMAL";
@@ -849,6 +861,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Create/CashWithdrawal")]
         public IHttpActionResult PostCash([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/Create/CashWithdrawal:17:Currently Inside This End Point.");
             try
             {
                 Utils.LogNO("Type A- cashwithdrawal with or without cheque HERE...... TransType:" + transMaster.TransType+", ChargeType: "+ transMaster.ChargeType+", CheNo:"+ transMaster.ChequeNo);
@@ -1084,7 +1097,7 @@ namespace iTellerBranch.Controllers
 
             try
             {//MUST: GET THE 2 GL ACCOUNTS FOR THIS POSTING
-                Utils.LogNO(string.Format("TranID: {0}", result));
+                Utils.LogNO(string.Format("CreateTransferTransactionforGL: TranID: {0}", result));
                 Utils.LogNO(string.Format("Transaction Master: {0}", JsonConvert.SerializeObject(transMaster)));
                 transMaster.TranId = result;
                 Utils.LogNO("Processing of transfer Started");
@@ -1128,7 +1141,7 @@ namespace iTellerBranch.Controllers
 
             try
             {//MUST: GET THE 2 GL ACCOUNTS FOR THIS POSTING
-                Utils.LogNO(string.Format("TranID: {0}", result));
+                Utils.LogNO(string.Format("CreateTransferTransaction4GL: TranID: {0}", result));
                 Utils.LogNO(string.Format("Transaction Master: {0}", JsonConvert.SerializeObject(transMaster)));
                 transMaster.TranId = result;
                 Utils.LogNO("Processing of transfer Started");
@@ -1173,7 +1186,7 @@ namespace iTellerBranch.Controllers
             try
             {//InitiatorName Branch TransactionParty CurrencyAbbrev
 
-                Utils.LogNO("Processing of transfer Started...");
+                Utils.LogNO("CreateSingleTransferTranssaction: Processing of transfer Started...");
                 TransactionModel transactionModel = new TransactionModel();
                 var transHeader = new TransferHeader();
               //  transactionModel.CurrCode = transMaster.CurrencyAbbrev;
@@ -1233,7 +1246,7 @@ namespace iTellerBranch.Controllers
             }
             catch (Exception ex)
             {
-                Utils.LogNO("Error posting the transfer details: " + ex.Message);
+                Utils.LogNO("Single: Error posting the transfer details: " + ex.Message);
             }
 
             return Response;
@@ -1246,7 +1259,7 @@ namespace iTellerBranch.Controllers
             try
             {//InitiatorName Branch TransactionParty CurrencyAbbrev
              
-                Utils.LogNO("Processing of transfer Started...");
+                Utils.LogNO("CreateTransferTransaction 2: Processing of transfer Started...");
                 TransactionModel transactionModel = new TransactionModel();
                 var transHeader = new TransferHeader();
                // transactionModel.CurrCode = transMaster.CurrencyAbbrev;
@@ -1309,6 +1322,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/PostTransferDetails/TransDeposit")]
         public IHttpActionResult PostTransferDetails([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/PostTransferDetails/TransDeposit:18:Currently Inside This End Point.");
             List<TransactionResponseMessages> transactionResponseMessages = new List<TransactionResponseMessages>();
             List<TransactionBeneficiaries> TransactionBeneficiary = new List<TransactionBeneficiaries>();
             List<TransferDetails> Beneficiaries = new List<TransferDetails>();
@@ -1574,6 +1588,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/PostTransferDetails/Approve")]
         public IHttpActionResult PostTransferDetailsOnApproval([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/PostTransferDetails/Approve:19:Currently Inside This End Point.");
             List<TransactionResponseMessages> transactionResponseMessages = new List<TransactionResponseMessages>();
             List<TransactionBeneficiaries> TransactionBeneficiary = new List<TransactionBeneficiaries>();
             List<TransferDetails> Beneficiaries = new List<TransferDetails>();
@@ -1846,6 +1861,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/PostTransferDetails/Single/TransDeposit")]
         public IHttpActionResult PostSingleTransferDetails([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/PostTransferDetails/Single/TransDeposit:20:Currently Inside This End Point.");
             List<TransactionResponseMessages> transactionResponseMessages = new List<TransactionResponseMessages>();
             List<TransactionBeneficiaries> TransactionBeneficiary = new List<TransactionBeneficiaries>();
             List<TransferDetails> Beneficiaries = new List<TransferDetails>();
@@ -2099,6 +2115,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/PostTransferDetails/Single/Approval")]
         public IHttpActionResult PostSingleTransferDetailsOnApproval([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/PostTransferDetails/Single/Approval:21:Currently Inside This End Point.");
             List<TransactionResponseMessages> transactionResponseMessages = new List<TransactionResponseMessages>();
             List<TransactionBeneficiaries> TransactionBeneficiary = new List<TransactionBeneficiaries>();
             List<TransferDetails> Beneficiaries = new List<TransferDetails>();
@@ -2354,6 +2371,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/PostTransferDetailsOld/TransDeposit")]
         public IHttpActionResult PostTransferDetailsOld([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/PostTransferDetailsOld/TransDeposit:21:Currently Inside This End Point.");
             List<TransactionResponseMessages> transactionResponseMessages = new List<TransactionResponseMessages>();
             List<TransactionBeneficiaries> TransactionBeneficiary = new List<TransactionBeneficiaries>();
             List<TransferDetails> Beneficiaries = new List<TransferDetails>();
@@ -2606,11 +2624,11 @@ namespace iTellerBranch.Controllers
                 transMaster.ChargeType = transHeader.ChargeType;
             }
             //need to batch into branches to process
-                Utils.LogNO("Beneficiary Details: " + JsonConvert.SerializeObject(beneficiary));
+                Utils.LogNO("SINGLE BEN POSTING 2CBA: Beneficiary Details: " + JsonConvert.SerializeObject(beneficiary));
                 var accountUrl = System.Configuration.ConfigurationManager.AppSettings["NameEnquiry"] + "/" + beneficiary.BenAccountNumber;
                 transMaster.CurrencyAbbrev = Transaction.GetAccountCurrency(accountUrl, transMaster.access_token);
                 var responseObj2 = CreateSingleTransferTransaction(transMaster, beneficiary, ref result, url);
-                Utils.LogNO("Executed transaction: ");
+                Utils.LogNO("SINGLE BEN POSTING 2CBA - Executed transaction: ");
                 Utils.LogNO("Transaction Response: " + JsonConvert.SerializeObject(responseObj2));
                 if (responseObj2.isSuccessful == true)
                 {
@@ -2662,7 +2680,7 @@ namespace iTellerBranch.Controllers
             //need to batch into branches to process
             foreach (var beneficiary in Beneficiaries)
             {
-                Utils.LogNO("Beneficiary Details: " + JsonConvert.SerializeObject(beneficiary));
+                Utils.LogNO("MULTI BEN POSTING 2CBA: Beneficiary Details: " + JsonConvert.SerializeObject(beneficiary));
                 var accountUrl = System.Configuration.ConfigurationManager.AppSettings["NameEnquiry"] + "/" + beneficiary.BenAccountNumber;
                 transMaster.CurrencyAbbrev = Transaction.GetAccountCurrency(accountUrl, transMaster.access_token);
                 var responseObj2 = CreateTransferTransaction(transMaster, beneficiary, ref result, url, GLAccounts);
@@ -2702,6 +2720,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/PostInHouseCheques/TransDeposit")]
         public IHttpActionResult PostInHouseChequesWithdrawal([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/PostInHouseCheques/TransDeposit:21:Currently Inside This End Point.");
             try
             {
                 transMaster.CBA = transMaster.CBA;
@@ -2830,6 +2849,7 @@ namespace iTellerBranch.Controllers
             
             OutputResponse response;
             TellerRequest tellerRequest = new TellerRequest();
+            Utils.LogNO("Create CBA CashWithdrawal.........");
             Utils.LogNO("Not till transfer");
             Utils.LogNO("Amount " + transMaster.Amount);
             tellerRequest.Teller = new Teller();
@@ -2857,7 +2877,8 @@ namespace iTellerBranch.Controllers
 
         private static FTChqResponse CreateCBAInHouseCheques(TransactionModel transMaster, string url, string narration)
         {
-           // FTOutputResponse response;
+            // FTOutputResponse response;
+            Utils.LogNO("CreateCBAInHouseChq....");
             InHouseChequesViewModel inHouseCheques = new InHouseChequesViewModel();
             inHouseCheques.FT_Request = new FT_Request();
             // response = null;
@@ -2885,6 +2906,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Create/TempCashWithdrawal")]
         public IHttpActionResult PostCashWithdrawalTemp([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/Create/TempCashWithdrawal:22:Currently Inside This End Point.");
             try
             {
                 Utils.LogNO("Type B- cashwithdrawal with or without cheque HERE...... TransType:" + transMaster.TransType + ", ChargeType: " + transMaster.ChargeType + ", CheNo:" + transMaster.ChequeNo+ ", amount:"+ transMaster.Amount);
@@ -2955,6 +2977,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Create/Imal/TempCashWithdrawal")]
         public IHttpActionResult PostImalCashWithdrawalTemp([FromBody]TransactionModel transMaster) 
         {
+            Utils.LogNO("api/Create/Imal/TempCashWithdrawal:23:Currently Inside This End Point.");
             try
             {
                 var transType = (int)TransType.TransactionType.Withdrawal;
@@ -3000,6 +3023,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Create/TempInHouseTransfer")]
         public IHttpActionResult PostCashInHouseTransferTemp([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/Create/TempInHouseTransfer:23:Currently Inside This End Point.");
             try
             {
                 var transType = (int)TransType.TransactionType.InHouseTransfer;
@@ -3036,6 +3060,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Create/TempInHouseChequeTransfer")]
         public IHttpActionResult PostCashInHouseChequeTransferTemp([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/Create/TempInHouseChequeTransferr:24:Currently Inside This End Point.");
             try
             {
             
@@ -3076,6 +3101,7 @@ namespace iTellerBranch.Controllers
         {
             try
             {
+                Utils.LogNO("api/Create/TempCashDeposit:25:Currently Inside This End Point.");
                 int transType = 0;
 
                 if (transMaster.ChequeNo.Length == 8)
@@ -3119,6 +3145,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Create/IMAL/TempCashDeposit")]
         public IHttpActionResult PostIMALCashDepositTemp([FromBody]TransactionModel transMaster) 
         {
+            Utils.LogNO("api/Create/IMAL/TempCashDeposit:26:Currently Inside This End Point.");
             try
             {
                 int transType = 0;
@@ -3169,6 +3196,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/ImalTransaction/Create/VaultIn")]
         public IHttpActionResult VaultInImal([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/ImalTransaction/Create/VaultIn:26:Currently Inside This End Point.");
             try
             {
                 string  branchCode = transMaster.BranchCode + "";
@@ -3408,6 +3436,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/ImalTransaction/Create/VaultOut")]
         public IHttpActionResult VaultOutImal([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/ImalTransaction/Create/VaultOut:27:Currently Inside This End Point.");
             try
             {
                 var branchCode = transMaster.BranchCode;
@@ -3630,7 +3659,8 @@ namespace iTellerBranch.Controllers
         private int AddTransactionToDB(TransactionModel transMaster, IMALResponse.IMALLocalFTResponse response2Imal)
         {
             int result;
-           // transMaster.BranchCode = transMaster.Branch;
+            // transMaster.BranchCode = transMaster.Branch;
+            Utils.LogNO("Add Trans 2DB...");
             transMaster.CBAResponse = response2Imal.responseMessage;
             transMaster.CBACode = string.IsNullOrEmpty(response2Imal.responseCode)?"00": response2Imal.responseCode;
             transMaster.Posted = true;
@@ -3645,6 +3675,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Create/VaultOut")]
         public IHttpActionResult VaultOut([FromBody]TransactionModel transMaster)
         {
+            Utils.LogNO("api/Create/VaultOut:28:Currently Inside This End Point.");
             try
             {
                 OutputResponse response = null;
@@ -3814,6 +3845,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Approve/Transaction")]
         public IHttpActionResult TransactionApproval([FromBody]TransactionApprovalModel transMaster)
         {
+            Utils.LogNO("api/Approve/Transaction:29:Currently Inside This End Point.");
             object result = null;
             try
             {//InitiatorName Branch TransactionParty CurrencyAbbrev
@@ -4031,6 +4063,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Disapprove/Transaction")]
         public IHttpActionResult TransactionDisapproval([FromBody]TransactionDisApprovalModel transMaster)
         {
+            Utils.LogNO("api/Disapprove/Transaction:30:Currently Inside This End Point.");
             object result = null;
             try
             {
@@ -4053,6 +4086,7 @@ namespace iTellerBranch.Controllers
         [HttpPost, Route("api/Transaction/TellerReversal")]
         public IHttpActionResult TellerReversal([FromBody]TellerReversal transMaster)
         {
+            Utils.LogNO("api/Transaction/TellerReversal:31:Currently Inside This End Point.");
             try
             {
                 if (isDemo == "false")

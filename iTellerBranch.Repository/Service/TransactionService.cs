@@ -1426,6 +1426,7 @@ namespace iTellerBranch.Repository.Service
 
         public string BuildNarration( string SerialNo, string Beneficiary, string transRef, string remarks,string depositor, int status, string transType="") //ok lets factor what MD said as per narration here
         {
+            Utils.LogNO("Building Narration inside Transaction. TransRef:" + transRef + ", serialNo:" + SerialNo + ", status:" + status + ", transtype:" + transType);
             string narration = string.Empty;
             string word = "";
             if (!string.IsNullOrEmpty(SerialNo) && SerialNo.Length == 8)
@@ -1702,9 +1703,9 @@ namespace iTellerBranch.Repository.Service
                         x.TellerId,
                         AccountNo =x.AccountNumber,
                         CurrncyCode = db.CashDenomination.Where(y=> y.ID == x.Currency).Select(y=> y.Abbrev).FirstOrDefault(),
-                        TransTypeName = TransType.getTranTypeName(x.TransType),
-                        //TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
-                        //            : x.TransType == cheque ? "InHouse Cheque Deposit" : x.TransType==transfer? "In-House Transfer":x.TransType==WTDCHQ?"Cash Withdrawal with Cheque": x.TransType==counterWTD? "Cash Withdrawal with Cheque":"Other",
+                        //TransTypeName = TransType.getTranTypeName(x.TransType),
+                        TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
+                                    : x.TransType == cheque ? "InHouse Cheque Deposit" : x.TransType==transfer? "In-House Transfer":x.TransType==WTDCHQ?"Cash Withdrawal with Cheque": x.TransType==counterWTD? "Cash Withdrawal with Cheque":"Other",
                         TransactionBeneficiary = db.TransferDetails.ToList().Where(y=>y.TranId==x.TranId),
                         //TransactionBeneficiary = db.TransferDetails.Where(y => y.TranId == x.TranId)
                         //.Select(y => new
@@ -1772,7 +1773,7 @@ namespace iTellerBranch.Repository.Service
 
         public object GetUnApprovedTrans(bool success, string message, Exception ex = null, string transRef = null) 
         {
-            Utils.LogNO("Getting unapproved trans here...");
+            //Utils.LogNO("Getting unapproved trans here...");
             int withdrawal = Convert.ToInt16(TransType.TransactionType.Withdrawal);
             int deposit = Convert.ToInt16(TransType.TransactionType.Deposit);
             int wtdCheque = Convert.ToInt16(TransType.TransactionType.ChequeLodgement);
@@ -1831,7 +1832,8 @@ namespace iTellerBranch.Repository.Service
                         CurrncyCode = db.CashDenomination.Where(y => y.ID == x.Currency).Select(y => y.Abbrev).FirstOrDefault(),
 
                         TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
-                                    : x.TransType == wtdCheque ? "Cash Withdrawal with Cheque" : x.TransType == ClearingCHQ ? "InHouse Cheque Deposit" : x.TransType == vaultOut?"Vault Out": x.TransType == vaultIn ? "Vault In": x.TransType == tillTrans ? "Till Transfer": x.TransType == cheque?"InHouse Cheque Deposit" : x.TransType == transfer? "In-House Transfer" : x.TransType == chqWTDCounter ? "Cash Withdrawal with Counter Cheque":"Treasury Transfer",
+                                    : x.TransType == wtdCheque ? "Cash Withdrawal with Cheque" : x.TransType == ClearingCHQ ? "InHouse Cheque Deposit" : x.TransType == vaultOut?"Vault Out": x.TransType == vaultIn ? "Vault In": x.TransType == tillTrans ? "Till Transfer": 
+                                    x.TransType == cheque?"InHouse Cheque Deposit" : x.TransType == transfer? "In-House Transfer" : x.TransType == chqWTDCounter ? "Cash Withdrawal with Counter Cheque":"Treasury Transfer",
                         //TransTypeName = TransType.getTranTypeName(x.TransType),
                         TransactionBeneficiary = db.TransferDetails.ToList().Where(y => y.TranId == x.TranId),
                         //TransactionBeneficiary = db.TransferDetails.Where(y => y.TranId == x.TranId)
@@ -1949,9 +1951,9 @@ namespace iTellerBranch.Repository.Service
                         x.TellerId,
                         AccountNo = x.AccountNumber,
                         CurrncyCode = db.CashDenomination.Where(y => y.ID == x.Currency).Select(y => y.Abbrev).FirstOrDefault(),
-                        TransTypeName = TransType.getTranTypeName(x.TransType),
-                        //TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
-                        //            : x.TransType == cheque ? "InHouse Cheque Deposit" : "In-House Transfer",
+                        //TransTypeName = TransType.getTranTypeName(x.TransType),
+                        TransTypeName = x.TransType == withdrawal ? "Cash Withdrawal" : x.TransType == deposit ? "Cash Deposit"
+                                    : x.TransType == cheque ? "InHouse Cheque Deposit" : "In-House Transfer",
                         TransactionBeneficiary = db.TransferDetails.ToList().Where(y => y.TranId == x.TranId),
                         //TransactionBeneficiary = db.TransferDetails.Where(y => y.TranId == x.TranId)
                         //.Select(y => new
